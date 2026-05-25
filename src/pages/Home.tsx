@@ -1,3 +1,4 @@
+import Dashboard from "../components/Dashboard";
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 
@@ -214,7 +215,7 @@ function Home() {
         </div>
 
       </section>
-
+<Dashboard />
       {/* DOCUMENTS */}
 
       <section className="py-24 px-6">
