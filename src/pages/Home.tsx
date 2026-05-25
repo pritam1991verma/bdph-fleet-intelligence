@@ -285,25 +285,7 @@ function Home() {
 
       </section>
 <ControlPanel />
-      {/* LIVE MAP SECTION */}
-
-      <section className="py-24 px-6 bg-[#020617]">
-
-        <div className="max-w-7xl mx-auto">
-
-          <div className="text-center mb-20">
-
-            <h2 className="text-5xl font-bold text-cyan-400 mb-4">
-              Enterprise GPS Intelligence
-            </h2>
-
-            <p className="text-gray-400 text-lg">
-              Live realtime tracking and satellite monitoring.
-            </p>
-
-          </div>
-
-          <div className="relative h-[600px] bg-[#08111f] border border-cyan-500/20 rounded-3xl overflow-hidden">
+      <LiveMap />
 
             {/* GRID */}
 
