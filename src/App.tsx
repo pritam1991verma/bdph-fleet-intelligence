@@ -1,7 +1,7 @@
-import Home from "./pages/Home";
+import AuthPage from "./pages/AuthPage";
 
 function App() {
-  return <Home />;
+  return <AuthPage />;
 }
 
 export default App;
