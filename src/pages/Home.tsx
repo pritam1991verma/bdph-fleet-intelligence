@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
+
 import {
   Satellite,
   Radar,
@@ -46,11 +47,11 @@ function Home() {
 
           <div className="flex flex-wrap justify-center gap-6">
 
-            <button className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-4 rounded-2xl">
+            <button className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-4 rounded-2xl transition">
               Explore Services
             </button>
 
-            <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-2xl hover:bg-cyan-500 hover:text-black">
+            <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-2xl hover:bg-cyan-500 hover:text-black transition">
               Live Demo
             </button>
 
@@ -130,7 +131,7 @@ function Home() {
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
-                className="bg-[#0b1120] border border-cyan-500/20 rounded-3xl p-8"
+                className="bg-[#0b1120] border border-cyan-500/20 rounded-3xl p-8 hover:border-cyan-400 transition"
               >
 
                 <div className="w-16 h-16 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center mb-6 text-cyan-400 text-2xl">
@@ -167,6 +168,10 @@ function Home() {
               Live Monitoring Dashboard
             </h2>
 
+            <p className="text-gray-400">
+              Realtime enterprise analytics system.
+            </p>
+
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
@@ -186,8 +191,9 @@ function Home() {
               },
             ].map((card, index) => (
 
-              <div
+              <motion.div
                 key={index}
+                whileHover={{ scale: 1.03 }}
                 className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-10"
               >
 
@@ -199,7 +205,7 @@ function Home() {
                   {card.value}
                 </div>
 
-              </div>
+              </motion.div>
 
             ))}
 
@@ -251,7 +257,7 @@ function Home() {
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
-                className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8"
+                className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8 hover:border-cyan-400 transition"
               >
 
                 <div className="text-cyan-400 mb-6">
@@ -269,6 +275,73 @@ function Home() {
               </motion.div>
 
             ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* LIVE MAP SECTION */}
+
+      <section className="py-24 px-6 bg-[#020617]">
+
+        <div className="max-w-7xl mx-auto">
+
+          <div className="text-center mb-20">
+
+            <h2 className="text-5xl font-bold text-cyan-400 mb-4">
+              Enterprise GPS Intelligence
+            </h2>
+
+            <p className="text-gray-400 text-lg">
+              Live realtime tracking and satellite monitoring.
+            </p>
+
+          </div>
+
+          <div className="relative h-[600px] bg-[#08111f] border border-cyan-500/20 rounded-3xl overflow-hidden">
+
+            {/* GRID */}
+
+            <div className="absolute inset-0 opacity-20">
+
+              <div className="w-full h-full bg-[linear-gradient(to_right,#06b6d420_1px,transparent_1px),linear-gradient(to_bottom,#06b6d420_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+
+            </div>
+
+            {/* TRACKING POINTS */}
+
+            <div className="absolute top-20 left-20 w-5 h-5 bg-green-400 rounded-full animate-ping"></div>
+
+            <div className="absolute top-40 right-32 w-5 h-5 bg-red-400 rounded-full animate-ping"></div>
+
+            <div className="absolute bottom-24 left-1/3 w-5 h-5 bg-yellow-400 rounded-full animate-ping"></div>
+
+            <div className="absolute bottom-16 right-1/4 w-5 h-5 bg-cyan-400 rounded-full animate-ping"></div>
+
+            {/* CENTER */}
+
+            <div className="relative z-10 h-full flex items-center justify-center">
+
+              <div className="text-center">
+
+                <div className="text-6xl mb-6">
+                  🌍
+                </div>
+
+                <h3 className="text-4xl font-bold text-cyan-400 mb-6 tracking-widest">
+                  GLOBAL TRACKING NETWORK
+                </h3>
+
+                <p className="text-gray-400 max-w-2xl">
+                  AI-powered enterprise vehicle intelligence system with realtime
+                  monitoring, fleet tracking and predictive analytics.
+                </p>
+
+              </div>
+
+            </div>
 
           </div>
 
