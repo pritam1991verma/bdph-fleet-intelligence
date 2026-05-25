@@ -1,9 +1,5 @@
-import LiveMap from "../components/LiveMap";
-import ControlPanel from "../components/ControlPanel";
-import Dashboard from "../components/Dashboard";
-import Navbar from "../components/Navbar";
+import { Suspense, useState, useEffect, lazy, ReactNode } from "react";
 import { motion } from "framer-motion";
-
 import {
   Satellite,
   Radar,
@@ -11,17 +7,114 @@ import {
   ShieldCheck,
   Map,
   FileWarning,
+  AlertCircle,
 } from "lucide-react";
 
+// Import lightweight components directly
+import Navbar from "../components/Navbar";
+import Dashboard from "../components/Dashboard";
+import ControlPanel from "../components/ControlPanel";
+
+// Lazy load heavy map component
+const LiveMap = lazy(() =>
+  import("../components/LiveMap").catch(() => ({
+    default: () => (
+      <section className="py-24 px-6 bg-black">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="text-red-400 flex items-center justify-center gap-2">
+            <AlertCircle size={20} />
+            Failed to load map component
+          </div>
+        </div>
+      </section>
+    ),
+  }))
+);
+
+// Loading fallback
+const MapLoader = () => (
+  <section className="py-24 px-6 bg-black">
+    <div className="max-w-7xl mx-auto text-center">
+      <div className="text-cyan-400 animate-pulse">Loading map...</div>
+    </div>
+  </section>
+);
+
+// Error Boundary Component
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error: Error | null;
+}
+
+interface ErrorBoundaryProps {
+  children: ReactNode;
+}
+
+class ErrorBoundary extends React.Component<
+  ErrorBoundaryProps,
+  ErrorBoundaryState
+> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error) {
+    console.error("Component error:", error);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="py-12 px-6 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400">
+          <div className="flex items-center gap-3">
+            <AlertCircle size={20} />
+            <span>Error loading component. Please refresh the page.</span>
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
 function Home() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // Reset mount state to ensure proper initialization after cookie deletion
+    setMounted(true);
+
+    // Clear stale session data
+    if (typeof sessionStorage !== "undefined") {
+      sessionStorage.removeItem("_stale_cache");
+      sessionStorage.removeItem("_stale");
+    }
+
+    // Cleanup on unmount
+    return () => {
+      setMounted(false);
+    };
+  }, []);
+
+  // Prevent rendering until mounted to avoid hydration mismatch
+  if (!mounted) {
+    return <div className="min-h-screen bg-[#030712]" />;
+  }
+
   return (
     <div className="min-h-screen bg-[#030712] text-white overflow-x-hidden">
-      
-      <Navbar />
+      <ErrorBoundary>
+        <Navbar />
+      </ErrorBoundary>
 
       {/* HERO SECTION */}
       <section className="relative flex flex-col items-center justify-center min-h-screen text-center px-6 overflow-hidden">
-
         <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/10 to-transparent"></div>
 
         <motion.div
@@ -30,7 +123,6 @@ function Home() {
           transition={{ duration: 1 }}
           className="relative z-10"
         >
-
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
             FUTURE OF
             <span className="text-cyan-400"> TECHNOLOGY </span>
@@ -38,13 +130,12 @@ function Home() {
           </h1>
 
           <p className="text-gray-400 text-xl max-w-3xl mx-auto mb-10">
-            BDPH Group delivers intelligent enterprise solutions including
-            GPS tracking, realtime monitoring, fuel intelligence,
-            battery analytics and enterprise automation.
+            BDPH Group delivers intelligent enterprise solutions including GPS
+            tracking, realtime monitoring, fuel intelligence, battery analytics
+            and enterprise automation.
           </p>
 
           <div className="flex flex-wrap justify-center gap-6">
-
             <button className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-4 rounded-2xl transition">
               Explore Services
             </button>
@@ -52,12 +143,10 @@ function Home() {
             <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-2xl hover:bg-cyan-500 hover:text-black transition">
               Live Demo
             </button>
-
           </div>
 
           {/* ORBIT UI */}
           <div className="mt-24 flex justify-center relative">
-
             <div className="absolute w-[500px] h-[500px] rounded-full border border-cyan-500/10 animate-ping"></div>
 
             <div className="absolute w-[400px] h-[400px] rounded-full border border-cyan-500/20 animate-pulse"></div>
@@ -71,7 +160,6 @@ function Home() {
               }}
               className="relative w-[300px] h-[300px] border border-cyan-500/30 rounded-full flex items-center justify-center"
             >
-
               <div className="absolute w-[200px] h-[200px] border border-cyan-500/20 rounded-full"></div>
 
               <div className="absolute w-[120px] h-[120px] border border-cyan-500/20 rounded-full"></div>
@@ -87,22 +175,15 @@ function Home() {
                 <Radar size={14} />
                 SCANNING
               </div>
-
             </motion.div>
-
           </div>
-
         </motion.div>
-
       </section>
 
       {/* SERVICES */}
       <section className="py-24 px-6">
-
         <div className="max-w-7xl mx-auto">
-
           <div className="text-center mb-20">
-
             <h2 className="text-5xl font-bold text-cyan-400 mb-4">
               Enterprise Services
             </h2>
@@ -110,11 +191,9 @@ function Home() {
             <p className="text-gray-400 text-lg">
               Smart enterprise intelligence systems.
             </p>
-
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
             {[
               "GPS Vehicle Tracking",
               "Fuel Monitoring",
@@ -123,13 +202,11 @@ function Home() {
               "Cloud Monitoring",
               "AI Automation",
             ].map((service, index) => (
-
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
                 className="bg-[#0b1120] border border-cyan-500/20 rounded-3xl p-8 hover:border-cyan-400 transition"
               >
-
                 <div className="w-16 h-16 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center mb-6 text-cyan-400 text-2xl">
                   ⚡
                 </div>
@@ -141,36 +218,24 @@ function Home() {
                 <p className="text-gray-400">
                   Advanced enterprise analytics and realtime monitoring system.
                 </p>
-
               </motion.div>
-
             ))}
-
           </div>
-
         </div>
-
       </section>
 
       {/* DASHBOARD */}
       <section className="py-24 px-6 bg-black">
-
         <div className="max-w-7xl mx-auto">
-
           <div className="text-center mb-16">
-
             <h2 className="text-5xl font-bold text-cyan-400 mb-4">
               Live Monitoring Dashboard
             </h2>
 
-            <p className="text-gray-400">
-              Realtime enterprise analytics system.
-            </p>
-
+            <p className="text-gray-400">Realtime enterprise analytics system.</p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
-
             {[
               {
                 title: "Active Vehicles",
@@ -185,48 +250,36 @@ function Home() {
                 value: "99.9%",
               },
             ].map((card, index) => (
-
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.03 }}
                 className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-10"
               >
-
-                <div className="text-gray-400 mb-4">
-                  {card.title}
-                </div>
+                <div className="text-gray-400 mb-4">{card.title}</div>
 
                 <div className="text-5xl font-bold text-cyan-400">
                   {card.value}
                 </div>
-
               </motion.div>
-
             ))}
-
           </div>
-
         </div>
-
       </section>
 
-      <Dashboard />
+      <ErrorBoundary>
+        <Dashboard />
+      </ErrorBoundary>
 
       {/* DOCUMENTS */}
       <section className="py-24 px-6">
-
         <div className="max-w-7xl mx-auto">
-
           <div className="text-center mb-20">
-
             <h2 className="text-5xl font-bold text-cyan-400 mb-4">
               Smart Document Monitoring
             </h2>
-
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
             {[
               {
                 title: "Pollution",
@@ -249,39 +302,33 @@ function Home() {
                 icon: <Map size={36} />,
               },
             ].map((item, index) => (
-
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
                 className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8 hover:border-cyan-400 transition"
               >
-
-                <div className="text-cyan-400 mb-6">
-                  {item.icon}
-                </div>
+                <div className="text-cyan-400 mb-6">{item.icon}</div>
 
                 <h3 className="text-2xl font-bold text-cyan-400 mb-4">
                   {item.title}
                 </h3>
 
-                <div className="text-xl text-gray-300">
-                  {item.status}
-                </div>
-
+                <div className="text-xl text-gray-300">{item.status}</div>
               </motion.div>
-
             ))}
-
           </div>
-
         </div>
-
       </section>
 
-      <ControlPanel />
+      <ErrorBoundary>
+        <ControlPanel />
+      </ErrorBoundary>
 
-      <LiveMap />
-
+      <ErrorBoundary>
+        <Suspense fallback={<MapLoader />}>
+          <LiveMap />
+        </Suspense>
+      </ErrorBoundary>
     </div>
   );
 }
