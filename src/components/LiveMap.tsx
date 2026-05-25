@@ -1,9 +1,10 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { useEffect } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
-// Create custom icon using data URLs or direct configuration
-const customIcon = new L.Icon({
+// Set default icon globally for all markers
+const DefaultIcon = L.icon({
   iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
   iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
   shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
@@ -11,9 +12,22 @@ const customIcon = new L.Icon({
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
   shadowSize: [41, 41],
+  tooltipAnchor: [16, -28],
 });
 
+L.Marker.prototype.options.icon = DefaultIcon;
+
 function LiveMap() {
+  useEffect(() => {
+    // Ensure Leaflet's default icon is set
+    delete (L.Icon.Default.prototype as any)._getIconUrl;
+    L.Icon.Default.mergeOptions({
+      iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+      iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+      shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+    });
+  }, []);
+
   return (
     <section className="py-24 px-6 bg-black">
       <div className="max-w-7xl mx-auto">
@@ -39,7 +53,7 @@ function LiveMap() {
             />
 
             {/* VEHICLE 1 */}
-            <Marker position={[22.8046, 86.2029]} icon={customIcon}>
+            <Marker position={[22.8046, 86.2029]} icon={DefaultIcon}>
               <Popup>
                 Vehicle BDPH-1021 <br />
                 Status: ACTIVE
@@ -47,7 +61,7 @@ function LiveMap() {
             </Marker>
 
             {/* VEHICLE 2 */}
-            <Marker position={[22.8246, 86.1829]} icon={customIcon}>
+            <Marker position={[22.8246, 86.1829]} icon={DefaultIcon}>
               <Popup>
                 Vehicle BDPH-2044 <br />
                 Fuel Low Alert
@@ -55,7 +69,7 @@ function LiveMap() {
             </Marker>
 
             {/* VEHICLE 3 */}
-            <Marker position={[22.7846, 86.2229]} icon={customIcon}>
+            <Marker position={[22.7846, 86.2229]} icon={DefaultIcon}>
               <Popup>
                 Vehicle BDPH-3301 <br />
                 Battery Stable
