@@ -16,11 +16,10 @@ import {
 function Home() {
   return (
     <div className="min-h-screen bg-[#030712] text-white overflow-x-hidden">
-
+      
       <Navbar />
 
       {/* HERO SECTION */}
-
       <section className="relative flex flex-col items-center justify-center min-h-screen text-center px-6 overflow-hidden">
 
         <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/10 to-transparent"></div>
@@ -33,19 +32,15 @@ function Home() {
         >
 
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
-
             FUTURE OF
             <span className="text-cyan-400"> TECHNOLOGY </span>
             & ENTERPRISE SOLUTIONS
-
           </h1>
 
           <p className="text-gray-400 text-xl max-w-3xl mx-auto mb-10">
-
             BDPH Group delivers intelligent enterprise solutions including
             GPS tracking, realtime monitoring, fuel intelligence,
             battery analytics and enterprise automation.
-
           </p>
 
           <div className="flex flex-wrap justify-center gap-6">
@@ -61,7 +56,6 @@ function Home() {
           </div>
 
           {/* ORBIT UI */}
-
           <div className="mt-24 flex justify-center relative">
 
             <div className="absolute w-[500px] h-[500px] rounded-full border border-cyan-500/10 animate-ping"></div>
@@ -103,7 +97,6 @@ function Home() {
       </section>
 
       {/* SERVICES */}
-
       <section className="py-24 px-6">
 
         <div className="max-w-7xl mx-auto">
@@ -160,7 +153,6 @@ function Home() {
       </section>
 
       {/* DASHBOARD */}
-
       <section className="py-24 px-6 bg-black">
 
         <div className="max-w-7xl mx-auto">
@@ -217,9 +209,10 @@ function Home() {
         </div>
 
       </section>
-<Dashboard />
-      {/* DOCUMENTS */}
 
+      <Dashboard />
+
+      {/* DOCUMENTS */}
       <section className="py-24 px-6">
 
         <div className="max-w-7xl mx-auto">
@@ -284,55 +277,10 @@ function Home() {
         </div>
 
       </section>
-<ControlPanel />
+
+      <ControlPanel />
+
       <LiveMap />
-
-            {/* GRID */}
-
-            <div className="absolute inset-0 opacity-20">
-
-              <div className="w-full h-full bg-[linear-gradient(to_right,#06b6d420_1px,transparent_1px),linear-gradient(to_bottom,#06b6d420_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-
-            </div>
-
-            {/* TRACKING POINTS */}
-
-            <div className="absolute top-20 left-20 w-5 h-5 bg-green-400 rounded-full animate-ping"></div>
-
-            <div className="absolute top-40 right-32 w-5 h-5 bg-red-400 rounded-full animate-ping"></div>
-
-            <div className="absolute bottom-24 left-1/3 w-5 h-5 bg-yellow-400 rounded-full animate-ping"></div>
-
-            <div className="absolute bottom-16 right-1/4 w-5 h-5 bg-cyan-400 rounded-full animate-ping"></div>
-
-            {/* CENTER */}
-
-            <div className="relative z-10 h-full flex items-center justify-center">
-
-              <div className="text-center">
-
-                <div className="text-6xl mb-6">
-                  🌍
-                </div>
-
-                <h3 className="text-4xl font-bold text-cyan-400 mb-6 tracking-widest">
-                  GLOBAL TRACKING NETWORK
-                </h3>
-
-                <p className="text-gray-400 max-w-2xl">
-                  AI-powered enterprise vehicle intelligence system with realtime
-                  monitoring, fleet tracking and predictive analytics.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
 
     </div>
   );
