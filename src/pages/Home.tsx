@@ -1,3 +1,4 @@
+import LiveMap from "../components/LiveMap";
 import ControlPanel from "../components/ControlPanel";
 import Dashboard from "../components/Dashboard";
 import Navbar from "../components/Navbar";
