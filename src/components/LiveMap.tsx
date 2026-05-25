@@ -1,22 +1,17 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
-import markerIcon from "leaflet/dist/images/marker-icon.png";
-import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
-import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import "leaflet/dist/leaflet.css";
 
-// Fix for marker icons
-const defaultIcon = L.icon({
-  iconUrl: markerIcon,
-  iconRetinaUrl: markerIcon2x,
-  shadowUrl: markerShadow,
+// Create custom icon using data URLs or direct configuration
+const customIcon = new L.Icon({
+  iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+  iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+  shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
   iconSize: [25, 41],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
   shadowSize: [41, 41],
 });
-
-L.Marker.prototype.options.icon = defaultIcon;
 
 function LiveMap() {
   return (
@@ -44,7 +39,7 @@ function LiveMap() {
             />
 
             {/* VEHICLE 1 */}
-            <Marker position={[22.8046, 86.2029]}>
+            <Marker position={[22.8046, 86.2029]} icon={customIcon}>
               <Popup>
                 Vehicle BDPH-1021 <br />
                 Status: ACTIVE
@@ -52,7 +47,7 @@ function LiveMap() {
             </Marker>
 
             {/* VEHICLE 2 */}
-            <Marker position={[22.8246, 86.1829]}>
+            <Marker position={[22.8246, 86.1829]} icon={customIcon}>
               <Popup>
                 Vehicle BDPH-2044 <br />
                 Fuel Low Alert
@@ -60,7 +55,7 @@ function LiveMap() {
             </Marker>
 
             {/* VEHICLE 3 */}
-            <Marker position={[22.7846, 86.2229]}>
+            <Marker position={[22.7846, 86.2229]} icon={customIcon}>
               <Popup>
                 Vehicle BDPH-3301 <br />
                 Battery Stable
