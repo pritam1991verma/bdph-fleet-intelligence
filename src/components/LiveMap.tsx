@@ -2,15 +2,11 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
-// Fix for marker icons
-const defaultIcon = L.icon({
-  iconUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png",
-  iconRetinaUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon-2x.png",
-  shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png",
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41],
+// Fix for marker icons using Leaflet's bundled assets
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: require("leaflet/dist/images/marker-icon-2x.png"),
+  iconUrl: require("leaflet/dist/images/marker-icon.png"),
+  shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
 });
 
 function LiveMap() {
@@ -39,7 +35,7 @@ function LiveMap() {
             />
 
             {/* VEHICLE 1 */}
-            <Marker position={[22.8046, 86.2029]} icon={defaultIcon}>
+            <Marker position={[22.8046, 86.2029]}>
               <Popup>
                 Vehicle BDPH-1021 <br />
                 Status: ACTIVE
@@ -47,7 +43,7 @@ function LiveMap() {
             </Marker>
 
             {/* VEHICLE 2 */}
-            <Marker position={[22.8246, 86.1829]} icon={defaultIcon}>
+            <Marker position={[22.8246, 86.1829]}>
               <Popup>
                 Vehicle BDPH-2044 <br />
                 Fuel Low Alert
@@ -55,7 +51,7 @@ function LiveMap() {
             </Marker>
 
             {/* VEHICLE 3 */}
-            <Marker position={[22.7846, 86.2229]} icon={defaultIcon}>
+            <Marker position={[22.7846, 86.2229]}>
               <Popup>
                 Vehicle BDPH-3301 <br />
                 Battery Stable
