@@ -1,3 +1,4 @@
+import ControlPanel from "../components/ControlPanel";
 import Dashboard from "../components/Dashboard";
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
@@ -282,7 +283,7 @@ function Home() {
         </div>
 
       </section>
-
+<ControlPanel />
       {/* LIVE MAP SECTION */}
 
       <section className="py-24 px-6 bg-[#020617]">
