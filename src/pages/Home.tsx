@@ -20,6 +20,43 @@ function Home() {
     <div className="min-h-screen bg-[#030712] text-white overflow-x-hidden">
 
       <Navbar />
+      {/* LIVE STATUS BAR */}
+
+<div className="relative z-40 mt-[76px] bg-[#08111f] border-b border-cyan-500/10 overflow-hidden">
+
+  <div className="animate-[ticker_25s_linear_infinite] whitespace-nowrap py-3 text-sm text-cyan-300">
+
+    <span className="mx-10">
+      ● GPS NETWORK ACTIVE
+    </span>
+
+    <span className="mx-10">
+      ● AI MONITORING ONLINE
+    </span>
+
+    <span className="mx-10">
+      ● 128 VEHICLES TRACKED
+    </span>
+
+    <span className="mx-10">
+      ● BATTERY SYSTEM STABLE
+    </span>
+
+    <span className="mx-10">
+      ● CLOUD SERVERS HEALTHY
+    </span>
+
+    <span className="mx-10">
+      ● LIVE SATELLITE CONNECTED
+    </span>
+
+    <span className="mx-10">
+      ● ENTERPRISE SECURITY ACTIVE
+    </span>
+
+  </div>
+
+</div>
 
       {/* HERO SECTION */}
 
