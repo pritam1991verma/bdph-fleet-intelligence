@@ -4,6 +4,7 @@ import {
   Marker,
   Popup,
   CircleMarker,
+  Polyline,
 } from "react-leaflet";
 
 import { divIcon } from "leaflet";
@@ -12,89 +13,193 @@ import L from "leaflet";
 
 import "leaflet/dist/leaflet.css";
 
-/* CUSTOM ICONS */
+/* =========================
+   CUSTOM CYBER ICONS
+========================= */
 
 const greenIcon = divIcon({
   className: "",
   html: `
-    <div class="relative">
-      <div class="animate-ping absolute inline-flex h-6 w-6 rounded-full bg-green-400 opacity-75"></div>
-      <div class="relative inline-flex rounded-full h-6 w-6 bg-green-500 border-2 border-white"></div>
+    <div class="relative flex items-center justify-center">
+      <div class="absolute w-10 h-10 bg-green-400 rounded-full opacity-20 animate-ping"></div>
+      <div class="relative w-5 h-5 bg-green-400 border-2 border-white rounded-full shadow-[0_0_20px_rgba(74,222,128,0.9)]"></div>
     </div>
   `,
-  iconSize: [24, 24],
+  iconSize: [40, 40],
 });
 
 const redIcon = divIcon({
   className: "",
   html: `
-    <div class="relative">
-      <div class="animate-ping absolute inline-flex h-6 w-6 rounded-full bg-red-400 opacity-75"></div>
-      <div class="relative inline-flex rounded-full h-6 w-6 bg-red-500 border-2 border-white"></div>
+    <div class="relative flex items-center justify-center">
+      <div class="absolute w-10 h-10 bg-red-500 rounded-full opacity-20 animate-ping"></div>
+      <div class="relative w-5 h-5 bg-red-500 border-2 border-white rounded-full shadow-[0_0_20px_rgba(239,68,68,0.9)]"></div>
     </div>
   `,
-  iconSize: [24, 24],
+  iconSize: [40, 40],
 });
 
 const yellowIcon = divIcon({
   className: "",
   html: `
-    <div class="relative">
-      <div class="animate-ping absolute inline-flex h-6 w-6 rounded-full bg-yellow-300 opacity-75"></div>
-      <div class="relative inline-flex rounded-full h-6 w-6 bg-yellow-400 border-2 border-white"></div>
+    <div class="relative flex items-center justify-center">
+      <div class="absolute w-10 h-10 bg-yellow-400 rounded-full opacity-20 animate-ping"></div>
+      <div class="relative w-5 h-5 bg-yellow-400 border-2 border-white rounded-full shadow-[0_0_20px_rgba(250,204,21,0.9)]"></div>
     </div>
   `,
-  iconSize: [24, 24],
+  iconSize: [40, 40],
 });
 
-function LiveMap() {
+/* =========================
+   LIVE MAP
+========================= */
 
+function LiveMap() {
   useEffect(() => {
     L.Icon.Default.mergeOptions({});
   }, []);
 
   return (
-
     <section
       id="tracking"
-      className="py-24 px-6 bg-black overflow-hidden max-w-full"
+      className="relative py-24 bg-black overflow-hidden"
     >
+      {/* BACKGROUND GLOW */}
 
-      <div className="max-w-7xl mx-auto">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-cyan-500/10 blur-[180px] rounded-full pointer-events-none"></div>
 
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* HEADER */}
 
         <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 backdrop-blur-xl mb-8">
+            <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse"></div>
 
-          <h2 className="text-5xl font-bold text-cyan-400 mb-4">
-            Live Satellite Fleet Intelligence
+            <span className="text-cyan-300 uppercase tracking-[0.3em] text-sm font-semibold">
+              AI Satellite Monitoring System
+            </span>
+          </div>
+
+          <h2 className="text-5xl md:text-7xl font-black tracking-tight mb-6">
+            <span className="bg-gradient-to-r from-cyan-300 via-white to-cyan-500 bg-clip-text text-transparent">
+              Live Fleet Intelligence
+            </span>
           </h2>
 
-          <p className="text-gray-400 text-lg">
-            AI-powered realtime vehicle monitoring and enterprise GPS analytics.
+          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+            Enterprise-grade AI powered satellite tracking with realtime
+            vehicle telemetry, predictive monitoring and global route
+            intelligence.
           </p>
-
         </div>
 
-        {/* MAP */}
+        {/* MAP WRAPPER */}
 
-        <div className="rounded-3xl overflow-hidden border border-cyan-500/20 shadow-[0_0_50px_rgba(34,211,238,0.15)]">
+        <div className="relative rounded-[32px] overflow-hidden border border-cyan-500/20 bg-black shadow-[0_0_100px_rgba(34,211,238,0.18)]">
+          {/* CYBER GRID */}
+
+          <div className="absolute inset-0 cyber-grid opacity-20 z-[200] pointer-events-none"></div>
+
+          {/* RADAR SWEEP */}
+
+          <div className="absolute inset-0 pointer-events-none z-[300] overflow-hidden">
+            <div className="radar-sweep"></div>
+          </div>
+
+          {/* HUD CORNERS */}
+
+          <div className="absolute top-0 left-0 w-24 h-24 border-l-4 border-t-4 border-cyan-400 z-[500]" />
+
+          <div className="absolute top-0 right-0 w-24 h-24 border-r-4 border-t-4 border-cyan-400 z-[500]" />
+
+          <div className="absolute bottom-0 left-0 w-24 h-24 border-l-4 border-b-4 border-cyan-400 z-[500]" />
+
+          <div className="absolute bottom-0 right-0 w-24 h-24 border-r-4 border-b-4 border-cyan-400 z-[500]" />
+
+          {/* LIVE STATUS PANEL */}
+
+          <div className="absolute top-6 left-6 z-[600] backdrop-blur-2xl bg-black/50 border border-cyan-500/20 rounded-3xl p-6 shadow-[0_0_40px_rgba(34,211,238,0.15)]">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse"></div>
+
+              <span className="text-green-400 text-sm tracking-[0.3em] font-bold uppercase">
+                Live Network
+              </span>
+            </div>
+
+            <div className="space-y-3 text-sm">
+              <div className="flex justify-between gap-12">
+                <span className="text-gray-400">Vehicles Online</span>
+
+                <span className="text-white font-bold">248</span>
+              </div>
+
+              <div className="flex justify-between gap-12">
+                <span className="text-gray-400">AI Alerts</span>
+
+                <span className="text-red-400 font-bold">12</span>
+              </div>
+
+              <div className="flex justify-between gap-12">
+                <span className="text-gray-400">Satellites Linked</span>
+
+                <span className="text-cyan-400 font-bold">16</span>
+              </div>
+
+              <div className="flex justify-between gap-12">
+                <span className="text-gray-400">Coverage</span>
+
+                <span className="text-green-400 font-bold">99.98%</span>
+              </div>
+            </div>
+          </div>
+
+          {/* MAP */}
 
           <MapContainer
             center={[22.8046, 86.2029]}
             zoom={11}
             scrollWheelZoom={true}
-            className="h-[750px] w-full max-w-full overflow-hidden z-0"
+            className="h-[780px] w-full z-0"
           >
-
-            {/* HD SATELLITE */}
+            {/* SATELLITE TILE */}
 
             <TileLayer
               attribution="&copy; Esri"
               url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
             />
 
-            {/* VEHICLE NETWORK */}
+            {/* LIVE ROUTES */}
+
+            <Polyline
+              positions={[
+                [22.8046, 86.2029],
+                [22.8246, 86.1829],
+                [22.8421, 86.2311],
+              ]}
+              pathOptions={{
+                color: "#22d3ee",
+                weight: 4,
+                opacity: 0.9,
+                dashArray: "10, 10",
+              }}
+            />
+
+            <Polyline
+              positions={[
+                [22.7521, 86.2411],
+                [22.7921, 86.2711],
+                [22.8321, 86.3911],
+              ]}
+              pathOptions={{
+                color: "#22c55e",
+                weight: 3,
+                opacity: 0.8,
+                dashArray: "12, 12",
+              }}
+            />
+
+            {/* VEHICLES */}
 
             <Marker position={[22.8046, 86.2029]} icon={greenIcon}>
               <Popup>BDPH-1021 • ACTIVE</Popup>
@@ -132,120 +237,67 @@ function LiveMap() {
               <Popup>BDPH-9104 • RUNNING</Popup>
             </Marker>
 
-            <Marker position={[22.8721, 86.2811]} icon={yellowIcon}>
-              <Popup>BDPH-1130 • MONITORING</Popup>
-            </Marker>
-
-            <Marker position={[22.7421, 86.1411]} icon={greenIcon}>
-              <Popup>BDPH-1208 • ACTIVE</Popup>
-            </Marker>
-
-            <Marker position={[22.7221, 86.3011]} icon={redIcon}>
-              <Popup>BDPH-1304 • SOS ALERT</Popup>
-            </Marker>
-
-            <Marker position={[22.8921, 86.2111]} icon={greenIcon}>
-              <Popup>BDPH-1420 • ONLINE</Popup>
-            </Marker>
-
-            <Marker position={[22.9121, 86.2411]} icon={yellowIcon}>
-              <Popup>BDPH-1520 • BATTERY CHECK</Popup>
-            </Marker>
-
-            <Marker position={[22.6921, 86.2611]} icon={greenIcon}>
-              <Popup>BDPH-1601 • DELIVERY ACTIVE</Popup>
-            </Marker>
-
-            <Marker position={[22.6621, 86.2211]} icon={greenIcon}>
-              <Popup>BDPH-1722 • ACTIVE</Popup>
-            </Marker>
-
-            <Marker position={[22.6521, 86.1611]} icon={redIcon}>
-              <Popup>BDPH-1820 • FUEL CRITICAL</Popup>
-            </Marker>
-
-            <Marker position={[22.9421, 86.1911]} icon={greenIcon}>
-              <Popup>BDPH-1930 • TRACKING LIVE</Popup>
-            </Marker>
-
-            <Marker position={[22.9521, 86.2911]} icon={yellowIcon}>
-              <Popup>BDPH-2001 • OBSERVATION</Popup>
-            </Marker>
-
-            <Marker position={[22.9821, 86.3211]} icon={greenIcon}>
-              <Popup>BDPH-2109 • ACTIVE</Popup>
-            </Marker>
-
-            <Marker position={[22.6321, 86.1111]} icon={greenIcon}>
-              <Popup>BDPH-2210 • ONLINE</Popup>
-            </Marker>
-
-            <Marker position={[22.6121, 86.3411]} icon={redIcon}>
-              <Popup>BDPH-2301 • SECURITY ALERT</Popup>
-            </Marker>
-
-            <Marker position={[22.9921, 86.1411]} icon={greenIcon}>
-              <Popup>BDPH-2411 • ACTIVE</Popup>
-            </Marker>
-
-            <Marker position={[22.7021, 86.3611]} icon={yellowIcon}>
-              <Popup>BDPH-2511 • LOW VOLTAGE</Popup>
-            </Marker>
-
-            <Marker position={[22.7421, 86.4011]} icon={greenIcon}>
-              <Popup>BDPH-2604 • MOVING</Popup>
-            </Marker>
-
-            <Marker position={[22.8321, 86.3911]} icon={greenIcon}>
-              <Popup>BDPH-2710 • RUNNING</Popup>
-            </Marker>
-
-            <Marker position={[22.9221, 86.3711]} icon={redIcon}>
-              <Popup>BDPH-2811 • GPS SIGNAL LOST</Popup>
-            </Marker>
-
-            <Marker position={[22.5621, 86.1811]} icon={greenIcon}>
-              <Popup>BDPH-2910 • ACTIVE</Popup>
-            </Marker>
-
-            <Marker position={[22.5421, 86.2911]} icon={yellowIcon}>
-              <Popup>BDPH-3011 • CHECK REQUIRED</Popup>
-            </Marker>
-
-            <Marker position={[22.5221, 86.3511]} icon={greenIcon}>
-              <Popup>BDPH-3110 • LIVE TRACKING</Popup>
-            </Marker>
-
             {/* LIVE ZONES */}
 
             <CircleMarker
               center={[22.8046, 86.2029]}
-              radius={50}
+              radius={60}
               pathOptions={{
                 color: "#22c55e",
                 fillColor: "#22c55e",
                 fillOpacity: 0.15,
+                weight: 2,
               }}
             />
 
             <CircleMarker
               center={[22.8246, 86.1829]}
-              radius={40}
+              radius={50}
               pathOptions={{
                 color: "#ef4444",
                 fillColor: "#ef4444",
                 fillOpacity: 0.15,
+                weight: 2,
               }}
             />
-
           </MapContainer>
 
+          {/* BOTTOM TELEMETRY */}
+
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[600]">
+            <div className="flex gap-4 flex-wrap justify-center">
+              <div className="backdrop-blur-xl bg-black/50 border border-cyan-500/20 rounded-2xl px-5 py-3">
+                <div className="text-gray-400 text-xs uppercase tracking-widest">
+                  Active Vehicles
+                </div>
+
+                <div className="text-2xl font-bold text-white">248</div>
+              </div>
+
+              <div className="backdrop-blur-xl bg-black/50 border border-cyan-500/20 rounded-2xl px-5 py-3">
+                <div className="text-gray-400 text-xs uppercase tracking-widest">
+                  Network Health
+                </div>
+
+                <div className="text-2xl font-bold text-green-400">
+                  Stable
+                </div>
+              </div>
+
+              <div className="backdrop-blur-xl bg-black/50 border border-cyan-500/20 rounded-2xl px-5 py-3">
+                <div className="text-gray-400 text-xs uppercase tracking-widest">
+                  AI Monitoring
+                </div>
+
+                <div className="text-2xl font-bold text-cyan-400">
+                  Enabled
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
       </div>
-
     </section>
-
   );
 }
 
