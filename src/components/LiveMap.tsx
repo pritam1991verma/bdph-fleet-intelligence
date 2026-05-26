@@ -108,6 +108,88 @@ function LiveMap() {
 
 </div>
         {/* MAP WRAPPER */}
+        <div className="absolute bottom-8 left-8 z-[700]">
+
+  <div className="backdrop-blur-2xl bg-black/50 border border-cyan-500/20 rounded-3xl p-6 shadow-[0_0_40px_rgba(34,211,238,0.15)]">
+
+    <div className="flex items-center gap-3 mb-6">
+
+      <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse"></div>
+
+      <span className="text-cyan-300 uppercase tracking-[0.3em] text-sm font-semibold">
+        Realtime Analytics
+      </span>
+
+    </div>
+
+    <div className="space-y-5 min-w-[280px]">
+
+      {/* CPU */}
+
+      <div>
+
+        <div className="flex justify-between mb-2 text-xs uppercase tracking-widest">
+
+          <span className="text-gray-400">AI Processing</span>
+
+          <span className="text-cyan-300">94%</span>
+
+        </div>
+
+        <div className="h-2 bg-white/10 rounded-full overflow-hidden">
+
+          <div className="h-full w-[94%] bg-gradient-to-r from-cyan-400 to-cyan-200 rounded-full animate-pulse"></div>
+
+        </div>
+
+      </div>
+
+      {/* SIGNAL */}
+
+      <div>
+
+        <div className="flex justify-between mb-2 text-xs uppercase tracking-widest">
+
+          <span className="text-gray-400">Satellite Signal</span>
+
+          <span className="text-green-400">99%</span>
+
+        </div>
+
+        <div className="h-2 bg-white/10 rounded-full overflow-hidden">
+
+          <div className="h-full w-[99%] bg-gradient-to-r from-green-400 to-emerald-300 rounded-full animate-pulse"></div>
+
+        </div>
+
+      </div>
+
+      {/* SECURITY */}
+
+      <div>
+
+        <div className="flex justify-between mb-2 text-xs uppercase tracking-widest">
+
+          <span className="text-gray-400">Network Security</span>
+
+          <span className="text-yellow-300">88%</span>
+
+        </div>
+
+        <div className="h-2 bg-white/10 rounded-full overflow-hidden">
+
+          <div className="h-full w-[88%] bg-gradient-to-r from-yellow-300 to-orange-300 rounded-full animate-pulse"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,211,238,0.08),transparent_70%)] z-[50] pointer-events-none"></div>
 <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/40 z-[100] pointer-events-none"></div>
         <div className="relative rounded-[32px] overflow-hidden border border-cyan-500/20 bg-black shadow-[0_0_100px_rgba(34,211,238,0.18)]">
   <div className="absolute top-8 right-8 z-[700]">
