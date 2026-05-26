@@ -9,24 +9,20 @@ function Navbar() {
         <div className="flex items-center gap-4">
 
           <img
-            src="/BDPH LOGO FINAL(3).png"
+            src="/logo.png"
             alt="BDPH Group"
-            className="h-14 w-auto object-contain"
+            className="h-12 w-auto object-contain"
           />
 
-          <div className="hidden md:block">
-
-            <h1 className="text-2xl font-bold text-white tracking-[0.3em]">
-              BDPH GROUP
-            </h1>
-
-          </div>
+          <h1 className="hidden md:block text-2xl font-bold text-white tracking-[0.25em]">
+            BDPH GROUP
+          </h1>
 
         </div>
 
         {/* MENU */}
 
-        <div className="hidden md:flex gap-10 uppercase text-sm tracking-[0.25em] font-semibold text-white">
+        <div className="hidden md:flex gap-10 uppercase text-sm tracking-[0.2em] font-semibold text-white">
 
           <a
             href="#home"
