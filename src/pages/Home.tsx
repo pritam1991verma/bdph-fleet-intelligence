@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Dashboard from "../components/Dashboard";
 import ControlPanel from "../components/ControlPanel";
+import LiveMap from "../components/LiveMap";
 
 import { motion } from "framer-motion";
 
@@ -59,7 +60,7 @@ function Home() {
 
           </div>
 
-          {/* ORBIT */}
+          {/* ORBIT UI */}
 
           <div className="mt-24 flex justify-center relative">
 
@@ -158,7 +159,7 @@ function Home() {
 
       </section>
 
-      {/* STATS */}
+      {/* DASHBOARD STATS */}
 
       <section className="py-24 px-6 bg-black">
 
@@ -219,7 +220,7 @@ function Home() {
 
       <Dashboard />
 
-      {/* DOCUMENTS */}
+      {/* SMART MONITORING */}
 
       <section className="py-24 px-6">
 
@@ -287,6 +288,8 @@ function Home() {
       </section>
 
       <ControlPanel />
+
+      <LiveMap />
 
       {/* FOOTER */}
 
