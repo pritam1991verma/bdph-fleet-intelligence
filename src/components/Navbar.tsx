@@ -2,19 +2,19 @@ function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full bg-black/70 backdrop-blur-md border-b border-cyan-500/20 z-50">
 
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-5">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-3">
 
         {/* LOGO */}
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-8">
 
           <img
             src="/logo.png"
             alt="BDPH Group"
-            className="h-24 w-auto object-contain"
+            className="h-16 w-auto object-contain"
           />
 
-          <h1 className="hidden md:block text-2xl font-bold text-white tracking-[0.25em]">
+          <h1 className="hidden md:block text-2xl font-bold text-white tracking-[0.18em]">
             BDPH GROUP
           </h1>
 
