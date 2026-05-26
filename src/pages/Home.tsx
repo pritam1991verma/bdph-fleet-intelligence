@@ -23,99 +23,158 @@ function Home() {
 
       {/* HERO SECTION */}
 
-      <section
-        id="home"
-        className="relative flex flex-col items-center justify-center min-h-screen text-center px-6 overflow-hidden"
+<section
+  id="home"
+  className="relative flex flex-col items-center justify-center min-h-screen text-center px-6 overflow-hidden"
+>
+
+  {/* BACKGROUND EFFECTS */}
+
+  <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/10 via-transparent to-black"></div>
+
+  <div className="absolute inset-0 opacity-20">
+
+    <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500 rounded-full blur-[140px]"></div>
+
+    <div className="absolute bottom-20 right-20 w-72 h-72 bg-blue-500 rounded-full blur-[140px]"></div>
+
+    <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-400 rounded-full blur-[180px] -translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+
+  </div>
+
+  {/* FLOATING STATS */}
+
+  <div className="absolute top-[25%] left-10 hidden xl:block z-20">
+
+    <motion.div
+      animate={{ y: [0, -12, 0] }}
+      transition={{
+        repeat: Infinity,
+        duration: 4,
+      }}
+      className="bg-[#08111f]/80 backdrop-blur-xl border border-cyan-500/20 rounded-3xl p-6 w-64 shadow-2xl"
+    >
+
+      <div className="text-gray-400 text-sm mb-2">
+        Active Vehicles
+      </div>
+
+      <div className="text-5xl font-bold text-cyan-400">
+        128
+      </div>
+
+      <div className="mt-4 text-green-400 text-sm">
+        ▲ 12% realtime increase
+      </div>
+
+    </motion.div>
+
+  </div>
+
+  <div className="absolute top-[45%] right-10 hidden xl:block z-20">
+
+    <motion.div
+      animate={{ y: [0, 12, 0] }}
+      transition={{
+        repeat: Infinity,
+        duration: 5,
+      }}
+      className="bg-[#08111f]/80 backdrop-blur-xl border border-cyan-500/20 rounded-3xl p-6 w-64 shadow-2xl"
+    >
+
+      <div className="text-gray-400 text-sm mb-2">
+        AI Monitoring Status
+      </div>
+
+      <div className="text-4xl font-bold text-cyan-400">
+        99.9%
+      </div>
+
+      <div className="mt-4 text-cyan-300 text-sm">
+        System uptime stable
+      </div>
+
+    </motion.div>
+
+  </div>
+
+  {/* MAIN HERO */}
+
+  <motion.div
+    initial={{ opacity: 0, y: 60 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+    className="relative z-10"
+  >
+
+    <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+
+      FUTURE OF
+      <span className="text-cyan-400"> AI ENTERPRISE </span>
+      INTELLIGENCE
+
+    </h1>
+
+    <p className="text-gray-400 text-xl max-w-3xl mx-auto mb-10">
+
+      Advanced GPS tracking, fleet monitoring, realtime analytics,
+      AI-powered enterprise automation and intelligent cloud systems.
+
+    </p>
+
+    <div className="flex flex-wrap justify-center gap-6">
+
+      <button className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-4 rounded-2xl transition">
+        Explore Platform
+      </button>
+
+      <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-2xl hover:bg-cyan-500 hover:text-black transition">
+        Live Dashboard
+      </button>
+
+    </div>
+
+    {/* ORBIT UI */}
+
+    <div className="mt-24 flex justify-center relative">
+
+      <div className="absolute w-[500px] h-[500px] rounded-full border border-cyan-500/10 animate-ping"></div>
+
+      <div className="absolute w-[400px] h-[400px] rounded-full border border-cyan-500/20 animate-pulse"></div>
+
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{
+          repeat: Infinity,
+          duration: 20,
+          ease: "linear",
+        }}
+        className="relative w-[300px] h-[300px] border border-cyan-500/30 rounded-full flex items-center justify-center"
       >
 
-        <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/10 via-transparent to-black"></div>
+        <div className="absolute w-[200px] h-[200px] border border-cyan-500/20 rounded-full"></div>
 
-<div className="absolute inset-0 opacity-20">
+        <div className="absolute w-[120px] h-[120px] border border-cyan-500/20 rounded-full"></div>
 
-  <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500 rounded-full blur-[140px]"></div>
+        <div className="w-10 h-10 bg-cyan-400 rounded-full shadow-[0_0_40px_rgba(34,211,238,0.9)]"></div>
 
-  <div className="absolute bottom-20 right-20 w-72 h-72 bg-blue-500 rounded-full blur-[140px]"></div>
+        <div className="absolute left-0 top-10 text-cyan-400 text-xs flex gap-2 items-center">
+          <Satellite size={14} />
+          LIVE SATELLITE
+        </div>
 
-  <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-400 rounded-full blur-[180px] -translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+        <div className="absolute bottom-6 right-6 text-purple-400 text-xs flex gap-2 items-center">
+          <Radar size={14} />
+          SCANNING
+        </div>
 
-</div>
+      </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="relative z-10"
-        >
+    </div>
 
-          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+  </motion.div>
 
-            FUTURE OF
-            <span className="text-cyan-400"> AI ENTERPRISE </span>
-            INTELLIGENCE
-
-          </h1>
-
-          <p className="text-gray-400 text-xl max-w-3xl mx-auto mb-10">
-
-            Advanced GPS tracking, fleet monitoring, realtime analytics,
-            AI-powered enterprise automation and intelligent cloud systems.
-
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-6">
-
-            <button className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-4 rounded-2xl transition">
-              Explore Platform
-            </button>
-
-            <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-2xl hover:bg-cyan-500 hover:text-black transition">
-              Live Dashboard
-            </button>
-
-          </div>
-
-          {/* ORBIT UI */}
-
-          <div className="mt-24 flex justify-center relative">
-
-            <div className="absolute w-[500px] h-[500px] rounded-full border border-cyan-500/10 animate-ping"></div>
-
-            <div className="absolute w-[400px] h-[400px] rounded-full border border-cyan-500/20 animate-pulse"></div>
-
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{
-                repeat: Infinity,
-                duration: 20,
-                ease: "linear",
-              }}
-              className="relative w-[300px] h-[300px] border border-cyan-500/30 rounded-full flex items-center justify-center"
-            >
-
-              <div className="absolute w-[200px] h-[200px] border border-cyan-500/20 rounded-full"></div>
-
-              <div className="absolute w-[120px] h-[120px] border border-cyan-500/20 rounded-full"></div>
-
-              <div className="w-10 h-10 bg-cyan-400 rounded-full shadow-[0_0_40px_rgba(34,211,238,0.9)]"></div>
-
-              <div className="absolute left-0 top-10 text-cyan-400 text-xs flex gap-2 items-center">
-                <Satellite size={14} />
-                LIVE SATELLITE
-              </div>
-
-              <div className="absolute bottom-6 right-6 text-purple-400 text-xs flex gap-2 items-center">
-                <Radar size={14} />
-                SCANNING
-              </div>
-
-            </motion.div>
-
-          </div>
-
-        </motion.div>
-
-      </section>
-
+</section>
       {/* SERVICES */}
 
       <section id="services" className="py-24 px-6">
