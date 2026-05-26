@@ -22,7 +22,10 @@ function Home() {
 
       {/* HERO SECTION */}
 
-      <section className="relative flex flex-col items-center justify-center min-h-screen text-center px-6 overflow-hidden">
+      <section
+        id="home"
+        className="relative flex flex-col items-center justify-center min-h-screen text-center px-6 overflow-hidden"
+      >
 
         <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/10 to-transparent"></div>
 
@@ -159,7 +162,7 @@ function Home() {
 
       </section>
 
-      {/* DASHBOARD STATS */}
+      {/* DASHBOARD */}
 
       <section id="dashboard" className="py-24 px-6 bg-black">
 
@@ -220,7 +223,7 @@ function Home() {
 
       <Dashboard />
 
-      {/* SMART MONITORING */}
+      {/* ANALYTICS */}
 
       <section id="analytics" className="py-24 px-6">
 
@@ -291,9 +294,34 @@ function Home() {
 
       <LiveMap />
 
+      {/* ABOUT */}
+
+      <section id="about" className="py-24 px-6 bg-[#020617]">
+
+        <div className="max-w-5xl mx-auto text-center">
+
+          <h2 className="text-5xl font-bold text-cyan-400 mb-8">
+            About BDPH Group
+          </h2>
+
+          <p className="text-gray-400 text-xl leading-relaxed">
+
+            BDPH Group is an AI-driven enterprise technology company delivering
+            advanced GPS intelligence, realtime fleet monitoring,
+            predictive analytics and intelligent automation solutions.
+
+          </p>
+
+        </div>
+
+      </section>
+
       {/* FOOTER */}
 
-      <footer className="py-10 border-t border-cyan-500/10 text-center text-gray-500">
+      <footer
+        id="contact"
+        className="py-10 border-t border-cyan-500/10 text-center text-gray-500"
+      >
 
         © 2026 BDPH ENTERPRISE — AI Fleet Intelligence Platform
 
