@@ -92,10 +92,39 @@ function LiveMap() {
             intelligence.
           </p>
         </div>
+<div className="mb-8 overflow-hidden rounded-2xl border border-cyan-500/20 bg-black/40 backdrop-blur-xl">
 
+  <div className="animate-[ticker_25s_linear_infinite] whitespace-nowrap py-4 text-sm uppercase tracking-[0.35em] text-cyan-300">
+
+    AI MONITORING ACTIVE •
+    SATELLITE LINK STABLE •
+    BDPH-2044 FUEL ALERT DETECTED •
+    LIVE GPS TRACKING ENABLED •
+    ROUTE AI OPTIMIZATION ACTIVE •
+    SECURITY NETWORK ONLINE •
+    GLOBAL TELEMETRY CONNECTED •
+
+  </div>
+
+</div>
         {/* MAP WRAPPER */}
-
+<div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/40 z-[100] pointer-events-none"></div>
         <div className="relative rounded-[32px] overflow-hidden border border-cyan-500/20 bg-black shadow-[0_0_100px_rgba(34,211,238,0.18)]">
+  <div className="absolute top-8 right-8 z-[700]">
+
+  <div className="relative flex items-center justify-center">
+
+    <div className="absolute w-24 h-24 rounded-full border border-cyan-400/20 animate-ping"></div>
+
+    <div className="w-24 h-24 rounded-full border border-cyan-400/40 bg-black/40 backdrop-blur-xl"></div>
+
+    <span className="absolute text-cyan-300 text-xs tracking-[0.3em]">
+      SAT-LINK
+    </span>
+
+  </div>
+
+</div>
           {/* CYBER GRID */}
 
           <div className="absolute inset-0 cyber-grid opacity-20 z-[200] pointer-events-none"></div>
