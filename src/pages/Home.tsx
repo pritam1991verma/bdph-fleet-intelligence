@@ -41,13 +41,13 @@ function Home() {
 
     <div
       onMouseMove={handleMouseMove}
-      className="min-h-screen bg-[#030712] text-white overflow-x-hidden grid-bg relative"
+      className="min-h-screen w-full bg-[#030712] text-white overflow-x-hidden grid-bg relative"
     >
 
       {/* MOUSE GLOW */}
 
       <motion.div
-        className="pointer-events-none fixed top-0 left-0 w-[400px] h-[400px] rounded-full bg-cyan-500/10 blur-[120px] z-0"
+        className="pointer-events-none fixed top-0 left-0 w-[300px] h-[300px] rounded-full bg-cyan-500/10 blur-[120px] z-0"
         style={{
           x: smoothX,
           y: smoothY,
