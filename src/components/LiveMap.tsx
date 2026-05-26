@@ -77,7 +77,7 @@ function LiveMap() {
 
           <MapContainer
             center={[22.8046, 86.2029]}
-            zoom={13}
+            zoom={11}
             scrollWheelZoom={true}
             className="h-[750px] w-full z-0"
           >
@@ -88,150 +88,127 @@ function LiveMap() {
               attribution='&copy; Esri'
               url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
             />
+{/* VEHICLE NETWORK */}
 
-            {/* VEHICLE 1 */}
+<Marker position={[22.8046, 86.2029]} icon={greenIcon}>
+  <Popup>BDPH-1021 • ACTIVE</Popup>
+</Marker>
 
-            <Marker position={[22.8046, 86.2029]} icon={greenIcon}>
-              <Popup>
-                <div className="text-black">
+<Marker position={[22.8246, 86.1829]} icon={redIcon}>
+  <Popup>BDPH-2044 • FUEL ALERT</Popup>
+</Marker>
 
-                  <strong>BDPH-1021</strong>
+<Marker position={[22.7846, 86.2229]} icon={yellowIcon}>
+  <Popup>BDPH-3301 • BATTERY WARNING</Popup>
+</Marker>
 
-                  <br />
+<Marker position={[22.8121, 86.2511]} icon={greenIcon}>
+  <Popup>BDPH-4410 • ROUTE ACTIVE</Popup>
+</Marker>
 
-                  Status: ACTIVE
+<Marker position={[22.7721, 86.1911]} icon={greenIcon}>
+  <Popup>BDPH-5502 • DELIVERY ACTIVE</Popup>
+</Marker>
 
-                  <br />
+<Marker position={[22.8421, 86.2311]} icon={redIcon}>
+  <Popup>BDPH-6619 • ENGINE ALERT</Popup>
+</Marker>
 
-                  Speed: 62 km/h
+<Marker position={[22.7921, 86.2711]} icon={yellowIcon}>
+  <Popup>BDPH-7720 • LOW BATTERY</Popup>
+</Marker>
 
-                  <br />
+<Marker position={[22.7521, 86.2411]} icon={greenIcon}>
+  <Popup>BDPH-8101 • ACTIVE</Popup>
+</Marker>
 
-                  Fuel: 78%
+<Marker position={[22.8621, 86.1711]} icon={greenIcon}>
+  <Popup>BDPH-9104 • RUNNING</Popup>
+</Marker>
 
-                </div>
-              </Popup>
-            </Marker>
+<Marker position={[22.8721, 86.2811]} icon={yellowIcon}>
+  <Popup>BDPH-1130 • MONITORING</Popup>
+</Marker>
 
-            {/* VEHICLE 2 */}
+<Marker position={[22.7421, 86.1411]} icon={greenIcon}>
+  <Popup>BDPH-1208 • ACTIVE</Popup>
+</Marker>
 
-            <Marker position={[22.8246, 86.1829]} icon={redIcon}>
-              <Popup>
-                <div className="text-black">
+<Marker position={[22.7221, 86.3011]} icon={redIcon}>
+  <Popup>BDPH-1304 • SOS ALERT</Popup>
+</Marker>
 
-                  <strong>BDPH-2044</strong>
+<Marker position={[22.8921, 86.2111]} icon={greenIcon}>
+  <Popup>BDPH-1420 • ONLINE</Popup>
+</Marker>
 
-                  <br />
+<Marker position={[22.9121, 86.2411]} icon={yellowIcon}>
+  <Popup>BDPH-1520 • BATTERY CHECK</Popup>
+</Marker>
 
-                  Fuel Alert Detected
+<Marker position={[22.6921, 86.2611]} icon={greenIcon}>
+  <Popup>BDPH-1601 • DELIVERY ACTIVE</Popup>
+</Marker>
 
-                  <br />
+<Marker position={[22.6621, 86.2211]} icon={greenIcon}>
+  <Popup>BDPH-1722 • ACTIVE</Popup>
+</Marker>
 
-                  Fuel Remaining: 21%
+<Marker position={[22.6521, 86.1611]} icon={redIcon}>
+  <Popup>BDPH-1820 • FUEL CRITICAL</Popup>
+</Marker>
 
-                </div>
-              </Popup>
-            </Marker>
+<Marker position={[22.9421, 86.1911]} icon={greenIcon}>
+  <Popup>BDPH-1930 • TRACKING LIVE</Popup>
+</Marker>
 
-            {/* VEHICLE 3 */}
+<Marker position={[22.9521, 86.2911]} icon={yellowIcon}>
+  <Popup>BDPH-2001 • OBSERVATION</Popup>
+</Marker>
 
-            <Marker position={[22.7846, 86.2229]} icon={yellowIcon}>
-              <Popup>
-                <div className="text-black">
+<Marker position={[22.9821, 86.3211]} icon={greenIcon}>
+  <Popup>BDPH-2109 • ACTIVE</Popup>
+</Marker>
 
-                  <strong>BDPH-3301</strong>
+<Marker position={[22.6321, 86.1111]} icon={greenIcon}>
+  <Popup>BDPH-2210 • ONLINE</Popup>
+</Marker>
 
-                  <br />
+<Marker position={[22.6121, 86.3411]} icon={redIcon}>
+  <Popup>BDPH-2301 • SECURITY ALERT</Popup>
+</Marker>
 
-                  Battery Warning
+<Marker position={[22.9921, 86.1411]} icon={greenIcon}>
+  <Popup>BDPH-2411 • ACTIVE</Popup>
+</Marker>
 
-                  <br />
+<Marker position={[22.7021, 86.3611]} icon={yellowIcon}>
+  <Popup>BDPH-2511 • LOW VOLTAGE</Popup>
+</Marker>
 
-                  Battery: 43%
+<Marker position={[22.7421, 86.4011]} icon={greenIcon}>
+  <Popup>BDPH-2604 • MOVING</Popup>
+</Marker>
 
-                </div>
-              </Popup>
-            </Marker>
+<Marker position={[22.8321, 86.3911]} icon={greenIcon}>
+  <Popup>BDPH-2710 • RUNNING</Popup>
+</Marker>
 
-            {/* VEHICLE 4 */}
+<Marker position={[22.9221, 86.3711]} icon={redIcon}>
+  <Popup>BDPH-2811 • GPS SIGNAL LOST</Popup>
+</Marker>
 
-            <Marker position={[22.8121, 86.2511]} icon={greenIcon}>
-              <Popup>
-                <div className="text-black">
+<Marker position={[22.5621, 86.1811]} icon={greenIcon}>
+  <Popup>BDPH-2910 • ACTIVE</Popup>
+</Marker>
 
-                  <strong>BDPH-4410</strong>
+<Marker position={[22.5421, 86.2911]} icon={yellowIcon}>
+  <Popup>BDPH-3011 • CHECK REQUIRED</Popup>
+</Marker>
 
-                  <br />
-
-                  Route Optimized
-
-                  <br />
-
-                  ETA: 14 mins
-
-                </div>
-              </Popup>
-            </Marker>
-
-            {/* VEHICLE 5 */}
-
-            <Marker position={[22.7721, 86.1911]} icon={greenIcon}>
-              <Popup>
-                <div className="text-black">
-
-                  <strong>BDPH-5502</strong>
-
-                  <br />
-
-                  Delivery Running
-
-                  <br />
-
-                  Speed: 48 km/h
-
-                </div>
-              </Popup>
-            </Marker>
-
-            {/* VEHICLE 6 */}
-
-            <Marker position={[22.8421, 86.2311]} icon={redIcon}>
-              <Popup>
-                <div className="text-black">
-
-                  <strong>BDPH-6619</strong>
-
-                  <br />
-
-                  Emergency Alert
-
-                  <br />
-
-                  Engine Temperature High
-
-                </div>
-              </Popup>
-            </Marker>
-
-            {/* VEHICLE 7 */}
-
-            <Marker position={[22.7921, 86.2711]} icon={yellowIcon}>
-              <Popup>
-                <div className="text-black">
-
-                  <strong>BDPH-7720</strong>
-
-                  <br />
-
-                  Battery Under Observation
-
-                  <br />
-
-                  Voltage Fluctuation
-
-                </div>
-              </Popup>
-            </Marker>
+<Marker position={[22.5221, 86.3511]} icon={greenIcon}>
+  <Popup>BDPH-3110 • LIVE TRACKING</Popup>
+</Marker>
 
             {/* LIVE ZONES */}
 
