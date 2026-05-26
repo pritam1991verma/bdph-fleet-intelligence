@@ -1,148 +1,434 @@
-function AnalyticsCharts() {
-  return (
-    <section className="py-24 px-6 bg-[#020617]">
+import AnalyticsCharts from "../components/AnalyticsCharts";import Navbar from "../components/Navbar";import Dashboard from "../components/Dashboard";import ControlPanel from "../components/ControlPanel";import LiveMap from "../components/LiveMap";
 
-      <div className="max-w-7xl mx-auto">
+import { motion } from "framer-motion";
 
-        <div className="text-center mb-20">
+import {Satellite,Radar,BatteryCharging,ShieldCheck,Map,FileWarning,} from "lucide-react";
 
-          <h2 className="text-5xl font-bold text-cyan-400 mb-6">
-            AI Analytics Intelligence
-          </h2>
+function Home() {return (
 
-          <p className="text-gray-400 text-xl">
-            Enterprise realtime monitoring and predictive analytics.
-          </p>
+  <Navbar />
 
-        </div>
+  {/* HERO SECTION */}
 
-        <div className="grid lg:grid-cols-2 gap-10">
+  <section
+    id="home"
+    className="relative flex flex-col items-center justify-center min-h-screen text-center px-6 overflow-hidden"
+  >
 
-          {/* FUEL */}
+    <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/10 to-transparent"></div>
 
-          <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8">
+    <motion.div
+      initial={{ opacity: 0, y: 60 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="relative z-10"
+    >
 
-            <h3 className="text-2xl font-bold text-cyan-400 mb-10">
-              Fuel Analytics
-            </h3>
+      <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
 
-            <div className="space-y-6">
+        FUTURE OF
+        <span className="text-cyan-400"> AI ENTERPRISE </span>
+        INTELLIGENCE
 
-              {[
-                { day: "Monday", value: "78%" },
-                { day: "Tuesday", value: "64%" },
-                { day: "Wednesday", value: "88%" },
-                { day: "Thursday", value: "71%" },
-                { day: "Friday", value: "93%" },
-              ].map((item, index) => (
+      </h1>
 
-                <div key={index}>
+      <p className="text-gray-400 text-xl max-w-3xl mx-auto mb-10">
 
-                  <div className="flex justify-between mb-2 text-gray-300">
+        Advanced GPS tracking, fleet monitoring, realtime analytics,
+        AI-powered enterprise automation and intelligent cloud systems.
 
-                    <span>{item.day}</span>
+      </p>
 
-                    <span>{item.value}</span>
+      <div className="flex flex-wrap justify-center gap-6">
 
-                  </div>
+        <button className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-4 rounded-2xl transition">
+          Explore Platform
+        </button>
 
-                  <div className="w-full h-4 bg-[#020617] rounded-full overflow-hidden">
-
-                    <div
-                      className="h-full bg-cyan-400 rounded-full"
-                      style={{ width: item.value }}
-                    ></div>
-
-                  </div>
-
-                </div>
-
-              ))}
-
-            </div>
-
-          </div>
-
-          {/* VEHICLE */}
-
-          <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8">
-
-            <h3 className="text-2xl font-bold text-cyan-400 mb-10">
-              Vehicle Activity
-            </h3>
-
-            <div className="flex items-end justify-between h-[300px] gap-4">
-
-              {[40, 80, 65, 95, 55, 100, 72].map((height, index) => (
-
-                <div
-                  key={index}
-                  className="flex-1 bg-cyan-400 rounded-t-2xl hover:bg-cyan-300 transition"
-                  style={{ height: `${height}%` }}
-                ></div>
-
-              ))}
-
-            </div>
-
-          </div>
-
-          {/* BATTERY */}
-
-          <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8 lg:col-span-2">
-
-            <h3 className="text-2xl font-bold text-cyan-400 mb-10">
-              Battery Intelligence
-            </h3>
-
-            <div className="grid md:grid-cols-4 gap-8">
-
-              {[
-                {
-                  fleet: "Fleet A",
-                  health: "94%",
-                },
-                {
-                  fleet: "Fleet B",
-                  health: "81%",
-                },
-                {
-                  fleet: "Fleet C",
-                  health: "72%",
-                },
-                {
-                  fleet: "Fleet D",
-                  health: "88%",
-                },
-              ].map((item, index) => (
-
-                <div
-                  key={index}
-                  className="bg-[#020617] rounded-3xl p-8 border border-cyan-500/10 text-center"
-                >
-
-                  <div className="text-gray-400 mb-4">
-                    {item.fleet}
-                  </div>
-
-                  <div className="text-5xl font-bold text-cyan-400">
-                    {item.health}
-                  </div>
-
-                </div>
-
-              ))}
-
-            </div>
-
-          </div>
-
-        </div>
+        <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-2xl hover:bg-cyan-500 hover:text-black transition">
+          Live Dashboard
+        </button>
 
       </div>
 
-    </section>
-  );
-}
+      {/* ORBIT UI */}
 
-export default AnalyticsCharts;
+      <div className="mt-24 flex justify-center relative">
+
+        <div className="absolute w-[500px] h-[500px] rounded-full border border-cyan-500/10 animate-ping"></div>
+
+        <div className="absolute w-[400px] h-[400px] rounded-full border border-cyan-500/20 animate-pulse"></div>
+
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{
+            repeat: Infinity,
+            duration: 20,
+            ease: "linear",
+          }}
+          className="relative w-[300px] h-[300px] border border-cyan-500/30 rounded-full flex items-center justify-center"
+        >
+
+          <div className="absolute w-[200px] h-[200px] border border-cyan-500/20 rounded-full"></div>
+
+          <div className="absolute w-[120px] h-[120px] border border-cyan-500/20 rounded-full"></div>
+
+          <div className="w-10 h-10 bg-cyan-400 rounded-full shadow-[0_0_40px_rgba(34,211,238,0.9)]"></div>
+
+          <div className="absolute left-0 top-10 text-cyan-400 text-xs flex gap-2 items-center">
+            <Satellite size={14} />
+            LIVE SATELLITE
+          </div>
+
+          <div className="absolute bottom-6 right-6 text-purple-400 text-xs flex gap-2 items-center">
+            <Radar size={14} />
+            SCANNING
+          </div>
+
+        </motion.div>
+
+      </div>
+
+    </motion.div>
+
+  </section>
+
+  {/* SERVICES */}
+
+  <section id="services" className="py-24 px-6">
+
+    <div className="max-w-7xl mx-auto">
+
+      <div className="text-center mb-20">
+
+        <h2 className="text-5xl font-bold text-cyan-400 mb-4">
+          Enterprise Services
+        </h2>
+
+        <p className="text-gray-400 text-lg">
+          Intelligent enterprise monitoring systems.
+        </p>
+
+      </div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        {[
+          "GPS Vehicle Tracking",
+          "Fuel Monitoring",
+          "Battery Intelligence",
+          "Realtime Dashboard",
+          "Cloud Monitoring",
+          "AI Automation",
+        ].map((service, index) => (
+
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.05 }}
+            className="bg-[#0b1120] border border-cyan-500/20 rounded-3xl p-8 hover:border-cyan-400 transition"
+          >
+
+            <div className="w-16 h-16 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center mb-6 text-cyan-400 text-2xl">
+              ⚡
+            </div>
+
+            <h3 className="text-2xl font-bold text-cyan-400 mb-4">
+              {service}
+            </h3>
+
+            <p className="text-gray-400">
+              Enterprise-grade realtime analytics and monitoring systems.
+            </p>
+
+          </motion.div>
+
+        ))}
+
+      </div>
+
+    </div>
+
+  </section>
+
+  {/* DASHBOARD */}
+
+  <section id="dashboard" className="py-24 px-6 bg-black">
+
+    <div className="max-w-7xl mx-auto">
+
+      <div className="text-center mb-16">
+
+        <h2 className="text-5xl font-bold text-cyan-400 mb-4">
+          Live Monitoring Dashboard
+        </h2>
+
+        <p className="text-gray-400">
+          Enterprise realtime intelligence systems.
+        </p>
+
+      </div>
+
+      <div className="grid lg:grid-cols-3 gap-8">
+
+        {[
+          {
+            title: "Active Vehicles",
+            value: "128",
+          },
+          {
+            title: "Fuel Efficiency",
+            value: "94%",
+          },
+          {
+            title: "System Uptime",
+            value: "99.9%",
+          },
+        ].map((card, index) => (
+
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.03 }}
+            className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-10"
+          >
+
+            <div className="text-gray-400 mb-4">
+              {card.title}
+            </div>
+
+            <div className="text-5xl font-bold text-cyan-400">
+              {card.value}
+            </div>
+
+          </motion.div>
+
+        ))}
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <Dashboard />
+
+  {/* ANALYTICS */}
+
+  <section id="analytics" className="py-24 px-6">
+
+    <div className="max-w-7xl mx-auto">
+
+      <div className="text-center mb-20">
+
+        <h2 className="text-5xl font-bold text-cyan-400 mb-4">
+          Smart Monitoring System
+        </h2>
+
+      </div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        {[
+          {
+            title: "Pollution",
+            status: "12 Expiring",
+            icon: <FileWarning size={36} />,
+          },
+          {
+            title: "Insurance",
+            status: "48 Active",
+            icon: <ShieldCheck size={36} />,
+          },
+          {
+            title: "Battery",
+            status: "Realtime AI",
+            icon: <BatteryCharging size={36} />,
+          },
+          {
+            title: "GPS Maps",
+            status: "Live Tracking",
+            icon: <Map size={36} />,
+          },
+        ].map((item, index) => (
+
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.05 }}
+            className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8 hover:border-cyan-400 transition"
+          >
+
+            <div className="text-cyan-400 mb-6">
+              {item.icon}
+            </div>
+
+            <h3 className="text-2xl font-bold text-cyan-400 mb-4">
+              {item.title}
+            </h3>
+
+            <div className="text-xl text-gray-300">
+              {item.status}
+            </div>
+
+          </motion.div>
+
+        ))}
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <ControlPanel />
+  <AnalyticsCharts />
+
+  <LiveMap />
+
+  {/* ABOUT */}
+
+  <section id="about" className="py-24 px-6 bg-[#020617]">
+
+    <div className="max-w-5xl mx-auto text-center">
+
+      <h2 className="text-5xl font-bold text-cyan-400 mb-8">
+        About BDPH Group
+      </h2>
+
+      <p className="text-gray-400 text-xl leading-relaxed">
+
+        BDPH Group is an AI-driven enterprise technology company delivering
+        advanced GPS intelligence, realtime fleet monitoring,
+        predictive analytics and intelligent automation solutions.
+
+      </p>
+
+    </div>
+
+  </section>
+
+  {/* FOOTER */}
+
+  {/* CONTACT SECTION */}
+
+<div className="text-center mb-20">
+
+  <h2 className="text-5xl font-bold text-cyan-400 mb-6">
+    Contact BDPH Group
+  </h2>
+
+  <p className="text-gray-400 text-xl">
+    Enterprise AI Solutions & Fleet Intelligence Platform
+  </p>
+
+</div>
+
+<div className="grid lg:grid-cols-2 gap-12">
+
+  {/* LEFT */}
+
+  <div className="space-y-8">
+
+    <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8">
+
+      <h3 className="text-3xl font-bold text-cyan-400 mb-6">
+        Corporate Office
+      </h3>
+
+      <div className="space-y-4 text-gray-300 text-lg">
+
+        <p>
+          📍 Bhagalpur, Bihar, India
+        </p>
+
+        <p>
+          📞 +91 9122221684
+        </p>
+
+        <p>
+          ✉️ info@bdphgroup.com
+        </p>
+
+        <p>
+          🌐 www.bdphgroup.com
+        </p>
+
+      </div>
+
+    </div>
+
+    <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8">
+
+      <h3 className="text-3xl font-bold text-cyan-400 mb-6">
+        Business Hours
+      </h3>
+
+      <div className="space-y-3 text-gray-300">
+
+        <p>Monday - Saturday : 9:00 AM - 6:00 PM</p>
+
+        <p>Sunday : Closed</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  {/* RIGHT */}
+
+  <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-10">
+
+    <h3 className="text-3xl font-bold text-cyan-400 mb-8">
+      Send Enquiry
+    </h3>
+
+    <div className="space-y-6">
+
+      <input
+        type="text"
+        placeholder="Full Name"
+        className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-4 outline-none focus:border-cyan-400"
+      />
+
+      <input
+        type="email"
+        placeholder="Email Address"
+        className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-4 outline-none focus:border-cyan-400"
+      />
+
+      <input
+        type="text"
+        placeholder="Phone Number"
+        className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-4 outline-none focus:border-cyan-400"
+      />
+
+      <textarea
+        rows={5}
+        placeholder="Your Message"
+        className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-4 outline-none focus:border-cyan-400"
+      />
+
+      <button className="w-full bg-cyan-500 hover:bg-cyan-400 text-black font-bold py-4 rounded-2xl transition">
+
+        Submit Enquiry
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+{/* FOOTER */}
+
+<div className="mt-20 pt-10 border-t border-cyan-500/10 text-center text-gray-500">
+
+  © 2026 BDPH GROUP — AI Fleet Intelligence Platform
+
+</div>
+
+</div>
+
+);}
+
+export default Home;
