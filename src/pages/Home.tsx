@@ -318,14 +318,136 @@ function Home() {
 
       {/* FOOTER */}
 
-      <footer
-        id="contact"
-        className="py-10 border-t border-cyan-500/10 text-center text-gray-500"
-      >
+      {/* CONTACT SECTION */}
 
-        © 2026 BDPH ENTERPRISE — AI Fleet Intelligence Platform
+<section
+  id="contact"
+  className="py-24 px-6 bg-black border-t border-cyan-500/10"
+>
 
-      </footer>
+  <div className="max-w-7xl mx-auto">
+
+    <div className="text-center mb-20">
+
+      <h2 className="text-5xl font-bold text-cyan-400 mb-6">
+        Contact BDPH Group
+      </h2>
+
+      <p className="text-gray-400 text-xl">
+        Enterprise AI Solutions & Fleet Intelligence Platform
+      </p>
+
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-12">
+
+      {/* LEFT */}
+
+      <div className="space-y-8">
+
+        <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8">
+
+          <h3 className="text-3xl font-bold text-cyan-400 mb-6">
+            Corporate Office
+          </h3>
+
+          <div className="space-y-4 text-gray-300 text-lg">
+
+            <p>
+              📍 Jamshedpur, Jharkhand, India
+            </p>
+
+            <p>
+              📞 +91 9122221684
+            </p>
+
+            <p>
+              ✉️ info@bdphgroup.com
+            </p>
+
+            <p>
+              🌐 www.bdphgroup.com
+            </p>
+
+          </div>
+
+        </div>
+
+        <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8">
+
+          <h3 className="text-3xl font-bold text-cyan-400 mb-6">
+            Business Hours
+          </h3>
+
+          <div className="space-y-3 text-gray-300">
+
+            <p>Monday - Saturday : 9:00 AM - 6:00 PM</p>
+
+            <p>Sunday : Closed</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* RIGHT */}
+
+      <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-10">
+
+        <h3 className="text-3xl font-bold text-cyan-400 mb-8">
+          Send Enquiry
+        </h3>
+
+        <div className="space-y-6">
+
+          <input
+            type="text"
+            placeholder="Full Name"
+            className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-4 outline-none focus:border-cyan-400"
+          />
+
+          <input
+            type="email"
+            placeholder="Email Address"
+            className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-4 outline-none focus:border-cyan-400"
+          />
+
+          <input
+            type="text"
+            placeholder="Phone Number"
+            className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-4 outline-none focus:border-cyan-400"
+          />
+
+          <textarea
+            rows={5}
+            placeholder="Your Message"
+            className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-4 outline-none focus:border-cyan-400"
+          />
+
+          <button className="w-full bg-cyan-500 hover:bg-cyan-400 text-black font-bold py-4 rounded-2xl transition">
+
+            Submit Enquiry
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    {/* FOOTER */}
+
+    <div className="mt-20 pt-10 border-t border-cyan-500/10 text-center text-gray-500">
+
+      © 2026 BDPH GROUP — AI Fleet Intelligence Platform
+
+    </div>
+
+  </div>
+
+</section>
 
     </div>
   );
