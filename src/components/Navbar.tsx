@@ -6,9 +6,23 @@ function Navbar() {
 
         {/* LOGO */}
 
-        <h1 className="text-3xl font-bold text-cyan-400 tracking-[0.3em]">
-          BDPH GROUP
-        </h1>
+        <div className="flex items-center gap-4">
+
+          <img
+            src="/BDPH LOGO FINAL(3).png"
+            alt="BDPH Group"
+            className="h-14 w-auto object-contain"
+          />
+
+          <div className="hidden md:block">
+
+            <h1 className="text-2xl font-bold text-white tracking-[0.3em]">
+              BDPH GROUP
+            </h1>
+
+          </div>
+
+        </div>
 
         {/* MENU */}
 
