@@ -27,7 +27,10 @@ function Home() {
     mouseY.set(e.clientY - 200);
   };
   return (
-    <div className="min-h-screen bg-[#030712] text-white overflow-x-hidden grid-bg">
+<div
+  onMouseMove={handleMouseMove}
+  className="min-h-screen bg-[#030712] text-white overflow-x-hidden grid-bg relative"
+>
 
       <Navbar />
       {/* LIVE STATUS BAR */}
