@@ -48,20 +48,19 @@ function Navbar() {
           <a
             href="#tracking"
             className="hover:text-cyan-400 transition duration-300"
-          
+           >
+            Live Tracking
+          </a>
+
+          <a
+            href="#analytics"
+            className="hover:text-cyan-400 transition duration-300"
           >
             Analytics
           </a>
 
           <a
             href="#about"
-            className="hover:text-cyan-400 transition duration-300"
-            >
-            Live Tracking
-          </a>
-
-          <a
-            href="#analytics"
             className="hover:text-cyan-400 transition duration-300"
           >
             About
