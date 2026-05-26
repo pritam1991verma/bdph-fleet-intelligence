@@ -16,42 +16,30 @@ import "leaflet/dist/leaflet.css";
 /* =========================
    CUSTOM CYBER ICONS
 ========================= */
-
 const greenIcon = divIcon({
   className: "",
   html: `
-    <div class="relative flex items-center justify-center">
-      <div class="absolute w-14 h-14 rounded-full border border-green-400/40 animate-ping"></div>
-      <div class="absolute w-10 h-10 rounded-full border border-green-400/20 animate-pulse"></div>
-      <div class="relative w-5 h-5 bg-green-400 border-2 border-white rounded-full shadow-[0_0_25px_rgba(74,222,128,1)]"></div>
-    </div>
-  ,
-  iconSize: [40, 40],
+    <div style="width:16px;height:16px;background:#22c55e;border:2px solid white;border-radius:9999px;box-shadow:0 0 20px #22c55e;"></div>
+  `,
+  iconSize: [16, 16],
 });
 
 const redIcon = divIcon({
   className: "",
-  html: 
-    <div class="relative flex items-center justify-center">
-      <div class="absolute w-14 h-14 rounded-full border border-red-400/40 animate-ping"></div>
-      <div class="absolute w-10 h-10 rounded-full border border-red-400/20 animate-pulse"></div>
-      <div class="relative w-5 h-5 bg-red-500 border-2 border-white rounded-full shadow-[0_0_25px_rgba(239,68,68,1)]"></div>
-    </div>
-  ,
-  iconSize: [40, 40],
+  html: `
+    <div style="width:16px;height:16px;background:#ef4444;border:2px solid white;border-radius:9999px;box-shadow:0 0 20px #ef4444;"></div>
+  `,
+  iconSize: [16, 16],
 });
 
 const yellowIcon = divIcon({
   className: "",
-  html:
-    <div class="relative flex items-center justify-center">
-      <div class="absolute w-14 h-14 rounded-full border border-yellow-300/40 animate-ping"></div>
-      <div class="absolute w-10 h-10 rounded-full border border-yellow-300/20 animate-pulse"></div>
-      <div class="relative w-5 h-5 bg-yellow-400 border-2 border-white rounded-full shadow-[0_0_25px_rgba(250,204,21,1)]"></div>
-    </div>
-  ,
-  iconSize: [40, 40],
+  html: `
+    <div style="width:16px;height:16px;background:#facc15;border:2px solid white;border-radius:9999px;box-shadow:0 0 20px #facc15;"></div>
+  `,
+  iconSize: [16, 16],
 });
+
 
 /* =========================
    LIVE MAP
