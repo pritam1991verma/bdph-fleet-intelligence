@@ -1,80 +1,109 @@
+import { useEffect, useState } from "react";
+
 function Navbar() {
+
+  const [active, setActive] = useState("home");
+
+  useEffect(() => {
+
+    const sections = [
+      "home",
+      "services",
+      "dashboard",
+      "analytics",
+      "tracking",
+      "about",
+      "contact",
+    ];
+
+    const handleScroll = () => {
+
+      let current = "home";
+
+      sections.forEach((id) => {
+
+        const section = document.getElementById(id);
+
+        if (section) {
+
+          const top = section.offsetTop - 120;
+
+          if (window.scrollY >= top) {
+            current = id;
+          }
+
+        }
+
+      });
+
+      setActive(current);
+
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+
+  }, []);
+
+  const navItem = (id: string, label: string) => (
+
+    <a
+      href={`#${id}`}
+      className={`transition duration-300 uppercase text-sm tracking-[0.18em] font-semibold
+      ${
+        active === id
+          ? "text-cyan-400 drop-shadow-[0_0_12px_rgba(34,211,238,0.9)]"
+          : "text-gray-200 hover:text-cyan-400"
+      }`}
+    >
+      {label}
+    </a>
+
+  );
+
   return (
+
     <nav className="fixed top-0 left-0 w-full bg-black/50 backdrop-blur-md border-b border-white/10 z-50">
 
       <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-3">
 
         {/* LOGO */}
 
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-4">
 
           <img
             src="/logo.png"
-            alt=" "
+            alt="BDPH Group"
             className="h-16 w-auto object-contain"
           />
-
 
         </div>
 
         {/* MENU */}
 
-        <div className="hidden md:flex gap-10 uppercase text-sm tracking-[0.2em] font-semibold text-gray-200">
+        <div className="hidden md:flex gap-8">
 
-          <a
-            href="#home"
-            className="hover:text-cyan-400 hover:drop-shadow-[0_0_12px_rgba(34,211,238,0.8)] transition duration-300"
-          >
-            Home
-          </a>
+          {navItem("home", "Home")}
 
-          <a
-            href="#services"
-            className="hover:text-cyan-400 transition duration-300"
-          >
-            Services
-          </a>
+          {navItem("services", "Services")}
 
-          <a
-            href="#dashboard"
-            className="hover:text-cyan-400 transition duration-300"
-          >
-            Dashboard
-          </a>
+          {navItem("dashboard", "Dashboard")}
 
-         <a
-  href="#analytics"
-  className="hover:text-cyan-400 hover:drop-shadow-[0_0_12px_rgba(34,211,238,0.8)] transition duration-300"
->
-  Analytics
-</a>
+          {navItem("analytics", "Analytics")}
 
-<a
-  href="#tracking"
-  className="hover:text-cyan-400 hover:drop-shadow-[0_0_12px_rgba(34,211,238,0.8)] transition duration-300"
->
-  Live Tracking
-</a>
+          {navItem("tracking", "Live Tracking")}
 
-          <a
-            href="#about"
-            className="hover:text-cyan-400 transition duration-300"
-          >
-            About
-          </a>
+          {navItem("about", "About")}
 
-          <a
-            href="#contact"
-            className="hover:text-cyan-400 transition duration-300"
-          >
-            Contact
-          </a>
+          {navItem("contact", "Contact")}
 
         </div>
 
       </div>
 
     </nav>
+
   );
 }
 
