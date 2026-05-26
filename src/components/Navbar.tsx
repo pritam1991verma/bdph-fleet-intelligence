@@ -10,7 +10,7 @@ function Navbar() {
 
           <img
             src="/logo.png"
-            alt="BDPH Group"
+            alt="FOUR GENERATION ONE LEGACY"
             className="h-16 w-auto object-contain"
           />
 
