@@ -4,7 +4,7 @@ import L from "leaflet";
 
 import "leaflet/dist/leaflet.css";
 
-/* DEFAULT ICON */
+/* DEFAULT MARKER ICON */
 
 const DefaultIcon = L.icon({
   iconUrl:
@@ -43,42 +43,34 @@ function LiveMap() {
 
         {/* HEADER */}
 
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
 
           <h2 className="text-5xl font-bold text-cyan-400 mb-4">
-            Satellite GPS Intelligence
+            Satellite Fleet Intelligence
           </h2>
 
           <p className="text-gray-400 text-lg">
-            Realtime enterprise fleet monitoring and live satellite tracking.
+            Realtime AI-powered GPS tracking and satellite monitoring system.
           </p>
 
         </div>
 
-        {/* MAP */}
+        {/* MAP CONTAINER */}
 
-        <div className="overflow-hidden rounded-3xl border border-cyan-500/20 shadow-2xl">
+        <div className="rounded-3xl overflow-hidden border border-cyan-500/20 shadow-[0_0_40px_rgba(34,211,238,0.15)]">
 
           <MapContainer
             center={[22.8046, 86.2029]}
-            zoom={12}
+            zoom={14}
             scrollWheelZoom={true}
-            className="h-[650px] w-full"
+            className="h-[700px] w-full z-0"
           >
 
-            {/* SATELLITE VIEW */}
+            {/* HD SATELLITE VIEW */}
 
             <TileLayer
               attribution='&copy; Esri'
               url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
-            />
-
-            {/* ROAD LABELS */}
-
-            <TileLayer
-              attribution='&copy; OpenStreetMap'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              opacity={0.35}
             />
 
             {/* VEHICLE 1 */}
@@ -87,7 +79,7 @@ function LiveMap() {
               <Popup>
                 <div className="text-black">
 
-                  <strong>Vehicle BDPH-1021</strong>
+                  <strong>BDPH-1021</strong>
 
                   <br />
 
@@ -96,6 +88,10 @@ function LiveMap() {
                   <br />
 
                   Speed: 62 km/h
+
+                  <br />
+
+                  Fuel: 78%
 
                 </div>
               </Popup>
@@ -107,7 +103,7 @@ function LiveMap() {
               <Popup>
                 <div className="text-black">
 
-                  <strong>Vehicle BDPH-2044</strong>
+                  <strong>BDPH-2044</strong>
 
                   <br />
 
@@ -115,7 +111,7 @@ function LiveMap() {
 
                   <br />
 
-                  Fuel: 21%
+                  Fuel Remaining: 21%
 
                 </div>
               </Popup>
@@ -127,7 +123,7 @@ function LiveMap() {
               <Popup>
                 <div className="text-black">
 
-                  <strong>Vehicle BDPH-3301</strong>
+                  <strong>BDPH-3301</strong>
 
                   <br />
 
@@ -135,7 +131,7 @@ function LiveMap() {
 
                   <br />
 
-                  Battery: 94%
+                  Battery Health: 94%
 
                 </div>
               </Popup>
@@ -147,7 +143,7 @@ function LiveMap() {
               <Popup>
                 <div className="text-black">
 
-                  <strong>Vehicle BDPH-4410</strong>
+                  <strong>BDPH-4410</strong>
 
                   <br />
 
