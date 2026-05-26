@@ -104,7 +104,7 @@ function Home() {
 
       {/* SERVICES */}
 
-      <section className="py-24 px-6">
+      <section id="services" className="py-24 px-6">
 
         <div className="max-w-7xl mx-auto">
 
@@ -161,7 +161,7 @@ function Home() {
 
       {/* DASHBOARD STATS */}
 
-      <section className="py-24 px-6 bg-black">
+      <section id="dashboard" className="py-24 px-6 bg-black">
 
         <div className="max-w-7xl mx-auto">
 
@@ -222,7 +222,7 @@ function Home() {
 
       {/* SMART MONITORING */}
 
-      <section className="py-24 px-6">
+      <section id="analytics" className="py-24 px-6">
 
         <div className="max-w-7xl mx-auto">
 
