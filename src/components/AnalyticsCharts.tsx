@@ -1,42 +1,3 @@
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ResponsiveContainer,
-  CartesianGrid,
-  AreaChart,
-  Area,
-  BarChart,
-  Bar,
-} from "recharts";
-
-const fuelData = [
-  { day: "Mon", fuel: 78 },
-  { day: "Tue", fuel: 74 },
-  { day: "Wed", fuel: 69 },
-  { day: "Thu", fuel: 80 },
-  { day: "Fri", fuel: 66 },
-  { day: "Sat", fuel: 88 },
-];
-
-const vehicleData = [
-  { time: "6AM", active: 22 },
-  { time: "9AM", active: 48 },
-  { time: "12PM", active: 80 },
-  { time: "3PM", active: 62 },
-  { time: "6PM", active: 91 },
-  { time: "9PM", active: 44 },
-];
-
-const batteryData = [
-  { name: "Fleet A", health: 92 },
-  { name: "Fleet B", health: 81 },
-  { name: "Fleet C", health: 74 },
-  { name: "Fleet D", health: 88 },
-];
-
 function AnalyticsCharts() {
   return (
     <section className="py-24 px-6 bg-[#020617]">
@@ -57,101 +18,122 @@ function AnalyticsCharts() {
 
         <div className="grid lg:grid-cols-2 gap-10">
 
-          {/* FUEL CHART */}
+          {/* FUEL */}
 
           <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8">
 
-            <h3 className="text-2xl font-bold text-cyan-400 mb-8">
-              Fuel Efficiency Analytics
+            <h3 className="text-2xl font-bold text-cyan-400 mb-10">
+              Fuel Analytics
             </h3>
 
-            <ResponsiveContainer width="100%" height={300}>
+            <div className="space-y-6">
 
-              <AreaChart data={fuelData}>
+              {[
+                { day: "Monday", value: "78%" },
+                { day: "Tuesday", value: "64%" },
+                { day: "Wednesday", value: "88%" },
+                { day: "Thursday", value: "71%" },
+                { day: "Friday", value: "93%" },
+              ].map((item, index) => (
 
-                <CartesianGrid strokeDasharray="3 3" stroke="#164e63" />
+                <div key={index}>
 
-                <XAxis dataKey="day" stroke="#94a3b8" />
+                  <div className="flex justify-between mb-2 text-gray-300">
 
-                <YAxis stroke="#94a3b8" />
+                    <span>{item.day}</span>
 
-                <Tooltip />
+                    <span>{item.value}</span>
 
-                <Area
-                  type="monotone"
-                  dataKey="fuel"
-                  stroke="#22d3ee"
-                  fill="#0891b2"
-                />
+                  </div>
 
-              </AreaChart>
+                  <div className="w-full h-4 bg-[#020617] rounded-full overflow-hidden">
 
-            </ResponsiveContainer>
+                    <div
+                      className="h-full bg-cyan-400 rounded-full"
+                      style={{ width: item.value }}
+                    ></div>
+
+                  </div>
+
+                </div>
+
+              ))}
+
+            </div>
 
           </div>
 
-          {/* VEHICLE CHART */}
+          {/* VEHICLE */}
 
           <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8">
 
-            <h3 className="text-2xl font-bold text-cyan-400 mb-8">
-              Vehicle Activity Monitoring
+            <h3 className="text-2xl font-bold text-cyan-400 mb-10">
+              Vehicle Activity
             </h3>
 
-            <ResponsiveContainer width="100%" height={300}>
+            <div className="flex items-end justify-between h-[300px] gap-4">
 
-              <LineChart data={vehicleData}>
+              {[40, 80, 65, 95, 55, 100, 72].map((height, index) => (
 
-                <CartesianGrid strokeDasharray="3 3" stroke="#164e63" />
+                <div
+                  key={index}
+                  className="flex-1 bg-cyan-400 rounded-t-2xl hover:bg-cyan-300 transition"
+                  style={{ height: `${height}%` }}
+                ></div>
 
-                <XAxis dataKey="time" stroke="#94a3b8" />
+              ))}
 
-                <YAxis stroke="#94a3b8" />
-
-                <Tooltip />
-
-                <Line
-                  type="monotone"
-                  dataKey="active"
-                  stroke="#22d3ee"
-                  strokeWidth={4}
-                />
-
-              </LineChart>
-
-            </ResponsiveContainer>
+            </div>
 
           </div>
 
-          {/* BATTERY CHART */}
+          {/* BATTERY */}
 
           <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8 lg:col-span-2">
 
-            <h3 className="text-2xl font-bold text-cyan-400 mb-8">
-              Battery Health Intelligence
+            <h3 className="text-2xl font-bold text-cyan-400 mb-10">
+              Battery Intelligence
             </h3>
 
-            <ResponsiveContainer width="100%" height={350}>
+            <div className="grid md:grid-cols-4 gap-8">
 
-              <BarChart data={batteryData}>
+              {[
+                {
+                  fleet: "Fleet A",
+                  health: "94%",
+                },
+                {
+                  fleet: "Fleet B",
+                  health: "81%",
+                },
+                {
+                  fleet: "Fleet C",
+                  health: "72%",
+                },
+                {
+                  fleet: "Fleet D",
+                  health: "88%",
+                },
+              ].map((item, index) => (
 
-                <CartesianGrid strokeDasharray="3 3" stroke="#164e63" />
+                <div
+                  key={index}
+                  className="bg-[#020617] rounded-3xl p-8 border border-cyan-500/10 text-center"
+                >
 
-                <XAxis dataKey="name" stroke="#94a3b8" />
+                  <div className="text-gray-400 mb-4">
+                    {item.fleet}
+                  </div>
 
-                <YAxis stroke="#94a3b8" />
+                  <div className="text-5xl font-bold text-cyan-400">
+                    {item.health}
+                  </div>
 
-                <Tooltip />
+                </div>
 
-                <Bar
-                  dataKey="health"
-                  fill="#06b6d4"
-                  radius={[10, 10, 0, 0]}
-                />
+              ))}
 
-              </BarChart>
-
-            </ResponsiveContainer>
+            </div>
 
           </div>
 
