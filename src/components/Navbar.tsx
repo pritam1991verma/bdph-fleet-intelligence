@@ -10,12 +10,12 @@ function Navbar() {
 
           <img
             src="/logo.png"
-            alt="FOUR GENERATION ONE LEGACY"
+            alt=" "
             className="h-16 w-auto object-contain"
           />
 
           <h1 className="hidden md:block text-xl font-semibold text-white tracking-[0.18em]">
-            BDPH GROUP
+            FOUR GENERATIONS ONE LEGACY
           </h1>
 
         </div>
