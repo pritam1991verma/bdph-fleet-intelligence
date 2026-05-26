@@ -11,7 +11,7 @@ function Navbar() {
           <img
             src="/logo.png"
             alt="BDPH Group"
-            className="h-16 w-auto object-contain"
+            className="h-24 w-auto object-contain"
           />
 
           <h1 className="hidden md:block text-xl font-semibold text-white tracking-[0.18em]">
