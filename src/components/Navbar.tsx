@@ -14,9 +14,6 @@ function Navbar() {
             className="h-16 w-auto object-contain"
           />
 
-          <h1 className="hidden md:block text-xl font-semibold text-white tracking-[0.18em]">
-            FOUR GENERATIONS ONE LEGACY
-          </h1>
 
         </div>
 
