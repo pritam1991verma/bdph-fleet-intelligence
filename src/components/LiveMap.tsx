@@ -156,11 +156,14 @@ function LiveMap() {
 
           {/* MAP */}
 
-          <MapContainer
-            center={[22.8046, 86.2029]}
-            zoom={11}
-            scrollWheelZoom={true}
-            className="h-[780px] w-full z-0"
+          <div className="relative w-full h-[780px] z-0">
+
+  <MapContainer
+    center={[22.8046, 86.2029]}
+    zoom={11}
+    scrollWheelZoom={true}
+    className="w-full h-full"
+  
           >
             {/* SATELLITE TILE */}
 
@@ -261,6 +264,7 @@ function LiveMap() {
               }}
             />
           </MapContainer>
+            </div>
 
           {/* BOTTOM TELEMETRY */}
 
