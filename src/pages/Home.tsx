@@ -1,3 +1,4 @@
+import AnalyticsCharts from "../components/AnalyticsCharts";
 import Navbar from "../components/Navbar";
 import Dashboard from "../components/Dashboard";
 import ControlPanel from "../components/ControlPanel";
@@ -291,6 +292,7 @@ function Home() {
       </section>
 
       <ControlPanel />
+      <AnalyticsCharts />
 
       <LiveMap />
 
@@ -354,7 +356,7 @@ function Home() {
           <div className="space-y-4 text-gray-300 text-lg">
 
             <p>
-              📍 Jamshedpur, Jharkhand, India
+              📍 Bhagalpur, Bihar, India
             </p>
 
             <p>
