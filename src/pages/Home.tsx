@@ -39,10 +39,11 @@ function Home() {
 
   return (
 
-    <div
-      onMouseMove={handleMouseMove}
-      className="min-h-screen w-full bg-[#030712] text-white overflow-x-hidden grid-bg relative"
-    >
+   <div
+  onMouseMove={handleMouseMove}
+  className="min-h-screen w-full max-w-full bg-[#030712] text-white overflow-x-hidden grid-bg relative"
+  style={{ overflowX: "hidden" }}
+>
 
       {/* MOUSE GLOW */}
 
@@ -60,7 +61,7 @@ function Home() {
 
       <div className="relative z-40 mt-[76px] bg-[#08111f] border-b border-cyan-500/10 overflow-hidden">
 
-        <div className="animate-[ticker_25s_linear_infinite] whitespace-nowrap py-3 text-sm text-cyan-300">
+        <div className="animate-[ticker_25s_linear_infinite] whitespace-nowrap py-3 text-sm text-cyan-300 w-max">
 
           <span className="mx-10">
             ● GPS NETWORK ACTIVE
@@ -214,9 +215,9 @@ function Home() {
 
           <div className="mt-24 flex justify-center relative">
 
-            <div className="absolute w-[500px] h-[500px] rounded-full border border-cyan-500/10 animate-ping"></div>
+            <div className="absolute w-[350px] h-[350px] rounded-full border border-cyan-500/10 animate-ping"></div>
 
-            <div className="absolute w-[400px] h-[400px] rounded-full border border-cyan-500/20 animate-pulse"></div>
+            <div className="absolute w-[280px] h-[280px] rounded-full border border-cyan-500/20 animate-pulse"></div>
 
             <motion.div
               animate={{ rotate: 360 }}
