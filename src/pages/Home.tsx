@@ -38,7 +38,7 @@ function Home() {
   return (
     <div
       onMouseMove={handleMouseMove}
-      className="min-h-screen bg-[#030712] text-white overflow-x-hidden grid-bg relative"
+      className="min-h-screen bg-[#030712] text-white overflow-x-hidden relative"
     >
       {/* CURSOR GLOW */}
       <motion.div
@@ -54,6 +54,7 @@ function Home() {
       {/* LIVE STATUS BAR */}
       <div className="relative z-40 mt-[76px] bg-[#08111f] border-b border-cyan-500/10 overflow-hidden">
         <div className="animate-[ticker_25s_linear_infinite] whitespace-nowrap py-3 text-sm text-cyan-300">
+
           <span className="mx-10">
             ● GPS NETWORK ACTIVE
           </span>
@@ -81,27 +82,32 @@ function Home() {
           <span className="mx-10">
             ● ENTERPRISE SECURITY ACTIVE
           </span>
+
         </div>
       </div>
 
-      {/* HERO SECTION */}
+      {/* HERO */}
       <section
         id="home"
         className="relative flex flex-col items-center justify-center min-h-screen text-center px-6 overflow-hidden"
       >
-        {/* BG */}
+
+        {/* BACKGROUND */}
         <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/10 via-transparent to-black"></div>
 
         <div className="absolute inset-0 opacity-20">
+
           <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500 rounded-full blur-[140px]"></div>
 
           <div className="absolute bottom-20 right-20 w-72 h-72 bg-blue-500 rounded-full blur-[140px]"></div>
 
           <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-400 rounded-full blur-[180px] -translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+
         </div>
 
         {/* FLOATING CARD LEFT */}
         <div className="absolute top-[25%] left-10 hidden xl:block z-20">
+
           <motion.div
             animate={{ y: [0, -12, 0] }}
             transition={{
@@ -110,6 +116,7 @@ function Home() {
             }}
             className="bg-[#08111f]/80 backdrop-blur-xl border border-cyan-500/20 rounded-3xl p-6 w-64 shadow-2xl"
           >
+
             <div className="text-gray-400 text-sm mb-2">
               Active Vehicles
             </div>
@@ -121,11 +128,14 @@ function Home() {
             <div className="mt-4 text-green-400 text-sm">
               ▲ 12% realtime increase
             </div>
+
           </motion.div>
+
         </div>
 
         {/* FLOATING CARD RIGHT */}
         <div className="absolute top-[45%] right-10 hidden xl:block z-20">
+
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{
@@ -134,6 +144,7 @@ function Home() {
             }}
             className="bg-[#08111f]/80 backdrop-blur-xl border border-cyan-500/20 rounded-3xl p-6 w-64 shadow-2xl"
           >
+
             <div className="text-gray-400 text-sm mb-2">
               AI Monitoring Status
             </div>
@@ -145,7 +156,9 @@ function Home() {
             <div className="mt-4 text-cyan-300 text-sm">
               System uptime stable
             </div>
+
           </motion.div>
+
         </div>
 
         {/* MAIN HERO */}
@@ -155,22 +168,28 @@ function Home() {
           transition={{ duration: 1 }}
           className="relative z-10"
         >
+
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+
             FUTURE OF
             <span className="text-cyan-400">
               {" "}
               AI ENTERPRISE{" "}
             </span>
             INTELLIGENCE
+
           </h1>
 
           <p className="text-gray-400 text-xl max-w-3xl mx-auto mb-10">
+
             Advanced GPS tracking, fleet monitoring,
             realtime analytics, AI-powered enterprise
             automation and intelligent cloud systems.
+
           </p>
 
           <div className="flex flex-wrap justify-center gap-6">
+
             <button className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-4 rounded-2xl transition">
               Explore Platform
             </button>
@@ -181,10 +200,12 @@ function Home() {
             >
               Live Dashboard
             </a>
+
           </div>
 
-          {/* ORBIT */}
+          {/* ORBIT UI */}
           <div className="mt-24 flex justify-center relative">
+
             <div className="absolute w-[500px] h-[500px] rounded-full border border-cyan-500/10 animate-ping"></div>
 
             <div className="absolute w-[400px] h-[400px] rounded-full border border-cyan-500/20 animate-pulse"></div>
@@ -198,6 +219,7 @@ function Home() {
               }}
               className="relative w-[300px] h-[300px] border border-cyan-500/30 rounded-full flex items-center justify-center"
             >
+
               <div className="absolute w-[200px] h-[200px] border border-cyan-500/20 rounded-full"></div>
 
               <div className="absolute w-[120px] h-[120px] border border-cyan-500/20 rounded-full"></div>
@@ -213,9 +235,13 @@ function Home() {
                 <Radar size={14} />
                 SCANNING
               </div>
+
             </motion.div>
+
           </div>
+
         </motion.div>
+
       </section>
 
       {/* SERVICES */}
@@ -223,8 +249,11 @@ function Home() {
         id="services"
         className="py-24 px-6"
       >
+
         <div className="max-w-7xl mx-auto">
+
           <div className="text-center mb-20">
+
             <h2 className="text-5xl font-bold text-cyan-400 mb-4">
               Enterprise Services
             </h2>
@@ -232,9 +261,11 @@ function Home() {
             <p className="text-gray-400 text-lg">
               Intelligent enterprise monitoring systems.
             </p>
+
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
             {[
               "GPS Vehicle Tracking",
               "Fuel Monitoring",
@@ -243,11 +274,13 @@ function Home() {
               "Cloud Monitoring",
               "AI Automation",
             ].map((service, index) => (
+
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
                 className="bg-[#0b1120] border border-cyan-500/20 rounded-3xl p-8 hover:border-cyan-400 transition"
               >
+
                 <div className="w-16 h-16 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center mb-6 text-cyan-400 text-2xl">
                   ⚡
                 </div>
@@ -257,99 +290,169 @@ function Home() {
                 </h3>
 
                 <p className="text-gray-400">
-                  Enterprise-grade realtime analytics and
-                  monitoring systems.
+                  Enterprise-grade realtime analytics and monitoring systems.
                 </p>
+
               </motion.div>
+
             ))}
+
           </div>
+
         </div>
+
       </section>
 
-      {/* ULTRA DASHBOARD */}
+      {/* PREMIUM DASHBOARD */}
       <section
         id="dashboard"
-        className="relative py-24 px-6 bg-black overflow-hidden"
+        className="relative py-32 px-6 bg-black overflow-hidden"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,255,255,0.08),transparent_40%)] pointer-events-none" />
+
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[180px]" />
+
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[180px]" />
 
         <div className="max-w-[1600px] mx-auto relative z-10">
-          {/* TITLE */}
+
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-7xl font-black mb-6">
-              BDPH{" "}
+
+            <motion.h2
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-5xl md:text-7xl font-black mb-6"
+            >
+
+              LIVE{" "}
               <span className="text-cyan-400">
-                AI DASHBOARD
-              </span>
-            </h2>
+                ENTERPRISE
+              </span>{" "}
+              DASHBOARD
 
-            <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-              Enterprise-grade realtime monitoring system
-              powered by AI analytics.
+            </motion.h2>
+
+            <p className="text-gray-400 text-xl max-w-4xl mx-auto">
+
+              AI-powered enterprise monitoring system with realtime
+              fleet intelligence and predictive analytics.
+
             </p>
+
           </div>
 
-          {/* STATS */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-            {[
-              {
-                title: "Vehicles Online",
-                value: "128",
-                change: "+12%",
-              },
-              {
-                title: "Fuel Usage",
-                value: "78%",
-                change: "+8%",
-              },
-              {
-                title: "Battery Health",
-                value: "96%",
-                change: "+3%",
-              },
-              {
-                title: "AI Alerts",
-                value: "12",
-                change: "-2",
-              },
-            ].map((card, index) => (
-              <motion.div
-                key={index}
-                whileHover={{
-                  y: -8,
-                  scale: 1.02,
-                }}
-                className="rounded-[28px] border border-cyan-500/20 bg-gradient-to-br from-[#071122] to-[#020814] p-7 shadow-[0_0_40px_rgba(0,255,255,0.08)]"
-              >
-                <div className="text-gray-400 text-lg mb-3">
-                  {card.title}
-                </div>
+          <div className="grid xl:grid-cols-[320px_1fr] gap-8">
 
-                <div className="text-6xl font-black text-cyan-400">
-                  {card.value}
-                </div>
+            {/* SIDEBAR */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="rounded-[32px] border border-cyan-500/20 bg-[#08111f]/80 backdrop-blur-2xl p-8"
+            >
 
-                <div className="mt-4 text-green-400 font-semibold">
-                  ▲ {card.change}
-                </div>
+              <div className="text-4xl font-black text-cyan-400 mb-10">
+                BDPH AI
+              </div>
 
-                <div className="mt-8 flex items-end gap-2 h-16">
-                  {[20, 35, 28, 45, 32, 52, 40].map(
-                    (h, i) => (
-                      <div
-                        key={i}
-                        className="flex-1 rounded-full bg-gradient-to-t from-cyan-600 to-cyan-300"
-                        style={{
-                          height: `${h}px`,
-                        }}
-                      />
-                    )
-                  )}
-                </div>
-              </motion.div>
-            ))}
+              <div className="space-y-4">
+
+                {[
+                  "Overview",
+                  "Fleet Tracking",
+                  "Battery AI",
+                  "Fuel Analytics",
+                  "AI Monitoring",
+                  "Security Layer",
+                  "Cloud Sync",
+                  "Settings",
+                ].map((item, i) => (
+
+                  <motion.div
+                    key={i}
+                    whileHover={{
+                      x: 8,
+                    }}
+                    className={`rounded-2xl px-6 py-5 cursor-pointer ${
+                      i === 0
+                        ? "bg-cyan-500/10 border border-cyan-400/30"
+                        : "bg-[#0b1220] border border-cyan-500/10"
+                    }`}
+                  >
+
+                    <div className="text-white font-semibold text-lg">
+                      {item}
+                    </div>
+
+                  </motion.div>
+
+                ))}
+
+              </div>
+
+            </motion.div>
+
+            {/* MAIN PANEL */}
+            <div className="space-y-8">
+
+              {/* STATS */}
+              <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+                {[
+                  {
+                    title: "Vehicles Online",
+                    value: "128",
+                    growth: "+12%",
+                  },
+                  {
+                    title: "Fuel Efficiency",
+                    value: "94%",
+                    growth: "+8%",
+                  },
+                  {
+                    title: "Battery Health",
+                    value: "99%",
+                    growth: "+3%",
+                  },
+                  {
+                    title: "AI Alerts",
+                    value: "12",
+                    growth: "-2%",
+                  },
+                ].map((card, i) => (
+
+                  <motion.div
+                    key={i}
+                    whileHover={{
+                      y: -8,
+                    }}
+                    className="rounded-[30px] border border-cyan-500/20 bg-gradient-to-br from-[#08111f] to-[#020617] p-8"
+                  >
+
+                    <div className="text-gray-400 text-lg mb-4">
+                      {card.title}
+                    </div>
+
+                    <div className="text-6xl font-black text-cyan-400">
+                      {card.value}
+                    </div>
+
+                    <div className="mt-4 text-green-400 font-semibold">
+                      ▲ {card.growth}
+                    </div>
+
+                  </motion.div>
+
+                ))}
+
+              </div>
+
+            </div>
+
           </div>
+
         </div>
+
       </section>
 
       {/* ANALYTICS */}
@@ -357,14 +460,19 @@ function Home() {
         id="analytics"
         className="py-24 px-6"
       >
+
         <div className="max-w-7xl mx-auto">
+
           <div className="text-center mb-20">
+
             <h2 className="text-5xl font-bold text-cyan-400 mb-4">
               Smart Monitoring System
             </h2>
+
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
             {[
               {
                 title: "Pollution",
@@ -379,9 +487,7 @@ function Home() {
               {
                 title: "Battery",
                 status: "Realtime AI",
-                icon: (
-                  <BatteryCharging size={36} />
-                ),
+                icon: <BatteryCharging size={36} />,
               },
               {
                 title: "GPS Maps",
@@ -389,11 +495,13 @@ function Home() {
                 icon: <Map size={36} />,
               },
             ].map((item, index) => (
+
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
                 className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8 hover:border-cyan-400 transition"
               >
+
                 <div className="text-cyan-400 mb-6">
                   {item.icon}
                 </div>
@@ -405,61 +513,365 @@ function Home() {
                 <div className="text-xl text-gray-300">
                   {item.status}
                 </div>
+
               </motion.div>
+
             ))}
+
           </div>
+
         </div>
+
       </section>
 
       <ControlPanel />
-
       <AnalyticsCharts />
-
       <LiveMap />
 
-      {/* ABOUT */}
-      <section
-        id="about"
-        className="py-24 px-6 bg-[#020617]"
+      {/* CONTACT SECTION HERE */}
+     {/* ENHANCED AI CONTACT SECTION */}
+<section
+  id="contact"
+  className="relative py-32 px-6 bg-black overflow-hidden"
+>
+
+  {/* BACKGROUND FX */}
+  <div className="absolute inset-0">
+
+    <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[180px]" />
+
+    <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[180px]" />
+
+    <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-cyan-400/5 rounded-full blur-[220px] -translate-x-1/2 -translate-y-1/2" />
+
+  </div>
+
+  <div className="max-w-7xl mx-auto relative z-10">
+
+    {/* TITLE */}
+    <div className="text-center mb-24">
+
+      <motion.h2
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-5xl md:text-7xl font-black mb-6"
       >
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-5xl font-bold text-cyan-400 mb-8">
-            About BDPH Group
-          </h2>
 
-          <p className="text-gray-400 text-xl leading-relaxed">
-            BDPH Group is an AI-driven enterprise
-            technology company delivering advanced GPS
-            intelligence, realtime fleet monitoring,
-            predictive analytics and intelligent
-            automation solutions.
-          </p>
-        </div>
-      </section>
+        CONTACT{" "}
+        <span className="text-cyan-400">
+          BDPH AI
+        </span>
 
-      {/* CONTACT */}
-      <section
-        id="contact"
-        className="py-24 px-6 bg-black border-t border-cyan-500/10"
+      </motion.h2>
+
+      <p className="text-gray-400 text-xl max-w-4xl mx-auto">
+
+        Connect with our AI enterprise intelligence team for
+        realtime fleet systems, GPS monitoring, cloud analytics,
+        predictive automation and enterprise infrastructure solutions.
+
+      </p>
+
+    </div>
+
+    <div className="grid lg:grid-cols-[1fr_1.1fr] gap-10">
+
+      {/* LEFT SIDE */}
+      <motion.div
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="space-y-8"
       >
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-cyan-400 mb-6">
-              Contact BDPH Group
-            </h2>
 
-            <p className="text-gray-400 text-xl">
-              Enterprise AI Solutions & Fleet Intelligence
-              Platform
-            </p>
+        {/* COMPANY CARD */}
+        <div className="rounded-[32px] border border-cyan-500/20 bg-[#08111f]/80 backdrop-blur-2xl p-10 shadow-[0_0_50px_rgba(0,255,255,0.08)]">
+
+          <div className="flex items-center gap-5 mb-10">
+
+            <div className="w-20 h-20 rounded-3xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-4xl">
+              🚀
+            </div>
+
+            <div>
+
+              <div className="text-4xl font-black text-cyan-400">
+                BDPH GROUP
+              </div>
+
+              <div className="text-gray-500 mt-2">
+                Enterprise AI Intelligence Platform
+              </div>
+
+            </div>
+
           </div>
 
-          <div className="mt-20 pt-10 border-t border-cyan-500/10 text-center text-gray-500">
-            © 2026 BDPH GROUP — AI Fleet Intelligence
-            Platform
+          <div className="space-y-8">
+
+            <div className="flex items-start gap-5">
+
+              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-2xl">
+                📍
+              </div>
+
+              <div>
+
+                <div className="text-xl font-semibold text-white mb-1">
+                  Corporate Office
+                </div>
+
+                <div className="text-gray-400">
+                  Bhagalpur, Bihar, India
+                </div>
+
+              </div>
+
+            </div>
+
+            <div className="flex items-start gap-5">
+
+              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-2xl">
+                📞
+              </div>
+
+              <div>
+
+                <div className="text-xl font-semibold text-white mb-1">
+                  Contact Number
+                </div>
+
+                <div className="text-gray-400">
+                  +91 9122221684
+                </div>
+
+              </div>
+
+            </div>
+
+            <div className="flex items-start gap-5">
+
+              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-2xl">
+                ✉️
+              </div>
+
+              <div>
+
+                <div className="text-xl font-semibold text-white mb-1">
+                  Email Address
+                </div>
+
+                <div className="text-gray-400">
+                  info@bdphgroup.com
+                </div>
+
+              </div>
+
+            </div>
+
+            <div className="flex items-start gap-5">
+
+              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-2xl">
+                🌐
+              </div>
+
+              <div>
+
+                <div className="text-xl font-semibold text-white mb-1">
+                  Website
+                </div>
+
+                <div className="text-gray-400">
+                  www.bdphgroup.com
+                </div>
+
+              </div>
+
+            </div>
+
           </div>
+
         </div>
-      </section>
+
+        {/* AI STATUS CARD */}
+        <motion.div
+          animate={{
+            y: [0, -10, 0],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 5,
+          }}
+          className="rounded-[32px] border border-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-2xl p-8"
+        >
+
+          <div className="flex items-center justify-between mb-8">
+
+            <div>
+
+              <div className="text-3xl font-black text-cyan-400 mb-2">
+                AI SYSTEM STATUS
+              </div>
+
+              <div className="text-gray-400">
+                Enterprise cloud intelligence active
+              </div>
+
+            </div>
+
+            <div className="w-5 h-5 rounded-full bg-green-400 animate-pulse"></div>
+
+          </div>
+
+          <div className="space-y-5">
+
+            {[
+              "Realtime GPS Monitoring",
+              "Fleet Intelligence Active",
+              "Cloud Synchronization Stable",
+              "AI Prediction Engine Running",
+            ].map((item, i) => (
+
+              <div
+                key={i}
+                className="flex items-center justify-between border-b border-cyan-500/10 pb-4"
+              >
+
+                <div className="text-white">
+                  {item}
+                </div>
+
+                <div className="text-green-400 font-semibold">
+                  ACTIVE
+                </div>
+
+              </div>
+
+            ))}
+
+          </div>
+
+        </motion.div>
+
+      </motion.div>
+
+      {/* RIGHT SIDE FORM */}
+      <motion.div
+        initial={{ opacity: 0, x: 40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="rounded-[36px] border border-cyan-500/20 bg-[#08111f]/80 backdrop-blur-2xl p-10 shadow-[0_0_60px_rgba(0,255,255,0.08)]"
+      >
+
+        <div className="mb-10">
+
+          <div className="text-5xl font-black text-cyan-400 mb-4">
+            Send Enquiry
+          </div>
+
+          <div className="text-gray-400 text-lg">
+            Connect directly with our AI enterprise team.
+          </div>
+
+        </div>
+
+        <div className="space-y-6">
+
+          <input
+            type="text"
+            placeholder="Full Name"
+            className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition"
+          />
+
+          <input
+            type="email"
+            placeholder="Email Address"
+            className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition"
+          />
+
+          <input
+            type="text"
+            placeholder="Company Name"
+            className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition"
+          />
+
+          <textarea
+            rows={6}
+            placeholder="Describe your enterprise requirement..."
+            className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition resize-none"
+          />
+
+          <motion.button
+            whileHover={{
+              scale: 1.02,
+            }}
+            whileTap={{
+              scale: 0.98,
+            }}
+            className="w-full bg-cyan-500 hover:bg-cyan-400 text-black font-black text-lg py-5 rounded-2xl transition shadow-[0_0_30px_rgba(0,255,255,0.35)]"
+          >
+
+            Launch AI Enquiry
+
+          </motion.button>
+
+        </div>
+
+        {/* BOTTOM STATS */}
+        <div className="grid grid-cols-3 gap-5 mt-10">
+
+          {[
+            {
+              title: "Clients",
+              value: "250+",
+            },
+            {
+              title: "AI Accuracy",
+              value: "99%",
+            },
+            {
+              title: "Support",
+              value: "24/7",
+            },
+          ].map((item, i) => (
+
+            <div
+              key={i}
+              className="rounded-2xl bg-cyan-500/5 border border-cyan-500/10 p-5 text-center"
+            >
+
+              <div className="text-3xl font-black text-cyan-400 mb-2">
+                {item.value}
+              </div>
+
+              <div className="text-gray-500 text-sm">
+                {item.title}
+              </div>
+
+            </div>
+
+          ))}
+
+        </div>
+
+      </motion.div>
+
+    </div>
+
+    {/* FOOTER */}
+    <div className="mt-24 pt-10 border-t border-cyan-500/10 text-center">
+
+      <div className="text-gray-500 text-lg">
+        © 2026 BDPH GROUP — AI Fleet Intelligence Platform
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
     </div>
   );
 }
