@@ -4,7 +4,7 @@ import Dashboard from "../components/Dashboard";
 import ControlPanel from "../components/ControlPanel";
 import LiveMap from "../components/LiveMap";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 
 import {
   Satellite,
@@ -16,6 +16,16 @@ import {
 } from "lucide-react";
 
 function Home() {
+    const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const smoothX = useSpring(mouseX, { stiffness: 120, damping: 20 });
+  const smoothY = useSpring(mouseY, { stiffness: 120, damping: 20 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    mouseX.set(e.clientX - 200);
+    mouseY.set(e.clientY - 200);
+  };
   return (
     <div className="min-h-screen bg-[#030712] text-white overflow-x-hidden grid-bg">
 
