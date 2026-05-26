@@ -2,17 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
+html,
+body,
+#root {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
   background: #030712;
   color: white;
   font-family: sans-serif;
 }
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 @keyframes ticker {
+
   0% {
     transform: translateX(100%);
   }
@@ -20,11 +32,15 @@ body {
   100% {
     transform: translateX(-100%);
   }
+
 }
+
 .grid-bg {
+
   background-image:
     linear-gradient(rgba(34,211,238,0.06) 1px, transparent 1px),
     linear-gradient(90deg, rgba(34,211,238,0.06) 1px, transparent 1px);
 
   background-size: 80px 80px;
+
 }
