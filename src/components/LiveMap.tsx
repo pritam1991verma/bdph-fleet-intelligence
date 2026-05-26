@@ -1,39 +1,55 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  CircleMarker,
+} from "react-leaflet";
+
+import { divIcon } from "leaflet";
 import { useEffect } from "react";
 import L from "leaflet";
 
 import "leaflet/dist/leaflet.css";
 
-/* DEFAULT MARKER ICON */
+/* CUSTOM ICONS */
 
-const DefaultIcon = L.icon({
-  iconUrl:
-    "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/images/marker-icon.png",
+const greenIcon = divIcon({
+  className: "",
+  html: `
+    <div class="relative">
+      <div class="animate-ping absolute inline-flex h-6 w-6 rounded-full bg-green-400 opacity-75"></div>
+      <div class="relative inline-flex rounded-full h-6 w-6 bg-green-500 border-2 border-white"></div>
+    </div>
+  `,
+  iconSize: [24, 24],
+});
 
-  iconRetinaUrl:
-    "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+const redIcon = divIcon({
+  className: "",
+  html: `
+    <div class="relative">
+      <div class="animate-ping absolute inline-flex h-6 w-6 rounded-full bg-red-400 opacity-75"></div>
+      <div class="relative inline-flex rounded-full h-6 w-6 bg-red-500 border-2 border-white"></div>
+    </div>
+  `,
+  iconSize: [24, 24],
+});
 
-  shadowUrl:
-    "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/images/marker-shadow.png",
-
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41],
+const yellowIcon = divIcon({
+  className: "",
+  html: `
+    <div class="relative">
+      <div class="animate-ping absolute inline-flex h-6 w-6 rounded-full bg-yellow-300 opacity-75"></div>
+      <div class="relative inline-flex rounded-full h-6 w-6 bg-yellow-400 border-2 border-white"></div>
+    </div>
+  `,
+  iconSize: [24, 24],
 });
 
 function LiveMap() {
   useEffect(() => {
-    L.Icon.Default.mergeOptions({
-      iconUrl:
-        "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/images/marker-icon.png",
-
-      iconRetinaUrl:
-        "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/images/marker-icon-2x.png",
-
-      shadowUrl:
-        "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/images/marker-shadow.png",
-    });
+    L.Icon.Default.mergeOptions({});
   }, []);
 
   return (
@@ -46,27 +62,27 @@ function LiveMap() {
         <div className="text-center mb-16">
 
           <h2 className="text-5xl font-bold text-cyan-400 mb-4">
-            Satellite Fleet Intelligence
+            Live Satellite Fleet Intelligence
           </h2>
 
           <p className="text-gray-400 text-lg">
-            Realtime AI-powered GPS tracking and satellite monitoring system.
+            AI-powered realtime vehicle monitoring and enterprise GPS analytics.
           </p>
 
         </div>
 
-        {/* MAP CONTAINER */}
+        {/* MAP */}
 
-        <div className="rounded-3xl overflow-hidden border border-cyan-500/20 shadow-[0_0_40px_rgba(34,211,238,0.15)]">
+        <div className="rounded-3xl overflow-hidden border border-cyan-500/20 shadow-[0_0_50px_rgba(34,211,238,0.15)]">
 
           <MapContainer
             center={[22.8046, 86.2029]}
-            zoom={14}
+            zoom={13}
             scrollWheelZoom={true}
-            className="h-[700px] w-full z-0"
+            className="h-[750px] w-full z-0"
           >
 
-            {/* HD SATELLITE VIEW */}
+            {/* HD SATELLITE */}
 
             <TileLayer
               attribution='&copy; Esri'
@@ -75,7 +91,7 @@ function LiveMap() {
 
             {/* VEHICLE 1 */}
 
-            <Marker position={[22.8046, 86.2029]} icon={DefaultIcon}>
+            <Marker position={[22.8046, 86.2029]} icon={greenIcon}>
               <Popup>
                 <div className="text-black">
 
@@ -99,7 +115,7 @@ function LiveMap() {
 
             {/* VEHICLE 2 */}
 
-            <Marker position={[22.8246, 86.1829]} icon={DefaultIcon}>
+            <Marker position={[22.8246, 86.1829]} icon={redIcon}>
               <Popup>
                 <div className="text-black">
 
@@ -119,7 +135,7 @@ function LiveMap() {
 
             {/* VEHICLE 3 */}
 
-            <Marker position={[22.7846, 86.2229]} icon={DefaultIcon}>
+            <Marker position={[22.7846, 86.2229]} icon={yellowIcon}>
               <Popup>
                 <div className="text-black">
 
@@ -127,11 +143,11 @@ function LiveMap() {
 
                   <br />
 
-                  Battery Stable
+                  Battery Warning
 
                   <br />
 
-                  Battery Health: 94%
+                  Battery: 43%
 
                 </div>
               </Popup>
@@ -139,7 +155,7 @@ function LiveMap() {
 
             {/* VEHICLE 4 */}
 
-            <Marker position={[22.8121, 86.2511]} icon={DefaultIcon}>
+            <Marker position={[22.8121, 86.2511]} icon={greenIcon}>
               <Popup>
                 <div className="text-black">
 
@@ -156,6 +172,88 @@ function LiveMap() {
                 </div>
               </Popup>
             </Marker>
+
+            {/* VEHICLE 5 */}
+
+            <Marker position={[22.7721, 86.1911]} icon={greenIcon}>
+              <Popup>
+                <div className="text-black">
+
+                  <strong>BDPH-5502</strong>
+
+                  <br />
+
+                  Delivery Running
+
+                  <br />
+
+                  Speed: 48 km/h
+
+                </div>
+              </Popup>
+            </Marker>
+
+            {/* VEHICLE 6 */}
+
+            <Marker position={[22.8421, 86.2311]} icon={redIcon}>
+              <Popup>
+                <div className="text-black">
+
+                  <strong>BDPH-6619</strong>
+
+                  <br />
+
+                  Emergency Alert
+
+                  <br />
+
+                  Engine Temperature High
+
+                </div>
+              </Popup>
+            </Marker>
+
+            {/* VEHICLE 7 */}
+
+            <Marker position={[22.7921, 86.2711]} icon={yellowIcon}>
+              <Popup>
+                <div className="text-black">
+
+                  <strong>BDPH-7720</strong>
+
+                  <br />
+
+                  Battery Under Observation
+
+                  <br />
+
+                  Voltage Fluctuation
+
+                </div>
+              </Popup>
+            </Marker>
+
+            {/* LIVE ZONES */}
+
+            <CircleMarker
+              center={[22.8046, 86.2029]}
+              radius={50}
+              pathOptions={{
+                color: "#22c55e",
+                fillColor: "#22c55e",
+                fillOpacity: 0.15,
+              }}
+            />
+
+            <CircleMarker
+              center={[22.8246, 86.1829]}
+              radius={40}
+              pathOptions={{
+                color: "#ef4444",
+                fillColor: "#ef4444",
+                fillOpacity: 0.15,
+              }}
+            />
 
           </MapContainer>
 
