@@ -42,19 +42,19 @@ function Navbar() {
             Dashboard
           </a>
 
-          <a
-            href="#tracking"
-            className="hover:text-cyan-400 transition duration-300"
-           >
-            Live Tracking
-          </a>
+         <a
+  href="#analytics"
+  className="hover:text-cyan-400 hover:drop-shadow-[0_0_12px_rgba(34,211,238,0.8)] transition duration-300"
+>
+  Analytics
+</a>
 
-          <a
-            href="#analytics"
-            className="hover:text-cyan-400 transition duration-300"
-          >
-            Analytics
-          </a>
+<a
+  href="#tracking"
+  className="hover:text-cyan-400 hover:drop-shadow-[0_0_12px_rgba(34,211,238,0.8)] transition duration-300"
+>
+  Live Tracking
+</a>
 
           <a
             href="#about"
