@@ -36,9 +36,6 @@ function Home() {
     mouseY.set(e.clientY - 200);
   };
 
-  return (
-    <div
-      onMouseMove={handleMouseMove}
       const [formData, setFormData] = useState({
   name: "",
   email: "",
