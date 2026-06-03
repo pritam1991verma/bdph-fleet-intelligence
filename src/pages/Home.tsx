@@ -4,6 +4,7 @@ import ControlPanel from "../components/ControlPanel";
 import LiveMap from "../components/LiveMap";
 
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import { useState } from "react";
 
 import {
   Satellite,
@@ -38,8 +39,52 @@ function Home() {
   return (
     <div
       onMouseMove={handleMouseMove}
+      const [formData, setFormData] = useState({
+  name: "",
+  email: "",
+  company: "",
+  message: "",
+});
+
+const [successMessage, setSuccessMessage] = useState("");
+
+const handleInputChange = (
+  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
+
+const handleSubmit = () => {
+  if (
+    !formData.name ||
+    !formData.email ||
+    !formData.message
+  ) {
+    alert("Please fill all required fields");
+    return;
+  }
+
+  console.log("Form Submitted:", formData);
+
+  setSuccessMessage(
+    "Thank you! Your enquiry has been submitted successfully."
+  );
+
+  setFormData({
+    name: "",
+    email: "",
+    company: "",
+    message: "",
+  });
+};
       className="min-h-screen bg-[#030712] text-white overflow-x-hidden relative"
     >
+      
+      
+      
       {/* CURSOR GLOW */}
       <motion.div
         className="pointer-events-none fixed top-0 left-0 w-[400px] h-[400px] rounded-full bg-cyan-500/10 blur-[120px] z-0"
@@ -777,44 +822,55 @@ function Home() {
         </div>
 
         <div className="space-y-6">
+<input
+  type="text"
+  name="name"
+  value={formData.name}
+  onChange={handleInputChange}
+  placeholder="Full Name"
+  className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition"
+/>
 
-          <input
-            type="text"
-            placeholder="Full Name"
-            className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition"
-          />
+         <input
+  type="email"
+  name="email"
+  value={formData.email}
+  onChange={handleInputChange}
+  placeholder="Email Address"
+  className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition"
+/>
 
-          <input
-            type="email"
-            placeholder="Email Address"
-            className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition"
-          />
+         <input
+  type="text"
+  name="company"
+  value={formData.company}
+  onChange={handleInputChange}
+  placeholder="Company Name"
+  className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition"
+/>
+        
 
-          <input
-            type="text"
-            placeholder="Company Name"
-            className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition"
-          />
-
-          <textarea
-            rows={6}
-            placeholder="Describe your enterprise requirement..."
-            className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition resize-none"
+         <textarea
+  rows={6}
+  name="message"
+  value={formData.message}
+  onChange={handleInputChange}
+  placeholder="Describe your enterprise requirement..."
+  className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition resize-none"
           />
 
           <motion.button
-            whileHover={{
-              scale: 1.02,
-            }}
-            whileTap={{
-              scale: 0.98,
-            }}
-            className="w-full bg-cyan-500 hover:bg-cyan-400 text-black font-black text-lg py-5 rounded-2xl transition shadow-[0_0_30px_rgba(0,255,255,0.35)]"
-          >
-
-            Launch AI Enquiry
-
-          </motion.button>
+  onClick={handleSubmit}
+  whileHover={{
+    scale: 1.02,
+  }}
+  whileTap={{
+    scale: 0.98,
+  }}
+  className="w-full bg-cyan-500 hover:bg-cyan-400 text-black font-black text-lg py-5 rounded-2xl transition shadow-[0_0_30px_rgba(0,255,255,0.35)]"
+>
+  Launch AI Enquiry
+</motion.button>
 
         </div>
 
