@@ -607,28 +607,33 @@ transport intelligence on a single platform.
     <h3 className="text-3xl font-bold text-[#0F4C81] mb-8">
       Fleet Tracking
     </h3>
+<div className="grid md:grid-cols-4 gap-6">
 
-    <div className="grid md:grid-cols-4 gap-6">
+  <div className="bg-white rounded-3xl p-6 shadow-xl border-l-8 border-green-500">
+    <p className="text-gray-500">Running</p>
+    <h3 className="text-5xl font-bold text-green-500">182</h3>
+    <p className="text-green-500 font-semibold mt-2">▲ +12%</p>
+  </div>
 
-      <div className="bg-slate-50 p-6 rounded-2xl">
-        <div className="text-slate-500">Running</div>
-        <div className="text-5xl font-bold text-green-400">182</div>
-      </div>
+  <div className="bg-white rounded-3xl p-6 shadow-xl border-l-8 border-yellow-500">
+    <p className="text-gray-500">Idle</p>
+    <h3 className="text-5xl font-bold text-yellow-500">41</h3>
+    <p className="text-yellow-500 font-semibold mt-2">● Waiting</p>
+  </div>
 
-      <div className="bg-slate-50 p-6 rounded-2xl">
-        <div className="text-slate-500">Idle</div>
-        <div className="text-5xl font-bold text-yellow-400">41</div>
-      </div>
+  <div className="bg-white rounded-3xl p-6 shadow-xl border-l-8 border-red-500">
+    <p className="text-gray-500">Stopped</p>
+    <h3 className="text-5xl font-bold text-red-500">19</h3>
+    <p className="text-red-500 font-semibold mt-2">▼ Attention</p>
+  </div>
 
-      <div className="bg-slate-50 p-6 rounded-2xl">
-        <div className="text-slate-500">Stopped</div>
-        <div className="text-5xl font-bold text-red-400">19</div>
-      </div>
+  <div className="bg-white rounded-3xl p-6 shadow-xl border-l-8 border-slate-500">
+    <p className="text-gray-500">Offline</p>
+    <h3 className="text-5xl font-bold text-slate-500">6</h3>
+    <p className="text-slate-500 font-semibold mt-2">Disconnected</p>
+  </div>
 
-      <div className="bg-slate-50 p-6 rounded-2xl">
-        <div className="text-slate-500">Offline</div>
-        <div className="text-5xl font-bold text-slate-500">6</div>
-      </div>
+</div>
 
     </div>
 
