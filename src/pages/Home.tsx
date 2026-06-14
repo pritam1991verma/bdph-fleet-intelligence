@@ -373,7 +373,7 @@ transport intelligence on a single platform.
 
               <motion.div
                 key={index}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{   scale: 1.03,   y: -8 }}
                 className="bg-white border border-[#D4AF37]/20 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition"
               >
 
@@ -553,7 +553,7 @@ transport intelligence on a single platform.
 
           <div key={i}>
 
-            <div className="flex justify-between mb-2 text-gray-300">
+            <div className="flex justify-between mb-2 text-slate-600 font-medium">
               <span>Day {i + 1}</span>
               <span>{v}%</span>
             </div>
@@ -704,7 +704,7 @@ transport intelligence on a single platform.
 
         <div key={i}>
 
-          <div className="flex justify-between mb-2 text-gray-300">
+          <div className="flex justify-between mb-2 text-slate-600 font-medium">
             <span>Vehicle Group {i + 1}</span>
             <span>{v}%</span>
           </div>
@@ -933,7 +933,7 @@ transport intelligence on a single platform.
               key={i}
               className="bg-slate-50 rounded-2xl p-4 border border-cyan-500/10"
             >
-              <div className="text-gray-300">
+              <div className="text-slate-600 font-medium">
                 {log}
               </div>
             </div>
@@ -1107,7 +1107,7 @@ transport intelligence on a single platform.
               key={i}
               className="bg-slate-50 rounded-2xl p-4 border border-cyan-500/10"
             >
-              <div className="text-gray-300">
+              <div className="text-slate-600 font-medium">
                 {item}
               </div>
             </div>
@@ -1252,11 +1252,11 @@ transport intelligence on a single platform.
 
               <motion.div
                 key={index}
-                whileHover={{ scale: 1.05 }}
-                className="bg-white border border-[#D4AF37]/20 rounded-3xl p-8 hover:border-cyan-400 transition"
+                whileHover={{   scale: 1.03,   y: -8 }}
+                className=" bg-white border border-[#D4AF37]/20 rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:border-[#D4AF37] transition-all duration-300 "
               >
 
-                <div className="text-[#0F4C81] mb-6">
+                <div className="mb-6">
                   {item.icon}
                 </div>
 
@@ -1264,7 +1264,7 @@ transport intelligence on a single platform.
                   {item.title}
                 </h3>
 
-                <div className="text-xl text-gray-300">
+                <div className="text-xl text-slate-600 font-medium">
                   {item.status}
                 </div>
 
