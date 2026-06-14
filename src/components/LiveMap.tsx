@@ -211,7 +211,7 @@ const alerts = [
             </div>
 
           </div>
-          <div className="absolute top-[220px] left-6 z-[700]">
+          <div className="absolute top-[260px] left-6 z-[700]">
 
   <div className="backdrop-blur-2xl bg-black/50 border border-cyan-500/20 rounded-3xl p-6">
 
@@ -249,9 +249,9 @@ const alerts = [
 
           {/* REALTIME ANALYTICS */}
 
-          <div className="absolute bottom-8 left-8 z-[700]">
+          <div className="absolute bottom-8 left-6 z-[700]">
 
-            <div className="backdrop-blur-2xl bg-black/50 border border-cyan-500/20 rounded-3xl p-6 shadow-[0_0_40px_rgba(34,211,238,0.15)]">
+            <div className="backdrop-blur-2xl bg-black/50 border border-cyan-500/20 rounded-3xl p-5 shadow-[0_0_40px_rgba(34,211,238,0.15)]">
 
               <div className="flex items-center gap-3 mb-6">
 
@@ -314,9 +314,9 @@ const alerts = [
                   <div className="h-2 bg-white/10 rounded-full overflow-hidden">
 
                     <div className="h-full w-[88%] bg-gradient-to-r from-yellow-300 to-orange-300 rounded-full animate-pulse"></div>
-                    <div className="absolute bottom-[140px] right-8 z-[700]">
+                    <div className="absolute top-[430px] left-6 z-[700]">
 
-  <div className="backdrop-blur-2xl bg-black/50 border border-red-500/20 rounded-3xl p-6 w-[320px]">
+  <div className="backdrop-blur-2xl bg-black/50 border border-red-500/20 rounded-3xl p-6 w-[280px]">
 
     <div className="text-red-400 uppercase tracking-[0.3em] text-sm mb-5">
       AI Fuel Alerts
