@@ -676,6 +676,109 @@ return (
   </div>
 
 )}
+              {activeTab === "AI Monitoring" && (
+
+  <div className="space-y-8">
+
+    <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+
+      <h3 className="text-3xl font-bold text-cyan-400 mb-8">
+        AI Monitoring Center
+      </h3>
+
+      <div className="grid md:grid-cols-4 gap-6">
+
+        <div className="bg-[#020617] p-6 rounded-2xl">
+          <div className="text-gray-400 mb-2">Fuel Theft Risk</div>
+          <div className="text-5xl font-black text-red-400">3</div>
+        </div>
+
+        <div className="bg-[#020617] p-6 rounded-2xl">
+          <div className="text-gray-400 mb-2">Route Deviations</div>
+          <div className="text-5xl font-black text-yellow-400">12</div>
+        </div>
+
+        <div className="bg-[#020617] p-6 rounded-2xl">
+          <div className="text-gray-400 mb-2">Idle Vehicles</div>
+          <div className="text-5xl font-black text-orange-400">41</div>
+        </div>
+
+        <div className="bg-[#020617] p-6 rounded-2xl">
+          <div className="text-gray-400 mb-2">AI Accuracy</div>
+          <div className="text-5xl font-black text-green-400">98%</div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-8">
+
+      <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+
+        <h4 className="text-2xl font-bold text-cyan-400 mb-6">
+          AI Alerts
+        </h4>
+
+        <div className="space-y-4">
+
+          {[
+            "Possible fuel theft detected - BDPH-2044",
+            "Vehicle idle for 6+ hours - BDPH-1782",
+            "Route deviation detected - BDPH-6621",
+            "Speed anomaly detected - BDPH-5518",
+          ].map((alert, i) => (
+
+            <div
+              key={i}
+              className="bg-[#020617] border border-red-500/20 rounded-2xl p-4"
+            >
+              <div className="text-red-400">
+                {alert}
+              </div>
+            </div>
+
+          ))}
+
+        </div>
+
+      </div>
+
+      <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+
+        <h4 className="text-2xl font-bold text-cyan-400 mb-6">
+          AI Recommendations
+        </h4>
+
+        <div className="space-y-4">
+
+          {[
+            "Reduce idle time at Dumka siding by 12%",
+            "Refuel BDPH-6619 within next 4 hours",
+            "Reassign 3 vehicles to Kurwa route",
+            "Optimize night dispatch schedule",
+          ].map((item, i) => (
+
+            <div
+              key={i}
+              className="bg-[#020617] border border-green-500/20 rounded-2xl p-4"
+            >
+              <div className="text-green-400">
+                {item}
+              </div>
+            </div>
+
+          ))}
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+)}
 {activeTab === "Settings" && (
 
   <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
