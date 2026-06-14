@@ -2,7 +2,6 @@ import AnalyticsCharts from "../components/AnalyticsCharts";
 import Navbar from "../components/Navbar";
 import ControlPanel from "../components/ControlPanel";
 import LiveMap from "../components/LiveMap";
-import { motion } from "framer-motion";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useState } from "react";
 
@@ -1236,7 +1235,7 @@ transport intelligence on a single platform.
               {
                 title: "Insurance",
                 status: "48 Active",
-                icon: <Shield size={36} className="text-green-600" />,
+               icon: <ShieldCheck size={36} className="text-green-600" />,
               },
               {
                 title: "Battery",
