@@ -1,12 +1,12 @@
 function AnalyticsCharts() {
   return (
-    <section className="py-24 px-6 bg-[#020617]">
+    <section className="py-24 px-6 bg-slate-50">
 
       <div className="max-w-7xl mx-auto">
 
         <div className="text-center mb-20">
 
-          <h2 className="text-5xl font-bold text-cyan-400 mb-6">
+          <h2 className="text-5xl font-bold text-[#0F4C81] mb-6">
             AI Analytics Intelligence
           </h2>
 
@@ -20,9 +20,9 @@ function AnalyticsCharts() {
 
           {/* FUEL */}
 
-          <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8">
+          <div className="bg-white shadow-xl border border-[#D4AF37]/20 rounded-3xl p-8">
 
-            <h3 className="text-2xl font-bold text-cyan-400 mb-10">
+            <h3 className="text-2xl font-bold text-[#0F4C81] mb-10">
               Fuel Analytics
             </h3>
 
@@ -49,7 +49,7 @@ function AnalyticsCharts() {
                   <div className="w-full h-4 bg-[#020617] rounded-full overflow-hidden">
 
                     <div
-                      className="h-full bg-cyan-400 rounded-full"
+                      className="h-full bg-[#D4AF37] rounded-full"
                       style={{ width: item.value }}
                     ></div>
 
@@ -65,9 +65,9 @@ function AnalyticsCharts() {
 
           {/* VEHICLE */}
 
-          <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8">
+          <div className="bg-white shadow-xl border border-[#D4AF37]/20 rounded-3xl p-8">
 
-            <h3 className="text-2xl font-bold text-cyan-400 mb-10">
+            <h3 className="text-2xl font-bold text-[#0F4C81] mb-10">
               Vehicle Activity
             </h3>
 
@@ -77,7 +77,7 @@ function AnalyticsCharts() {
 
                 <div
                   key={index}
-                  className="flex-1 bg-cyan-400 rounded-t-2xl hover:bg-cyan-300 transition"
+                  className="flex-1 bg-[#D4AF37] rounded-t-2xl hover:bg-cyan-300 transition"
                   style={{ height: `${height}%` }}
                 ></div>
 
@@ -89,9 +89,9 @@ function AnalyticsCharts() {
 
           {/* BATTERY */}
 
-          <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8 lg:col-span-2">
+          <div className="bg-white shadow-xl border border-[#D4AF37]/20 rounded-3xl p-8 lg:col-span-2">
 
-            <h3 className="text-2xl font-bold text-cyan-400 mb-10">
+            <h3 className="text-2xl font-bold text-[#0F4C81] mb-10">
               Battery Intelligence
             </h3>
 
@@ -125,7 +125,7 @@ function AnalyticsCharts() {
                     {item.fleet}
                   </div>
 
-                  <div className="text-5xl font-bold text-cyan-400">
+                  <div className="text-5xl font-bold text-[#0F4C81]">
                     {item.health}
                   </div>
 
