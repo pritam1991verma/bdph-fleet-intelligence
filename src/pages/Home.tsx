@@ -80,7 +80,7 @@ const handleSubmit = () => {
 
 return (
   <div
-    className="min-h-screen bg-[#030712] text-white overflow-x-hidden relative"
+    className="min-h-screen bg-[#030712] text-slate-500 overflow-x-hidden relative"
     onMouseMove={handleMouseMove}
   >
       
@@ -97,7 +97,7 @@ return (
       <Navbar />
 
       {/* LIVE STATUS BAR */}
-      <div className="relative z-40 mt-[76px] bg-[#08111f] border-b border-cyan-500/10 overflow-hidden">
+      <div className="relative z-40 mt-[76px] bg-white border-b border-cyan-500/10 overflow-hidden">
         <div className="animate-[ticker_25s_linear_infinite] whitespace-nowrap py-3 text-sm text-cyan-300">
 
           <span className="mx-10">
@@ -159,14 +159,14 @@ return (
               repeat: Infinity,
               duration: 4,
             }}
-            className="bg-[#08111f]/80 backdrop-blur-xl border border-cyan-500/20 rounded-3xl p-6 w-64 shadow-2xl"
+            className="bg-white/80 backdrop-blur-xl border border-[#D4AF37]/20 rounded-3xl p-6 w-64 shadow-2xl"
           >
 
-            <div className="text-gray-400 text-sm mb-2">
+            <div className="text-slate-500 text-sm mb-2">
               Active Vehicles
             </div>
 
-            <div className="text-5xl font-bold text-cyan-400">
+            <div className="text-5xl font-bold text-[#0F4C81]">
               128
             </div>
 
@@ -187,14 +187,14 @@ return (
               repeat: Infinity,
               duration: 5,
             }}
-            className="bg-[#08111f]/80 backdrop-blur-xl border border-cyan-500/20 rounded-3xl p-6 w-64 shadow-2xl"
+            className="bg-white/80 backdrop-blur-xl border border-[#D4AF37]/20 rounded-3xl p-6 w-64 shadow-2xl"
           >
 
-            <div className="text-gray-400 text-sm mb-2">
+            <div className="text-slate-500 text-sm mb-2">
               AI Monitoring Status
             </div>
 
-            <div className="text-4xl font-bold text-cyan-400">
+            <div className="text-4xl font-bold text-[#0F4C81]">
               99.9%
             </div>
 
@@ -217,7 +217,7 @@ return (
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
 
             FUTURE OF
-            <span className="text-cyan-400">
+            <span className="text-[#0F4C81]">
               {" "}
               AI ENTERPRISE{" "}
             </span>
@@ -225,7 +225,7 @@ return (
 
           </h1>
 
-          <p className="text-gray-400 text-xl max-w-3xl mx-auto mb-10">
+          <p className="text-slate-500 text-xl max-w-3xl mx-auto mb-10">
 
             Advanced GPS tracking, fleet monitoring,
             realtime analytics, AI-powered enterprise
@@ -241,7 +241,7 @@ return (
 
             <a
               href="#dashboard"
-              className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-2xl hover:bg-cyan-500 hover:text-black transition"
+              className="border border-cyan-500 text-[#0F4C81] px-8 py-4 rounded-2xl hover:bg-cyan-500 hover:text-black transition"
             >
               Live Dashboard
             </a>
@@ -253,7 +253,7 @@ return (
 
             <div className="absolute w-[500px] h-[500px] rounded-full border border-cyan-500/10 animate-ping"></div>
 
-            <div className="absolute w-[400px] h-[400px] rounded-full border border-cyan-500/20 animate-pulse"></div>
+            <div className="absolute w-[400px] h-[400px] rounded-full border border-[#D4AF37]/20 animate-pulse"></div>
 
             <motion.div
               animate={{ rotate: 360 }}
@@ -265,13 +265,13 @@ return (
               className="relative w-[300px] h-[300px] border border-cyan-500/30 rounded-full flex items-center justify-center"
             >
 
-              <div className="absolute w-[200px] h-[200px] border border-cyan-500/20 rounded-full"></div>
+              <div className="absolute w-[200px] h-[200px] border border-[#D4AF37]/20 rounded-full"></div>
 
-              <div className="absolute w-[120px] h-[120px] border border-cyan-500/20 rounded-full"></div>
+              <div className="absolute w-[120px] h-[120px] border border-[#D4AF37]/20 rounded-full"></div>
 
               <div className="w-10 h-10 bg-cyan-400 rounded-full shadow-[0_0_40px_rgba(34,211,238,0.9)]"></div>
 
-              <div className="absolute left-0 top-10 text-cyan-400 text-xs flex gap-2 items-center">
+              <div className="absolute left-0 top-10 text-[#0F4C81] text-xs flex gap-2 items-center">
                 <Satellite size={14} />
                 LIVE SATELLITE
               </div>
@@ -299,11 +299,11 @@ return (
 
           <div className="text-center mb-20">
 
-            <h2 className="text-5xl font-bold text-cyan-400 mb-4">
+            <h2 className="text-5xl font-bold text-[#0F4C81] mb-4">
               Enterprise Services
             </h2>
 
-            <p className="text-gray-400 text-lg">
+            <p className="text-slate-500 text-lg">
               Intelligent enterprise monitoring systems.
             </p>
 
@@ -323,18 +323,18 @@ return (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
-                className="bg-[#0b1120] border border-cyan-500/20 rounded-3xl p-8 hover:border-cyan-400 transition"
+                className="bg-[#0b1120] border border-[#D4AF37]/20 rounded-3xl p-8 hover:border-cyan-400 transition"
               >
 
-                <div className="w-16 h-16 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center mb-6 text-cyan-400 text-2xl">
+                <div className="w-16 h-16 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center mb-6 text-[#0F4C81] text-2xl">
                   ⚡
                 </div>
 
-                <h3 className="text-2xl font-bold text-cyan-400 mb-4">
+                <h3 className="text-2xl font-bold text-[#0F4C81] mb-4">
                   {service}
                 </h3>
 
-                <p className="text-gray-400">
+                <p className="text-slate-500">
                   Enterprise-grade realtime analytics and monitoring systems.
                 </p>
 
@@ -370,14 +370,14 @@ return (
             >
 
               LIVE{" "}
-              <span className="text-cyan-400">
+              <span className="text-[#0F4C81]">
                 ENTERPRISE
               </span>{" "}
               DASHBOARD
 
             </motion.h2>
 
-            <p className="text-gray-400 text-xl max-w-4xl mx-auto">
+            <p className="text-slate-500 text-xl max-w-4xl mx-auto">
 
               AI-powered enterprise monitoring system with realtime
               fleet intelligence and predictive analytics.
@@ -390,9 +390,9 @@ return (
 
   {/* SIDEBAR */}
 
-  <div className="rounded-[32px] border border-cyan-500/20 bg-gradient-to-b from-[#08111f] to-[#020617] p-8">
+  <div className="rounded-[32px] border border-[#D4AF37]/20 bg-gradient-to-b from-[#08111f] to-[#020617] p-8">
 
-    <div className="text-5xl font-black text-cyan-400 mb-10">
+    <div className="text-5xl font-black text-[#0F4C81] mb-10">
       BDPH AI
     </div>
 
@@ -419,7 +419,7 @@ return (
               : "bg-[#0b1220] border border-cyan-500/10"
           }`}
         >
-          <div className="text-white font-semibold text-lg">
+          <div className="text-slate-900 font-semibold text-lg">
             {item}
           </div>
         </motion.div>
@@ -463,14 +463,14 @@ return (
                     whileHover={{
                       y: -8,
                     }}
-                    className="rounded-[30px] border border-cyan-500/20 bg-gradient-to-br from-[#08111f] to-[#020617] p-8"
+                    className="rounded-[30px] border border-[#D4AF37]/20 bg-gradient-to-br from-[#08111f] to-[#020617] p-8"
                   >
 
-                    <div className="text-gray-400 text-lg mb-4">
+                    <div className="text-slate-500 text-lg mb-4">
                       {card.title}
                     </div>
 
-                    <div className="text-6xl font-black text-cyan-400">
+                    <div className="text-6xl font-black text-[#0F4C81]">
                       {card.value}
                     </div>
 
@@ -490,9 +490,9 @@ return (
 
   <div className="grid lg:grid-cols-2 gap-8">
 
-    <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+    <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
 
-      <h3 className="text-2xl font-bold text-cyan-400 mb-8">
+      <h3 className="text-2xl font-bold text-[#0F4C81] mb-8">
         Fuel Consumption Analysis
       </h3>
 
@@ -507,7 +507,7 @@ return (
               <span>{v}%</span>
             </div>
 
-            <div className="h-4 bg-[#020617] rounded-full overflow-hidden">
+            <div className="h-4 bg-slate-50 rounded-full overflow-hidden">
 
               <div
                 className="h-full bg-cyan-400"
@@ -524,9 +524,9 @@ return (
 
     </div>
 
-    <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+    <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
 
-      <h3 className="text-2xl font-bold text-cyan-400 mb-8">
+      <h3 className="text-2xl font-bold text-[#0F4C81] mb-8">
         Fleet Activity
       </h3>
 
@@ -552,32 +552,32 @@ return (
 
 {activeTab === "Fleet Tracking" && (
 
-  <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+  <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
 
-    <h3 className="text-3xl font-bold text-cyan-400 mb-8">
+    <h3 className="text-3xl font-bold text-[#0F4C81] mb-8">
       Fleet Tracking
     </h3>
 
     <div className="grid md:grid-cols-4 gap-6">
 
-      <div className="bg-[#020617] p-6 rounded-2xl">
-        <div className="text-gray-400">Running</div>
+      <div className="bg-slate-50 p-6 rounded-2xl">
+        <div className="text-slate-500">Running</div>
         <div className="text-5xl font-bold text-green-400">182</div>
       </div>
 
-      <div className="bg-[#020617] p-6 rounded-2xl">
-        <div className="text-gray-400">Idle</div>
+      <div className="bg-slate-50 p-6 rounded-2xl">
+        <div className="text-slate-500">Idle</div>
         <div className="text-5xl font-bold text-yellow-400">41</div>
       </div>
 
-      <div className="bg-[#020617] p-6 rounded-2xl">
-        <div className="text-gray-400">Stopped</div>
+      <div className="bg-slate-50 p-6 rounded-2xl">
+        <div className="text-slate-500">Stopped</div>
         <div className="text-5xl font-bold text-red-400">19</div>
       </div>
 
-      <div className="bg-[#020617] p-6 rounded-2xl">
-        <div className="text-gray-400">Offline</div>
-        <div className="text-5xl font-bold text-gray-400">6</div>
+      <div className="bg-slate-50 p-6 rounded-2xl">
+        <div className="text-slate-500">Offline</div>
+        <div className="text-5xl font-bold text-slate-500">6</div>
       </div>
 
     </div>
@@ -588,9 +588,9 @@ return (
 
 {activeTab === "Battery AI" && (
 
-  <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+  <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
 
-    <h3 className="text-3xl font-bold text-cyan-400 mb-8">
+    <h3 className="text-3xl font-bold text-[#0F4C81] mb-8">
       Battery Intelligence
     </h3>
 
@@ -600,14 +600,14 @@ return (
 
         <div
           key={i}
-          className="bg-[#020617] rounded-2xl p-8 text-center"
+          className="bg-slate-50 rounded-2xl p-8 text-center"
         >
 
-          <div className="text-gray-400 mb-4">
+          <div className="text-slate-500 mb-4">
             Fleet {i + 1}
           </div>
 
-          <div className="text-5xl font-bold text-cyan-400">
+          <div className="text-5xl font-bold text-[#0F4C81]">
             {v}
           </div>
 
@@ -622,26 +622,26 @@ return (
 )}
 {activeTab === "Fuel Analytics" && (
 
-  <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+  <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
 
-    <h3 className="text-3xl font-bold text-cyan-400 mb-8">
+    <h3 className="text-3xl font-bold text-[#0F4C81] mb-8">
       Fuel Analytics
     </h3>
 
     <div className="grid md:grid-cols-3 gap-6 mb-8">
 
-      <div className="bg-[#020617] p-6 rounded-2xl">
-        <div className="text-gray-400">Today's Fuel</div>
-        <div className="text-5xl font-bold text-cyan-400">8,450L</div>
+      <div className="bg-slate-50 p-6 rounded-2xl">
+        <div className="text-slate-500">Today's Fuel</div>
+        <div className="text-5xl font-bold text-[#0F4C81]">8,450L</div>
       </div>
 
-      <div className="bg-[#020617] p-6 rounded-2xl">
-        <div className="text-gray-400">Average Mileage</div>
+      <div className="bg-slate-50 p-6 rounded-2xl">
+        <div className="text-slate-500">Average Mileage</div>
         <div className="text-5xl font-bold text-green-400">5.8</div>
       </div>
 
-      <div className="bg-[#020617] p-6 rounded-2xl">
-        <div className="text-gray-400">Fuel Cost</div>
+      <div className="bg-slate-50 p-6 rounded-2xl">
+        <div className="text-slate-500">Fuel Cost</div>
         <div className="text-5xl font-bold text-yellow-400">₹7.2L</div>
       </div>
 
@@ -658,7 +658,7 @@ return (
             <span>{v}%</span>
           </div>
 
-          <div className="h-4 bg-[#020617] rounded-full overflow-hidden">
+          <div className="h-4 bg-slate-50 rounded-full overflow-hidden">
 
             <div
               className="h-full bg-cyan-400"
@@ -680,31 +680,31 @@ return (
 
   <div className="space-y-8">
 
-    <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+    <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
 
-      <h3 className="text-3xl font-bold text-cyan-400 mb-8">
+      <h3 className="text-3xl font-bold text-[#0F4C81] mb-8">
         AI Monitoring Center
       </h3>
 
       <div className="grid md:grid-cols-4 gap-6">
 
-        <div className="bg-[#020617] p-6 rounded-2xl">
-          <div className="text-gray-400 mb-2">Fuel Theft Risk</div>
+        <div className="bg-slate-50 p-6 rounded-2xl">
+          <div className="text-slate-500 mb-2">Fuel Theft Risk</div>
           <div className="text-5xl font-black text-red-400">3</div>
         </div>
 
-        <div className="bg-[#020617] p-6 rounded-2xl">
-          <div className="text-gray-400 mb-2">Route Deviations</div>
+        <div className="bg-slate-50 p-6 rounded-2xl">
+          <div className="text-slate-500 mb-2">Route Deviations</div>
           <div className="text-5xl font-black text-yellow-400">12</div>
         </div>
 
-        <div className="bg-[#020617] p-6 rounded-2xl">
-          <div className="text-gray-400 mb-2">Idle Vehicles</div>
+        <div className="bg-slate-50 p-6 rounded-2xl">
+          <div className="text-slate-500 mb-2">Idle Vehicles</div>
           <div className="text-5xl font-black text-orange-400">41</div>
         </div>
 
-        <div className="bg-[#020617] p-6 rounded-2xl">
-          <div className="text-gray-400 mb-2">AI Accuracy</div>
+        <div className="bg-slate-50 p-6 rounded-2xl">
+          <div className="text-slate-500 mb-2">AI Accuracy</div>
           <div className="text-5xl font-black text-green-400">98%</div>
         </div>
 
@@ -714,9 +714,9 @@ return (
 
     <div className="grid lg:grid-cols-2 gap-8">
 
-      <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+      <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
 
-        <h4 className="text-2xl font-bold text-cyan-400 mb-6">
+        <h4 className="text-2xl font-bold text-[#0F4C81] mb-6">
           AI Alerts
         </h4>
 
@@ -731,7 +731,7 @@ return (
 
             <div
               key={i}
-              className="bg-[#020617] border border-red-500/20 rounded-2xl p-4"
+              className="bg-slate-50 border border-red-500/20 rounded-2xl p-4"
             >
               <div className="text-red-400">
                 {alert}
@@ -744,9 +744,9 @@ return (
 
       </div>
 
-      <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+      <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
 
-        <h4 className="text-2xl font-bold text-cyan-400 mb-6">
+        <h4 className="text-2xl font-bold text-[#0F4C81] mb-6">
           AI Recommendations
         </h4>
 
@@ -761,7 +761,7 @@ return (
 
             <div
               key={i}
-              className="bg-[#020617] border border-green-500/20 rounded-2xl p-4"
+              className="bg-slate-50 border border-green-500/20 rounded-2xl p-4"
             >
               <div className="text-green-400">
                 {item}
@@ -783,25 +783,25 @@ return (
 
   <div className="space-y-8">
 
-    <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+    <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
 
-      <h3 className="text-3xl font-bold text-cyan-400 mb-8">
+      <h3 className="text-3xl font-bold text-[#0F4C81] mb-8">
         Security Operations Center
       </h3>
 
       <div className="grid md:grid-cols-4 gap-6">
 
-        <div className="bg-[#020617] p-6 rounded-2xl">
-          <div className="text-gray-400 mb-2">
+        <div className="bg-slate-50 p-6 rounded-2xl">
+          <div className="text-slate-500 mb-2">
             Active Users
           </div>
-          <div className="text-5xl font-black text-cyan-400">
+          <div className="text-5xl font-black text-[#0F4C81]">
             24
           </div>
         </div>
 
-        <div className="bg-[#020617] p-6 rounded-2xl">
-          <div className="text-gray-400 mb-2">
+        <div className="bg-slate-50 p-6 rounded-2xl">
+          <div className="text-slate-500 mb-2">
             GPS Devices Online
           </div>
           <div className="text-5xl font-black text-green-400">
@@ -809,8 +809,8 @@ return (
           </div>
         </div>
 
-        <div className="bg-[#020617] p-6 rounded-2xl">
-          <div className="text-gray-400 mb-2">
+        <div className="bg-slate-50 p-6 rounded-2xl">
+          <div className="text-slate-500 mb-2">
             Failed Logins
           </div>
           <div className="text-5xl font-black text-red-400">
@@ -818,8 +818,8 @@ return (
           </div>
         </div>
 
-        <div className="bg-[#020617] p-6 rounded-2xl">
-          <div className="text-gray-400 mb-2">
+        <div className="bg-slate-50 p-6 rounded-2xl">
+          <div className="text-slate-500 mb-2">
             Threat Level
           </div>
           <div className="text-5xl font-black text-yellow-400">
@@ -833,9 +833,9 @@ return (
 
     <div className="grid lg:grid-cols-2 gap-8">
 
-      <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+      <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
 
-        <h4 className="text-2xl font-bold text-cyan-400 mb-6">
+        <h4 className="text-2xl font-bold text-[#0F4C81] mb-6">
           Access Control
         </h4>
 
@@ -850,9 +850,9 @@ return (
 
             <div
               key={i}
-              className="bg-[#020617] rounded-2xl p-4 border border-cyan-500/10"
+              className="bg-slate-50 rounded-2xl p-4 border border-cyan-500/10"
             >
-              <div className="text-white">
+              <div className="text-slate-900">
                 {item}
               </div>
             </div>
@@ -863,9 +863,9 @@ return (
 
       </div>
 
-      <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+      <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
 
-        <h4 className="text-2xl font-bold text-cyan-400 mb-6">
+        <h4 className="text-2xl font-bold text-[#0F4C81] mb-6">
           Security Audit Logs
         </h4>
 
@@ -880,7 +880,7 @@ return (
 
             <div
               key={i}
-              className="bg-[#020617] rounded-2xl p-4 border border-cyan-500/10"
+              className="bg-slate-50 rounded-2xl p-4 border border-cyan-500/10"
             >
               <div className="text-gray-300">
                 {log}
@@ -895,46 +895,46 @@ return (
 
     </div>
 
-    <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+    <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
 
-      <h4 className="text-2xl font-bold text-cyan-400 mb-6">
+      <h4 className="text-2xl font-bold text-[#0F4C81] mb-6">
         System Protection Status
       </h4>
 
       <div className="grid md:grid-cols-4 gap-6">
 
-        <div className="bg-[#020617] rounded-2xl p-6 text-center">
+        <div className="bg-slate-50 rounded-2xl p-6 text-center">
           <div className="text-green-400 text-lg">
             Firewall
           </div>
-          <div className="text-3xl font-bold text-white mt-2">
+          <div className="text-3xl font-bold text-slate-900 mt-2">
             ACTIVE
           </div>
         </div>
 
-        <div className="bg-[#020617] rounded-2xl p-6 text-center">
+        <div className="bg-slate-50 rounded-2xl p-6 text-center">
           <div className="text-green-400 text-lg">
             GPS Encryption
           </div>
-          <div className="text-3xl font-bold text-white mt-2">
+          <div className="text-3xl font-bold text-slate-900 mt-2">
             ENABLED
           </div>
         </div>
 
-        <div className="bg-[#020617] rounded-2xl p-6 text-center">
+        <div className="bg-slate-50 rounded-2xl p-6 text-center">
           <div className="text-green-400 text-lg">
             Cloud Backup
           </div>
-          <div className="text-3xl font-bold text-white mt-2">
+          <div className="text-3xl font-bold text-slate-900 mt-2">
             RUNNING
           </div>
         </div>
 
-        <div className="bg-[#020617] rounded-2xl p-6 text-center">
+        <div className="bg-slate-50 rounded-2xl p-6 text-center">
           <div className="text-green-400 text-lg">
             Data Integrity
           </div>
-          <div className="text-3xl font-bold text-white mt-2">
+          <div className="text-3xl font-bold text-slate-900 mt-2">
             100%
           </div>
         </div>
@@ -950,16 +950,16 @@ return (
 
   <div className="space-y-8">
 
-    <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+    <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
 
-      <h3 className="text-3xl font-bold text-cyan-400 mb-8">
+      <h3 className="text-3xl font-bold text-[#0F4C81] mb-8">
         Cloud Synchronization Center
       </h3>
 
       <div className="grid md:grid-cols-4 gap-6">
 
-        <div className="bg-[#020617] p-6 rounded-2xl">
-          <div className="text-gray-400 mb-2">
+        <div className="bg-slate-50 p-6 rounded-2xl">
+          <div className="text-slate-500 mb-2">
             Sync Status
           </div>
           <div className="text-5xl font-black text-green-400">
@@ -967,17 +967,17 @@ return (
           </div>
         </div>
 
-        <div className="bg-[#020617] p-6 rounded-2xl">
-          <div className="text-gray-400 mb-2">
+        <div className="bg-slate-50 p-6 rounded-2xl">
+          <div className="text-slate-500 mb-2">
             Last Sync
           </div>
-          <div className="text-3xl font-black text-cyan-400">
+          <div className="text-3xl font-black text-[#0F4C81]">
             2 Min Ago
           </div>
         </div>
 
-        <div className="bg-[#020617] p-6 rounded-2xl">
-          <div className="text-gray-400 mb-2">
+        <div className="bg-slate-50 p-6 rounded-2xl">
+          <div className="text-slate-500 mb-2">
             Server Health
           </div>
           <div className="text-5xl font-black text-green-400">
@@ -985,11 +985,11 @@ return (
           </div>
         </div>
 
-        <div className="bg-[#020617] p-6 rounded-2xl">
-          <div className="text-gray-400 mb-2">
+        <div className="bg-slate-50 p-6 rounded-2xl">
+          <div className="text-slate-500 mb-2">
             Data Processed
           </div>
-          <div className="text-5xl font-black text-cyan-400">
+          <div className="text-5xl font-black text-[#0F4C81]">
             2.8TB
           </div>
         </div>
@@ -1000,9 +1000,9 @@ return (
 
     <div className="grid lg:grid-cols-2 gap-8">
 
-      <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+      <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
 
-        <h4 className="text-2xl font-bold text-cyan-400 mb-6">
+        <h4 className="text-2xl font-bold text-[#0F4C81] mb-6">
           Connected Services
         </h4>
 
@@ -1018,9 +1018,9 @@ return (
 
             <div
               key={i}
-              className="bg-[#020617] rounded-2xl p-4 border border-green-500/20 flex justify-between"
+              className="bg-slate-50 rounded-2xl p-4 border border-green-500/20 flex justify-between"
             >
-              <span className="text-white">
+              <span className="text-slate-500">
                 {service}
               </span>
 
@@ -1036,9 +1036,9 @@ return (
 
       </div>
 
-      <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+      <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
 
-        <h4 className="text-2xl font-bold text-cyan-400 mb-6">
+        <h4 className="text-2xl font-bold text-[#0F4C81] mb-6">
           Synchronization Queue
         </h4>
 
@@ -1054,7 +1054,7 @@ return (
 
             <div
               key={i}
-              className="bg-[#020617] rounded-2xl p-4 border border-cyan-500/10"
+              className="bg-slate-50 rounded-2xl p-4 border border-cyan-500/10"
             >
               <div className="text-gray-300">
                 {item}
@@ -1069,43 +1069,43 @@ return (
 
     </div>
 
-    <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+    <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
 
-      <h4 className="text-2xl font-bold text-cyan-400 mb-8">
+      <h4 className="text-2xl font-bold text-[#0F4C81] mb-8">
         Cloud Infrastructure
       </h4>
 
       <div className="grid md:grid-cols-4 gap-6">
 
-        <div className="bg-[#020617] rounded-2xl p-6 text-center">
-          <div className="text-cyan-400 text-lg">
+        <div className="bg-slate-50 rounded-2xl p-6 text-center">
+          <div className="text-[#0F4C81] text-lg">
             Primary Server
           </div>
-          <div className="text-3xl font-bold text-white mt-2">
+          <div className="text-3xl font-bold text-slate-500 mt-2">
             ONLINE
           </div>
         </div>
 
-        <div className="bg-[#020617] rounded-2xl p-6 text-center">
-          <div className="text-cyan-400 text-lg">
+        <div className="bg-slate-50 rounded-2xl p-6 text-center">
+          <div className="text-[#0F4C81] text-lg">
             Backup Server
           </div>
-          <div className="text-3xl font-bold text-white mt-2">
+          <div className="text-3xl font-bold text-slate-500 mt-2">
             ONLINE
           </div>
         </div>
 
-        <div className="bg-[#020617] rounded-2xl p-6 text-center">
-          <div className="text-cyan-400 text-lg">
+        <div className="bg-slate-50 rounded-2xl p-6 text-center">
+          <div className="text-[#0F4C81] text-lg">
             API Gateway
           </div>
-          <div className="text-3xl font-bold text-white mt-2">
+          <div className="text-3xl font-bold text-slate-500 mt-2">
             ACTIVE
           </div>
         </div>
 
-        <div className="bg-[#020617] rounded-2xl p-6 text-center">
-          <div className="text-cyan-400 text-lg">
+        <div className="bg-slate-50 rounded-2xl p-6 text-center">
+          <div className="text-[#0F4C81] text-lg">
             Backup Status
           </div>
           <div className="text-3xl font-bold text-green-400 mt-2">
@@ -1122,27 +1122,27 @@ return (
 )}
 {activeTab === "Settings" && (
 
-  <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+  <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
 
-    <h3 className="text-3xl font-bold text-cyan-400 mb-8">
+    <h3 className="text-3xl font-bold text-[#0F4C81] mb-8">
       Settings
     </h3>
 
     <div className="space-y-5">
 
-      <div className="bg-[#020617] p-5 rounded-2xl">
+      <div className="bg-slate-50 p-5 rounded-2xl">
         Company Name: BDPH GROUP
       </div>
 
-      <div className="bg-[#020617] p-5 rounded-2xl">
+      <div className="bg-slate-50 p-5 rounded-2xl">
         Notifications: Enabled
       </div>
 
-      <div className="bg-[#020617] p-5 rounded-2xl">
+      <div className="bg-slate-50 p-5 rounded-2xl">
         GPS Provider: Active
       </div>
 
-      <div className="bg-[#020617] p-5 rounded-2xl">
+      <div className="bg-slate-50 p-5 rounded-2xl">
         Cloud Sync: Connected
       </div>
 
@@ -1168,7 +1168,7 @@ return (
 
           <div className="text-center mb-20">
 
-            <h2 className="text-5xl font-bold text-cyan-400 mb-4">
+            <h2 className="text-5xl font-bold text-[#0F4C81] mb-4">
               Smart Monitoring System
             </h2>
 
@@ -1202,14 +1202,14 @@ return (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
-                className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8 hover:border-cyan-400 transition"
+                className="bg-white border border-[#D4AF37]/20 rounded-3xl p-8 hover:border-cyan-400 transition"
               >
 
-                <div className="text-cyan-400 mb-6">
+                <div className="text-[#0F4C81] mb-6">
                   {item.icon}
                 </div>
 
-                <h3 className="text-2xl font-bold text-cyan-400 mb-4">
+                <h3 className="text-2xl font-bold text-[#0F4C81] mb-4">
                   {item.title}
                 </h3>
 
@@ -1237,7 +1237,7 @@ return (
     {/* ABOUT */}
 <section
   id="about"
-  className="py-32 px-6 bg-[#020617]"
+  className="py-32 px-6 bg-slate-50"
 >
   <div className="max-w-7xl mx-auto">
 
@@ -1245,12 +1245,12 @@ return (
 
       <h2 className="text-5xl md:text-7xl font-black mb-6">
         ABOUT{" "}
-        <span className="text-cyan-400">
+        <span className="text-[#0F4C81]">
           BDPH GROUP
         </span>
       </h2>
 
-      <p className="text-xl text-gray-400 max-w-4xl mx-auto">
+      <p className="text-xl text-slate-500 max-w-4xl mx-auto">
         BDPH Group is developing intelligent enterprise solutions for
         transporters, fleet operators, logistics companies and industrial
         businesses. Our platform integrates GPS tracking, fuel monitoring,
@@ -1262,47 +1262,47 @@ return (
 
     <div className="grid md:grid-cols-3 gap-8">
 
-      <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8">
-        <div className="text-cyan-400 text-4xl mb-6">
+      <div className="bg-white border border-[#D4AF37]/20 rounded-3xl p-8">
+        <div className="text-[#0F4C81] text-4xl mb-6">
           🎯
         </div>
 
-        <h3 className="text-2xl font-bold text-cyan-400 mb-4">
+        <h3 className="text-2xl font-bold text-[#0F4C81] mb-4">
           Mission
         </h3>
 
-        <p className="text-gray-400">
+        <p className="text-slate-500">
           To simplify transporter operations through intelligent
           automation, AI-driven monitoring and centralized fleet
           management.
         </p>
       </div>
 
-      <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8">
-        <div className="text-cyan-400 text-4xl mb-6">
+      <div className="bg-white border border-[#D4AF37]/20 rounded-3xl p-8">
+        <div className="text-[#0F4C81] text-4xl mb-6">
           🚀
         </div>
 
-        <h3 className="text-2xl font-bold text-cyan-400 mb-4">
+        <h3 className="text-2xl font-bold text-[#0F4C81] mb-4">
           Vision
         </h3>
 
-        <p className="text-gray-400">
+        <p className="text-slate-500">
           To become India's leading AI-powered enterprise and fleet
           intelligence platform for transport and logistics industries.
         </p>
       </div>
 
-      <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8">
-        <div className="text-cyan-400 text-4xl mb-6">
+      <div className="bg-white border border-[#D4AF37]/20 rounded-3xl p-8">
+        <div className="text-[#0F4C81] text-4xl mb-6">
           ⚡
         </div>
 
-        <h3 className="text-2xl font-bold text-cyan-400 mb-4">
+        <h3 className="text-2xl font-bold text-[#0F4C81] mb-4">
           Solutions
         </h3>
 
-        <p className="text-gray-400">
+        <p className="text-slate-500">
           GPS tracking, fuel management, compliance monitoring,
           document alerts, AI analytics and enterprise automation.
         </p>
@@ -1342,13 +1342,13 @@ return (
       >
 
         CONTACT{" "}
-        <span className="text-cyan-400">
+        <span className="text-[#0F4C81]">
           BDPH AI
         </span>
 
       </motion.h2>
 
-      <p className="text-gray-400 text-xl max-w-4xl mx-auto">
+      <p className="text-slate-500 text-xl max-w-4xl mx-auto">
 
         Connect with our AI enterprise intelligence team for
         realtime fleet systems, GPS monitoring, cloud analytics,
@@ -1369,17 +1369,17 @@ return (
       >
 
         {/* COMPANY CARD */}
-        <div className="rounded-[32px] border border-cyan-500/20 bg-[#08111f]/80 backdrop-blur-2xl p-10 shadow-[0_0_50px_rgba(0,255,255,0.08)]">
+        <div className="rounded-[32px] border border-[#D4AF37]/20 bg-white/80 backdrop-blur-2xl p-10 shadow-[0_0_50px_rgba(0,255,255,0.08)]">
 
           <div className="flex items-center gap-5 mb-10">
 
-            <div className="w-20 h-20 rounded-3xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-4xl">
+            <div className="w-20 h-20 rounded-3xl bg-cyan-500/10 border border-[#D4AF37]/20 flex items-center justify-center text-4xl">
               🚀
             </div>
 
             <div>
 
-              <div className="text-4xl font-black text-cyan-400">
+              <div className="text-4xl font-black text-[#0F4C81]">
                 BDPH GROUP
               </div>
 
@@ -1395,17 +1395,17 @@ return (
 
             <div className="flex items-start gap-5">
 
-              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-2xl">
+              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-[#D4AF37]/20 flex items-center justify-center text-[#0F4C81] text-2xl">
                 📍
               </div>
 
               <div>
 
-                <div className="text-xl font-semibold text-white mb-1">
+                <div className="text-xl font-semibold text-slate-500 mb-1">
                   Corporate Office
                 </div>
 
-                <div className="text-gray-400">
+                <div className="text-slate-500">
                   Bhagalpur, Bihar, India
                 </div>
 
@@ -1415,17 +1415,17 @@ return (
 
             <div className="flex items-start gap-5">
 
-              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-2xl">
+              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-[#D4AF37]/20 flex items-center justify-center text-[#0F4C81] text-2xl">
                 📞
               </div>
 
               <div>
 
-                <div className="text-xl font-semibold text-white mb-1">
+                <div className="text-xl font-semibold text-slate-500 mb-1">
                   Contact Number
                 </div>
 
-                <div className="text-gray-400">
+                <div className="text-slate-500">
                   +91 9122221684
                 </div>
 
@@ -1435,17 +1435,17 @@ return (
 
             <div className="flex items-start gap-5">
 
-              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-2xl">
+              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-[#D4AF37]/20 flex items-center justify-center text-[#0F4C81] text-2xl">
                 ✉️
               </div>
 
               <div>
 
-                <div className="text-xl font-semibold text-white mb-1">
+                <div className="text-xl font-semibold text-slate-500 mb-1">
                   Email Address
                 </div>
 
-                <div className="text-gray-400">
+                <div className="text-slate-500">
                   info@bdphgroup.com
                 </div>
 
@@ -1455,17 +1455,17 @@ return (
 
             <div className="flex items-start gap-5">
 
-              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-2xl">
+              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-[#D4AF37]/20 flex items-center justify-center text-[#0F4C81] text-2xl">
                 🌐
               </div>
 
               <div>
 
-                <div className="text-xl font-semibold text-white mb-1">
+                <div className="text-xl font-semibold text-slate-500 mb-1">
                   Website
                 </div>
 
-                <div className="text-gray-400">
+                <div className="text-slate-500">
                   www.bdphgroup.com
                 </div>
 
@@ -1486,18 +1486,18 @@ return (
             repeat: Infinity,
             duration: 5,
           }}
-          className="rounded-[32px] border border-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-2xl p-8"
+          className="rounded-[32px] border border-[#D4AF37]/20 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-2xl p-8"
         >
 
           <div className="flex items-center justify-between mb-8">
 
             <div>
 
-              <div className="text-3xl font-black text-cyan-400 mb-2">
+              <div className="text-3xl font-black text-[#0F4C81] mb-2">
                 AI SYSTEM STATUS
               </div>
 
-              <div className="text-gray-400">
+              <div className="text-slate-500">
                 Enterprise cloud intelligence active
               </div>
 
@@ -1521,7 +1521,7 @@ return (
                 className="flex items-center justify-between border-b border-cyan-500/10 pb-4"
               >
 
-                <div className="text-white">
+                <div className="text-slate-500">
                   {item}
                 </div>
 
@@ -1544,16 +1544,16 @@ return (
         initial={{ opacity: 0, x: 40 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="rounded-[36px] border border-cyan-500/20 bg-[#08111f]/80 backdrop-blur-2xl p-10 shadow-[0_0_60px_rgba(0,255,255,0.08)]"
+        className="rounded-[36px] border border-[#D4AF37]/20 bg-white/80 backdrop-blur-2xl p-10 shadow-[0_0_60px_rgba(0,255,255,0.08)]"
       >
 
         <div className="mb-10">
 
-          <div className="text-5xl font-black text-cyan-400 mb-4">
+          <div className="text-5xl font-black text-[#0F4C81] mb-4">
             Send Enquiry
           </div>
 
-          <div className="text-gray-400 text-lg">
+          <div className="text-slate-500 text-lg">
             Connect directly with our AI enterprise team.
           </div>
 
@@ -1566,7 +1566,7 @@ return (
   value={formData.name}
   onChange={handleInputChange}
   placeholder="Full Name"
-  className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition"
+  className="w-full bg-slate-50 border border-[#D4AF37]/20 rounded-2xl px-6 py-5 text-slate-500 outline-none focus:border-cyan-400 transition"
 />
 
          <input
@@ -1575,7 +1575,7 @@ return (
   value={formData.email}
   onChange={handleInputChange}
   placeholder="Email Address"
-  className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition"
+  className="w-full bg-slate-50 border border-[#D4AF37]/20 rounded-2xl px-6 py-5 text-slate-500 outline-none focus:border-cyan-400 transition"
 />
 
          <input
@@ -1584,7 +1584,7 @@ return (
   value={formData.company}
   onChange={handleInputChange}
   placeholder="Company Name"
-  className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition"
+  className="w-full bg-slate-50 border border-[#D4AF37]/20 rounded-2xl px-6 py-5 text-slate-500 outline-none focus:border-cyan-400 transition"
 />
         
 
@@ -1594,7 +1594,7 @@ return (
   value={formData.message}
   onChange={handleInputChange}
   placeholder="Describe your enterprise requirement..."
-  className="w-full bg-[#020617] border border-cyan-500/20 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition resize-none"
+  className="w-full bg-slate-50 border border-[#D4AF37]/20 rounded-2xl px-6 py-5 text-slate-500 outline-none focus:border-cyan-400 transition resize-none"
           />
 
           <motion.button
@@ -1640,7 +1640,7 @@ return (
               className="rounded-2xl bg-cyan-500/5 border border-cyan-500/10 p-5 text-center"
             >
 
-              <div className="text-3xl font-black text-cyan-400 mb-2">
+              <div className="text-3xl font-black text-[#0F4C81] mb-2">
                 {item.value}
               </div>
 
