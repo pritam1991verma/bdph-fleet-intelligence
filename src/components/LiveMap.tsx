@@ -91,23 +91,23 @@ const alerts = [
     >
       {/* BACKGROUND GLOW */}
 
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-cyan-500/10 blur-[180px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-[#D4AF37]/10 blur-[180px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* HEADER */}
 
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-[#D4AF37]/30 bg-cyan-500/10 backdrop-blur-xl mb-8">
+          <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 backdrop-blur-xl mb-8">
             <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse"></div>
 
             <span className="text-[#0F4C81] uppercase tracking-[0.3em] text-sm font-semibold">
-              AI Satellite Monitoring System
+              Enterprise Fleet Command Center
             </span>
           </div>
 
           <h2 className="text-5xl md:text-7xl font-black tracking-tight mb-6">
             <span className="bg-gradient-to-r from-cyan-300 via-white to-cyan-500 bg-clip-text text-transparent">
-              Live Fleet Intelligence
+              Live Fleet Operations
             </span>
           </h2>
 
@@ -140,7 +140,7 @@ const alerts = [
 
         {/* MAP WRAPPER */}
 
-        <div className="relative rounded-[32px] overflow-hidden border border-[#D4AF37]/30 bg-slate-100 shadow-[0_0_100px_rgba(34,211,238,0.18)]">
+        <div className="relative rounded-[32px] overflow-hidden border border-[#D4AF37]/20 bg-white shadow-2xl">
 
           {/* AI CORE GLOW */}
 
@@ -165,7 +165,7 @@ const alerts = [
               <div className="w-24 h-24 rounded-full border border-cyan-400/40 bg-slate-100/40 backdrop-blur-xl"></div>
 
               <span className="absolute text-[#0F4C81] text-xs tracking-[0.3em]">
-                SAT-LINK
+                LIVE GPS
               </span>
 
             </div>
@@ -319,7 +319,7 @@ const alerts = [
   <div className="backdrop-blur-2xl bg-white/95 border border-red-500/20 rounded-3xl p-6 w-[280px]">
 
     <div className="text-red-400 uppercase tracking-[0.3em] text-sm mb-5">
-      AI Fuel Alerts
+      Critical Fleet Alerts
     </div>
 
     <div className="space-y-4">
@@ -375,7 +375,7 @@ const alerts = [
 
          {/* MAP */}
 
-<div className="relative w-full h-[780px] z-0">
+<div className="relative w-full h-[850px] z-0">
 
   {/* VEHICLE SEARCH PANEL */}
 
@@ -391,7 +391,7 @@ const alerts = [
         type="text"
         value={searchVehicle}
         onChange={(e) => setSearchVehicle(e.target.value)}
-        placeholder="Search Vehicle No"
+        placeholder="Search Vehicle / Driver / Route"
         className="w-full bg-white border border-[#D4AF37]/30 rounded-xl px-4 py-3 text-slate-900 outline-none"
       />
 
