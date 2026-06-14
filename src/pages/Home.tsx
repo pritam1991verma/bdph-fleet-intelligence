@@ -632,7 +632,7 @@ transport intelligence on a single platform.
     <h3 className="text-5xl font-bold text-slate-500">6</h3>
     <p className="text-slate-500 font-semibold mt-2">Disconnected</p>
   </div>
-
+</div>
 </div>
 
     </div>
