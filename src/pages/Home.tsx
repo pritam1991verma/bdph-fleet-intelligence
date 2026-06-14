@@ -79,7 +79,7 @@ const handleSubmit = () => {
 
 return (
   <div
-    className="min-h-screen bg-white text-slate-800 overflow-x-hidden relative"
+    className="min-h-screen bg-gradient-to-br from-white via-slate-50 to-blue-50 text-slate-800 overflow-x-hidden relative"
     onMouseMove={handleMouseMove}
   >
       
@@ -96,7 +96,7 @@ return (
       <Navbar />
 
       {/* LIVE STATUS BAR */}
-      <div className="relative z-40 mt-[76px] bg-white border-b border-cyan-500/10 overflow-hidden">
+      <div className="relative z-40 mt-[76px] bg-gradient-to-br from-white via-slate-50 to-blue-50 border-b border-cyan-500/10 overflow-hidden">
         <div className="animate-[ticker_25s_linear_infinite] whitespace-nowrap py-3 text-sm text-cyan-300">
 
           <span className="mx-10">
@@ -158,7 +158,7 @@ return (
               repeat: Infinity,
               duration: 4,
             }}
-            className="bg-white/80 backdrop-blur-xl border border-[#D4AF37]/20 rounded-3xl p-6 w-64 shadow-2xl"
+            className="bg-gradient-to-br from-white via-slate-50 to-blue-50/80 backdrop-blur-xl border border-[#D4AF37]/20 rounded-3xl p-6 w-64 shadow-2xl"
           >
 
             <div className="text-slate-500 text-sm mb-2">
@@ -186,7 +186,7 @@ return (
               repeat: Infinity,
               duration: 5,
             }}
-            className="bg-white/80 backdrop-blur-xl border border-[#D4AF37]/20 rounded-3xl p-6 w-64 shadow-2xl"
+            className="bg-gradient-to-br from-white via-slate-50 to-blue-50/80 backdrop-blur-xl border border-[#D4AF37]/20 rounded-3xl p-6 w-64 shadow-2xl"
           >
 
             <div className="text-slate-500 text-sm mb-2">
@@ -247,19 +247,19 @@ transport intelligence on a single platform.
           </div>
           <div className="flex flex-wrap justify-center gap-4 mt-10">
 
-  <div className="bg-white px-5 py-3 rounded-full shadow-lg border border-[#D4AF37]/20 text-[#0F4C81] font-semibold">
+  <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 px-5 py-3 rounded-full shadow-lg border border-[#D4AF37]/20 text-[#0F4C81] font-semibold">
     ✓ GPS Tracking
   </div>
 
-  <div className="bg-white px-5 py-3 rounded-full shadow-lg border border-[#D4AF37]/20 text-[#0F4C81] font-semibold">
+  <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 px-5 py-3 rounded-full shadow-lg border border-[#D4AF37]/20 text-[#0F4C81] font-semibold">
     ✓ Fuel Analytics
   </div>
 
-  <div className="bg-white px-5 py-3 rounded-full shadow-lg border border-[#D4AF37]/20 text-[#0F4C81] font-semibold">
+  <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 px-5 py-3 rounded-full shadow-lg border border-[#D4AF37]/20 text-[#0F4C81] font-semibold">
     ✓ AI Monitoring
   </div>
 
-  <div className="bg-white px-5 py-3 rounded-full shadow-lg border border-[#D4AF37]/20 text-[#0F4C81] font-semibold">
+  <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 px-5 py-3 rounded-full shadow-lg border border-[#D4AF37]/20 text-[#0F4C81] font-semibold">
     ✓ Enterprise Security
   </div>
    </div>         
@@ -271,7 +271,7 @@ transport intelligence on a single platform.
   className="mt-16 max-w-6xl mx-auto"
 >
 
-  <div className="bg-white rounded-[32px] border border-[#D4AF37]/20 shadow-2xl p-10">
+  <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 rounded-[32px] border border-[#D4AF37]/20 shadow-2xl p-10">
 
     <div className="grid md:grid-cols-4 gap-6">
 
@@ -373,7 +373,7 @@ transport intelligence on a single platform.
               <motion.div
                 key={index}
                 whileHover={{   scale: 1.03,   y: -8 }}
-                className="bg-white border border-[#D4AF37]/20 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition"
+                className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition"
               >
 
                 <div className="w-16 h-16 rounded-2xl bg-blue-50 border border-[#D4AF37]/20 flex items-center justify-center mb-6 text-[#0F4C81] text-2xl">
@@ -440,7 +440,7 @@ transport intelligence on a single platform.
 
   {/* SIDEBAR */}
 
-  <div className="rounded-[32px] border border-[#D4AF37]/20 bg-white shadow-2xl p-8">
+  <div className="rounded-[32px] border border-[#D4AF37]/20 bg-gradient-to-br from-white via-slate-50 to-blue-50 shadow-2xl p-8">
 
     <div className="text-5xl font-black text-[#0F4C81] mb-10">
       BDPH AI
@@ -466,7 +466,7 @@ transport intelligence on a single platform.
   className={`rounded-2xl px-6 py-5 cursor-pointer transition-all ${
     activeTab === item
       ? "bg-blue-50 border border-[#D4AF37]/30"
-      : "bg-white border border-slate-200"
+      : "bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-slate-200"
   }`}
 >
   <div className="text-[#0F4C81] font-bold text-lg">
@@ -513,7 +513,7 @@ transport intelligence on a single platform.
                     whileHover={{
                       y: -8,
                     }}
-                    className="rounded-[30px] bg-white border border-[#D4AF37]/20 shadow-xl p-8"
+                    className="rounded-[30px] bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 shadow-xl p-8"
                   >
 
                     <div className="text-slate-500 text-lg mb-4">
@@ -540,7 +540,7 @@ transport intelligence on a single platform.
 
   <div className="grid lg:grid-cols-2 gap-8">
 
-    <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
+    <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
       <h3 className="text-2xl font-bold text-[#0F4C81] mb-8">
         Fuel Consumption Analysis
@@ -574,7 +574,7 @@ transport intelligence on a single platform.
 
     </div>
 
-    <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
+    <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
       <h3 className="text-2xl font-bold text-[#0F4C81] mb-8">
         Fleet Activity
@@ -602,7 +602,7 @@ transport intelligence on a single platform.
 
 {activeTab === "Fleet Tracking" && (
 
-  <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
+  <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
     <h3 className="text-3xl font-bold text-[#0F4C81] mb-8">
       Fleet Tracking
@@ -638,7 +638,7 @@ transport intelligence on a single platform.
 
 {activeTab === "Battery AI" && (
 
-  <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
+  <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
     <h3 className="text-3xl font-bold text-[#0F4C81] mb-8">
       Battery Intelligence
@@ -672,7 +672,7 @@ transport intelligence on a single platform.
 )}
 {activeTab === "Fuel Analytics" && (
 
-  <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
+  <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
     <h3 className="text-3xl font-bold text-[#0F4C81] mb-8">
       Fuel Analytics
@@ -730,7 +730,7 @@ transport intelligence on a single platform.
 
   <div className="space-y-8">
 
-    <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
+    <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
       <h3 className="text-3xl font-bold text-[#0F4C81] mb-8">
         AI Monitoring Center
@@ -764,7 +764,7 @@ transport intelligence on a single platform.
 
     <div className="grid lg:grid-cols-2 gap-8">
 
-      <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
+      <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
         <h4 className="text-2xl font-bold text-[#0F4C81] mb-6">
           AI Alerts
@@ -794,7 +794,7 @@ transport intelligence on a single platform.
 
       </div>
 
-      <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
+      <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
         <h4 className="text-2xl font-bold text-[#0F4C81] mb-6">
           AI Recommendations
@@ -833,7 +833,7 @@ transport intelligence on a single platform.
 
   <div className="space-y-8">
 
-    <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
+    <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
       <h3 className="text-3xl font-bold text-[#0F4C81] mb-8">
         Security Operations Center
@@ -883,7 +883,7 @@ transport intelligence on a single platform.
 
     <div className="grid lg:grid-cols-2 gap-8">
 
-      <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
+      <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
         <h4 className="text-2xl font-bold text-[#0F4C81] mb-6">
           Access Control
@@ -913,7 +913,7 @@ transport intelligence on a single platform.
 
       </div>
 
-      <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
+      <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
         <h4 className="text-2xl font-bold text-[#0F4C81] mb-6">
           Security Audit Logs
@@ -945,7 +945,7 @@ transport intelligence on a single platform.
 
     </div>
 
-    <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
+    <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
       <h4 className="text-2xl font-bold text-[#0F4C81] mb-6">
         System Protection Status
@@ -1000,7 +1000,7 @@ transport intelligence on a single platform.
 
   <div className="space-y-8">
 
-    <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
+    <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
       <h3 className="text-3xl font-bold text-[#0F4C81] mb-8">
         Cloud Synchronization Center
@@ -1050,7 +1050,7 @@ transport intelligence on a single platform.
 
     <div className="grid lg:grid-cols-2 gap-8">
 
-      <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
+      <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
         <h4 className="text-2xl font-bold text-[#0F4C81] mb-6">
           Connected Services
@@ -1086,7 +1086,7 @@ transport intelligence on a single platform.
 
       </div>
 
-      <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
+      <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
         <h4 className="text-2xl font-bold text-[#0F4C81] mb-6">
           Synchronization Queue
@@ -1119,7 +1119,7 @@ transport intelligence on a single platform.
 
     </div>
 
-    <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
+    <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
       <h4 className="text-2xl font-bold text-[#0F4C81] mb-8">
         Cloud Infrastructure
@@ -1172,7 +1172,7 @@ transport intelligence on a single platform.
 )}
 {activeTab === "Settings" && (
 
-  <div className="bg-white border border-[#D4AF37]/20 rounded-[30px] p-8">
+  <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
     <h3 className="text-3xl font-bold text-[#0F4C81] mb-8">
       Settings
@@ -1252,7 +1252,7 @@ transport intelligence on a single platform.
               <motion.div
                 key={index}
                 whileHover={{   scale: 1.03,   y: -8 }}
-                className=" bg-white border border-[#D4AF37]/20 rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:border-[#D4AF37] transition-all duration-300 "
+                className=" bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:border-[#D4AF37] transition-all duration-300 "
               >
 
                 <div className="mb-6">
@@ -1312,7 +1312,7 @@ transport intelligence on a single platform.
 
     <div className="grid md:grid-cols-3 gap-8">
 
-      <div className="bg-white border border-[#D4AF37]/20 rounded-3xl p-8">
+      <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-3xl p-8">
         <div className="text-[#0F4C81] text-4xl mb-6">
           🎯
         </div>
@@ -1328,7 +1328,7 @@ transport intelligence on a single platform.
         </p>
       </div>
 
-      <div className="bg-white border border-[#D4AF37]/20 rounded-3xl p-8">
+      <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-3xl p-8">
         <div className="text-[#0F4C81] text-4xl mb-6">
           🚀
         </div>
@@ -1343,7 +1343,7 @@ transport intelligence on a single platform.
         </p>
       </div>
 
-      <div className="bg-white border border-[#D4AF37]/20 rounded-3xl p-8">
+      <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-3xl p-8">
         <div className="text-[#0F4C81] text-4xl mb-6">
           ⚡
         </div>
@@ -1419,7 +1419,7 @@ transport intelligence on a single platform.
       >
 
         {/* COMPANY CARD */}
-        <div className="rounded-[32px] border border-[#D4AF37]/20 bg-white/80 backdrop-blur-2xl p-10 shadow-[0_0_50px_rgba(0,255,255,0.08)]">
+        <div className="rounded-[32px] border border-[#D4AF37]/20 bg-gradient-to-br from-white via-slate-50 to-blue-50/80 backdrop-blur-2xl p-10 shadow-[0_0_50px_rgba(0,255,255,0.08)]">
 
           <div className="flex items-center gap-5 mb-10">
 
@@ -1594,7 +1594,7 @@ transport intelligence on a single platform.
         initial={{ opacity: 0, x: 40 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="rounded-[36px] border border-[#D4AF37]/20 bg-white/80 backdrop-blur-2xl p-10 shadow-[0_0_60px_rgba(0,255,255,0.08)]"
+        className="rounded-[36px] border border-[#D4AF37]/20 bg-gradient-to-br from-white via-slate-50 to-blue-50/80 backdrop-blur-2xl p-10 shadow-[0_0_60px_rgba(0,255,255,0.08)]"
       >
 
         <div className="mb-10">
