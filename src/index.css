@@ -167,7 +167,7 @@ body {
    GOLD GLOW
 ========================= */
 
-.glow-cyan {
+.glow-gold {   box-shadow:     0 0 15px rgba(212,175,55,0.25),     0 0 40px rgba(212,175,55,0.15); } {
   box-shadow:
     0 0 15px rgba(212,175,55,0.25),
     0 0 40px rgba(212,175,55,0.15);
