@@ -302,9 +302,14 @@ return (
   </motion.div>
 
 </div>
-      {/* SERVICES */}
-      <section
-        id="services"
+
+</motion.div>
+
+</section>
+
+{/* SERVICES */}
+<section
+  id="services"
         className="py-24 px-6"
       >
 
