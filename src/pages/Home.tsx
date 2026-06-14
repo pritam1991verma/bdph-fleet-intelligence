@@ -265,22 +265,77 @@ transport intelligence on a single platform.
   </div>
    </div>         
 
-<div className="mt-16 max-w-6xl mx-auto rounded-[32px] overflow-hidden border border-[#D4AF37]/20 shadow-2xl">
+<motion.div
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+  className="mt-16 max-w-6xl mx-auto"
+>
 
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="w-full h-auto"
-  >
-    <source
-      src="/fleet-ai-demo.mp4"
-      type="video/mp4"
-    />
-  </video>
+  <div className="bg-white rounded-[32px] border border-[#D4AF37]/20 shadow-2xl p-10">
 
-</div>
+    <div className="grid md:grid-cols-4 gap-6">
+
+      {[
+        { title: "Vehicles", value: "128" },
+        { title: "Fuel Efficiency", value: "94%" },
+        { title: "Tracking Accuracy", value: "99.9%" },
+        { title: "AI Alerts", value: "12" }
+      ].map((item, index) => (
+        <motion.div
+          key={index}
+          animate={{ y: [0, -8, 0] }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            delay: index * 0.2
+          }}
+          className="bg-slate-50 rounded-3xl p-6 border border-[#D4AF37]/20"
+        >
+          <div className="text-slate-500 text-sm">
+            {item.title}
+          </div>
+
+          <div className="text-4xl font-bold text-[#0F4C81] mt-2">
+            {item.value}
+          </div>
+        </motion.div>
+      ))}
+
+    </div>
+
+    <div className="mt-10">
+
+      <div className="flex justify-between mb-2">
+        <span className="text-[#0F4C81] font-semibold">
+          Fleet Performance
+        </span>
+
+        <span className="text-[#D4AF37]">
+          94%
+        </span>
+      </div>
+
+      <div className="h-4 bg-slate-200 rounded-full overflow-hidden">
+
+        <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: "94%" }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            repeatType: "reverse"
+          }}
+          className="h-full bg-[#D4AF37]"
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+
+</motion.div>
 
 </motion.div>
 
