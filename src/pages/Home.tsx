@@ -18,7 +18,7 @@ import {
 function Home() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-
+const [activeTab, setActiveTab] = useState("Overview");
   const smoothX = useSpring(mouseX, {
     stiffness: 120,
     damping: 20,
@@ -403,39 +403,33 @@ return (
               <div className="space-y-4">
 
                 {[
-                  "Overview",
-                  "Fleet Tracking",
-                  "Battery AI",
-                  "Fuel Analytics",
-                  "AI Monitoring",
-                  "Security Layer",
-                  "Cloud Sync",
-                  "Settings",
-                ].map((item, i) => (
+  "Overview",
+  "Fleet Tracking",
+  "Battery AI",
+  "Fuel Analytics",
+  "AI Monitoring",
+  "Security Layer",
+  "Cloud Sync",
+  "Settings",
+].map((item) => (
 
                   <motion.div
-                    key={i}
-                    whileHover={{
-                      x: 8,
-                    }}
-                    className={`rounded-2xl px-6 py-5 cursor-pointer ${
-                      i === 0
-                        ? "bg-cyan-500/10 border border-cyan-400/30"
-                        : "bg-[#0b1220] border border-cyan-500/10"
-                    }`}
-                  >
-
-                    <div className="text-white font-semibold text-lg">
-                      {item}
-                    </div>
-
-                  </motion.div>
-
-                ))}
-
-              </div>
-
-            </motion.div>
+  key={item}
+  whileHover={{ x: 8 }}
+  onClick={() => setActiveTab(item)}
+  className={rounded-2xl px-6 py-5 cursor-pointer transition-all
+    ${
+      activeTab === item
+        ? "bg-cyan-500/10 border border-cyan-400/30"
+        : "bg-[#0b1220] border border-cyan-500/10"
+    }
+  }
+>
+  <div className="text-white font-semibold text-lg">
+    {item}
+  </div>
+</motion.div>
+           
 
             {/* MAIN PANEL */}
             <div className="space-y-8">
@@ -492,62 +486,174 @@ return (
 
                          </div>
 
-              {/* DASHBOARD CONTENT */}
+             {/* DASHBOARD CONTENT */}
 
-              <div className="grid lg:grid-cols-2 gap-8">
+{activeTab === "Overview" && (
 
-                <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+  <div className="grid lg:grid-cols-2 gap-8">
 
-                  <h3 className="text-2xl font-bold text-cyan-400 mb-8">
-                    Fuel Consumption Analysis
-                  </h3>
+    <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
 
-                  <div className="space-y-5">
+      <h3 className="text-2xl font-bold text-cyan-400 mb-8">
+        Fuel Consumption Analysis
+      </h3>
 
-                    {[78, 64, 88, 71, 93].map((v, i) => (
+      <div className="space-y-5">
 
-                      <div key={i}>
+        {[78, 64, 88, 71, 93].map((v, i) => (
 
-                        <div className="flex justify-between mb-2 text-gray-300">
-                          <span>Day {i + 1}</span>
-                          <span>{v}%</span>
-                        </div>
+          <div key={i}>
 
-                        <div className="h-4 bg-[#020617] rounded-full overflow-hidden">
+            <div className="flex justify-between mb-2 text-gray-300">
+              <span>Day {i + 1}</span>
+              <span>{v}%</span>
+            </div>
 
-                          <div
-                            className="h-full bg-cyan-400"
-                            style={{ width: `${v}%` }}
-                          />
+            <div className="h-4 bg-[#020617] rounded-full overflow-hidden">
 
-                        </div>
+              <div
+                className="h-full bg-cyan-400"
+                style={{ width: `${v}%` }}
+              />
 
-                      </div>
+            </div>
 
-                    ))}
+          </div>
 
-                  </div>
+        ))}
 
-                </div>
+      </div>
 
-                <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+    </div>
 
-                  <h3 className="text-2xl font-bold text-cyan-400 mb-8">
-                    Fleet Activity
-                  </h3>
+    <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
 
-                  <div className="flex items-end justify-between h-[300px] gap-4">
+      <h3 className="text-2xl font-bold text-cyan-400 mb-8">
+        Fleet Activity
+      </h3>
 
-                    {[40, 80, 65, 95, 55, 100, 72].map((h, i) => (
+      <div className="flex items-end justify-between h-[300px] gap-4">
 
-                      <div
-                        key={i}
-                        className="flex-1 bg-cyan-400 rounded-t-2xl"
-                        style={{ height: `${h}%` }}
-                      />
+        {[40, 80, 65, 95, 55, 100, 72].map((h, i) => (
 
-                    ))}
+          <div
+            key={i}
+            className="flex-1 bg-cyan-400 rounded-t-2xl"
+            style={{ height: `${h}%` }}
+          />
 
+        ))}
+
+      </div>
+
+    </div>
+
+  </div>
+
+)}
+
+{activeTab === "Fleet Tracking" && (
+
+  <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+
+    <h3 className="text-3xl font-bold text-cyan-400 mb-8">
+      Fleet Tracking
+    </h3>
+
+    <div className="grid md:grid-cols-4 gap-6">
+
+      <div className="bg-[#020617] p-6 rounded-2xl">
+        <div className="text-gray-400">Running</div>
+        <div className="text-5xl font-bold text-green-400">182</div>
+      </div>
+
+      <div className="bg-[#020617] p-6 rounded-2xl">
+        <div className="text-gray-400">Idle</div>
+        <div className="text-5xl font-bold text-yellow-400">41</div>
+      </div>
+
+      <div className="bg-[#020617] p-6 rounded-2xl">
+        <div className="text-gray-400">Stopped</div>
+        <div className="text-5xl font-bold text-red-400">19</div>
+      </div>
+
+      <div className="bg-[#020617] p-6 rounded-2xl">
+        <div className="text-gray-400">Offline</div>
+        <div className="text-5xl font-bold text-gray-400">6</div>
+      </div>
+
+    </div>
+
+  </div>
+
+)}
+
+{activeTab === "Battery AI" && (
+
+  <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+
+    <h3 className="text-3xl font-bold text-cyan-400 mb-8">
+      Battery Intelligence
+    </h3>
+
+    <div className="grid md:grid-cols-4 gap-6">
+
+      {["94%", "81%", "72%", "88%"].map((v, i) => (
+
+        <div
+          key={i}
+          className="bg-[#020617] rounded-2xl p-8 text-center"
+        >
+
+          <div className="text-gray-400 mb-4">
+            Fleet {i + 1}
+          </div>
+
+          <div className="text-5xl font-bold text-cyan-400">
+            {v}
+          </div>
+
+        </div>
+
+      ))}
+
+    </div>
+
+  </div>
+
+)}
+
+{activeTab === "Settings" && (
+
+  <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+
+    <h3 className="text-3xl font-bold text-cyan-400 mb-8">
+      Settings
+    </h3>
+
+    <div className="space-y-5">
+
+      <div className="bg-[#020617] p-5 rounded-2xl">
+        Company Name: BDPH GROUP
+      </div>
+
+      <div className="bg-[#020617] p-5 rounded-2xl">
+        Notifications: Enabled
+      </div>
+
+      <div className="bg-[#020617] p-5 rounded-2xl">
+        GPS Provider: Active
+      </div>
+
+      <div className="bg-[#020617] p-5 rounded-2xl">
+        Cloud Sync: Connected
+      </div>
+
+    </div>
+
+  </div>
+
+)}
                   </div>
 
                 </div>
