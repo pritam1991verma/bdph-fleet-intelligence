@@ -77,9 +77,12 @@ const handleSubmit = () => {
     message: "",
   });
 };
-      className="min-h-screen bg-[#030712] text-white overflow-x-hidden relative"
-    >
-      
+
+return (
+  <div
+    className="min-h-screen bg-[#030712] text-white overflow-x-hidden relative"
+    onMouseMove={handleMouseMove}
+  >
       
       
       {/* CURSOR GLOW */}
@@ -868,6 +871,11 @@ const handleSubmit = () => {
 >
   Launch AI Enquiry
 </motion.button>
+          {successMessage && (
+  <div className="mt-4 text-center text-green-400 font-semibold">
+    {successMessage}
+  </div>
+)}
 
         </div>
 
