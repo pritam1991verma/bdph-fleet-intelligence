@@ -388,21 +388,7 @@ return (
 
           <div className="grid xl:grid-cols-[320px_1fr] gap-8">
 
-            {/* SIDEBAR */}
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="rounded-[32px] border border-cyan-500/20 bg-[#08111f]/80 backdrop-blur-2xl p-8"
-            >
-
-              <div className="text-4xl font-black text-cyan-400 mb-10">
-                BDPH AI
-              </div>
-
-              <div className="space-y-4">
-
-                {[
+           {[
   "Overview",
   "Fleet Tracking",
   "Battery AI",
@@ -413,23 +399,35 @@ return (
   "Settings",
 ].map((item) => (
 
-                  <motion.div
-  key={item}
-  whileHover={{ x: 8 }}
-  onClick={() => setActiveTab(item)}
-  className={rounded-2xl px-6 py-5 cursor-pointer transition-all
-    ${
+  <motion.div
+    key={item}
+    whileHover={{ x: 8 }}
+    onClick={() => setActiveTab(item)}
+    className={`rounded-2xl px-6 py-5 cursor-pointer transition-all ${
       activeTab === item
         ? "bg-cyan-500/10 border border-cyan-400/30"
         : "bg-[#0b1220] border border-cyan-500/10"
-    }
-  }
+    }`}
+  >
+    <div className="text-white font-semibold text-lg">
+      {item}
+    </div>
+  </motion.div>
+
+))}
+  key={item}
+  whileHover={{ x: 8 }}
+  onClick={() => setActiveTab(item)}
+  className={`rounded-2xl px-6 py-5 cursor-pointer transition-all ${
+    activeTab === item
+      ? "bg-cyan-500/10 border border-cyan-400/30"
+      : "bg-[#0b1220] border border-cyan-500/10"
+  }`}
 >
   <div className="text-white font-semibold text-lg">
     {item}
   </div>
 </motion.div>
-           
 
             {/* MAIN PANEL */}
             <div className="space-y-8">
@@ -513,7 +511,7 @@ return (
 
               <div
                 className="h-full bg-cyan-400"
-                style={{ width: ${v}% }}
+                style={{ width: `${v}%` }}
               />
 
             </div>
@@ -539,7 +537,7 @@ return (
           <div
             key={i}
             className="flex-1 bg-cyan-400 rounded-t-2xl"
-            style={{ height: ${h}% }}
+            style={{ height: `${h}%` }}
           />
 
         ))}
