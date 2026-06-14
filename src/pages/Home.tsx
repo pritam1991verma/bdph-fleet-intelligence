@@ -1368,7 +1368,7 @@ transport intelligence on a single platform.
 </section>
      {/* ENHANCED AI CONTACT SECTION */}
 <section
-  id="contact"
+  CONTACT BDPH AI
   className="relative py-32 px-6 bg-slate-50 overflow-hidden"
 >
 
@@ -1422,114 +1422,94 @@ transport intelligence on a single platform.
         className="space-y-8"
       >
 
-        {/* COMPANY CARD */}
-        <div className="rounded-[32px] border border-[#D4AF37]/20 bg-gradient-to-br from-white via-slate-50 to-blue-50/80 backdrop-blur-2xl p-10 shadow-[0_0_50px_rgba(0,255,255,0.08)]">
+       {/* COMPANY CARD */}
 
-          <div className="flex items-center gap-5 mb-10">
+<div className="rounded-[32px] border border-cyan-500/20 bg-gradient-to-br from-slate-900 via-[#0F172A] to-[#0F4C81] p-10 shadow-[0_0_80px_rgba(34,211,238,0.15)] text-white">
 
-            <div className="w-20 h-20 rounded-3xl bg-cyan-500/10 border border-[#D4AF37]/20 flex items-center justify-center text-4xl">
-              🚀
-            </div>
+  <div className="flex items-center justify-between mb-10">
 
-            <div>
 
-              <div className="text-4xl font-black text-[#0F4C81]">
-                BDPH GROUP
-              </div>
+<div>
+  <h3 className="text-4xl font-black">
+    Enterprise Operations Center
+  </h3>
 
-              <div className="text-gray-500 mt-2">
-                Enterprise AI Intelligence Platform
-              </div>
+  <p className="text-cyan-300 mt-2">
+    AI Powered Fleet Intelligence Network
+  </p>
+</div>
 
-            </div>
+<div className="flex gap-2">
 
-          </div>
+  <span className="px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-sm">
+    LIVE
+  </span>
 
-          <div className="space-y-8">
+  <span className="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 text-sm">
+    ONLINE
+  </span>
 
-            <div className="flex items-start gap-5">
+  <span className="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-400 text-sm">
+    SECURED
+  </span>
 
-              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-[#D4AF37]/20 flex items-center justify-center text-[#0F4C81] text-2xl">
-                📍
-              </div>
+</div>
 
-              <div>
 
-                <div className="text-xl font-semibold text-slate-500 mb-1">
-                  Corporate Office
-                </div>
+  </div>
 
-                <div className="text-slate-500">
-                  Bhagalpur, Bihar, India
-                </div>
+  <div className="grid grid-cols-2 gap-5">
 
-              </div>
 
-            </div>
+<div className="bg-white/5 backdrop-blur-xl rounded-3xl p-5 border border-white/10">
+  <p className="text-slate-400 text-sm">Vehicles Connected</p>
+  <h4 className="text-4xl font-black text-cyan-400">128</h4>
+</div>
 
-            <div className="flex items-start gap-5">
+<div className="bg-white/5 backdrop-blur-xl rounded-3xl p-5 border border-white/10">
+  <p className="text-slate-400 text-sm">GPS Accuracy</p>
+  <h4 className="text-4xl font-black text-green-400">99.8%</h4>
+</div>
 
-              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-[#D4AF37]/20 flex items-center justify-center text-[#0F4C81] text-2xl">
-                📞
-              </div>
+<div className="bg-white/5 backdrop-blur-xl rounded-3xl p-5 border border-white/10">
+  <p className="text-slate-400 text-sm">Cloud Nodes</p>
+  <h4 className="text-4xl font-black text-yellow-400">42</h4>
+</div>
 
-              <div>
+<div className="bg-white/5 backdrop-blur-xl rounded-3xl p-5 border border-white/10">
+  <p className="text-slate-400 text-sm">AI Health Score</p>
+  <h4 className="text-4xl font-black text-cyan-400">98%</h4>
+</div>
 
-                <div className="text-xl font-semibold text-slate-500 mb-1">
-                  Contact Number
-                </div>
 
-                <div className="text-slate-500">
-                  +91 9122221684
-                </div>
+  </div>
 
-              </div>
+  <div className="mt-8 space-y-4">
 
-            </div>
 
-            <div className="flex items-start gap-5">
+<div className="flex justify-between border-b border-white/10 pb-3">
+  <span className="text-slate-400">Corporate HQ</span>
+  <span>Bhagalpur, Bihar</span>
+</div>
 
-              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-[#D4AF37]/20 flex items-center justify-center text-[#0F4C81] text-2xl">
-                ✉️
-              </div>
+<div className="flex justify-between border-b border-white/10 pb-3">
+  <span className="text-slate-400">Support Line</span>
+  <span>+91 9122221684</span>
+</div>
 
-              <div>
+<div className="flex justify-between border-b border-white/10 pb-3">
+  <span className="text-slate-400">Enterprise Email</span>
+  <span>info@bdphgroup.com</span>
+</div>
 
-                <div className="text-xl font-semibold text-slate-500 mb-1">
-                  Email Address
-                </div>
+<div className="flex justify-between">
+  <span className="text-slate-400">Platform</span>
+  <span>www.bdphgroup.com</span>
+</div>
 
-                <div className="text-slate-500">
-                  info@bdphgroup.com
-                </div>
+  </div>
 
-              </div>
-
-            </div>
-
-            <div className="flex items-start gap-5">
-
-              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-[#D4AF37]/20 flex items-center justify-center text-[#0F4C81] text-2xl">
-                🌐
-              </div>
-
-              <div>
-
-                <div className="text-xl font-semibold text-slate-500 mb-1">
-                  Website
-                </div>
-
-                <div className="text-slate-500">
-                  www.bdphgroup.com
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
+</div>
 
         {/* AI STATUS CARD */}
         <motion.div
@@ -1547,7 +1527,7 @@ transport intelligence on a single platform.
 
             <div>
 
-              <div className="text-3xl font-black text-[#0F4C81] mb-2">
+              <div className="text-4xl font-black text-cyan-400 mb-2">
                 AI SYSTEM STATUS
               </div>
 
@@ -1604,11 +1584,25 @@ transport intelligence on a single platform.
         <div className="mb-10">
 
           <div className="text-5xl font-black text-[#0F4C81] mb-4">
-            Send Enquiry
+            Enterprise Command Center
+            <div className="flex gap-2 mt-4">
+
+  <span className="px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-xs">
+    LIVE
+  </span>
+
+  <span className="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 text-xs">
+    AI ACTIVE
+  </span>
+
+  <span className="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-400 text-xs">
+    SECURED
+  </span>
+
           </div>
 
-          <div className="text-slate-500 text-lg">
-            Connect directly with our AI enterprise team.
+          <div className="text-cyan-300 text-lg">
+  Connect directly with our AI enterprise operations team.
           </div>
 
         </div>
@@ -1620,7 +1614,7 @@ transport intelligence on a single platform.
   value={formData.name}
   onChange={handleInputChange}
   placeholder="Full Name"
-  className="w-full bg-slate-50 border border-[#D4AF37]/20 rounded-2xl px-6 py-5 text-slate-500 outline-none focus:border-cyan-400 transition"
+  className="w-full bg-white/5 backdrop-blur-xl border border-cyan-500/20 rounded-2xl px-6 py-5 text-white placeholder:text-slate-400 outline-none focus:border-cyan-400 transition"
 />
 
          <input
@@ -1629,7 +1623,7 @@ transport intelligence on a single platform.
   value={formData.email}
   onChange={handleInputChange}
   placeholder="Email Address"
-  className="w-full bg-slate-50 border border-[#D4AF37]/20 rounded-2xl px-6 py-5 text-slate-500 outline-none focus:border-cyan-400 transition"
+  className="w-full bg-white/5 backdrop-blur-xl border border-cyan-500/20 rounded-2xl px-6 py-5 text-white placeholder:text-slate-400 outline-none focus:border-cyan-400 transition"
 />
 
          <input
@@ -1638,7 +1632,7 @@ transport intelligence on a single platform.
   value={formData.company}
   onChange={handleInputChange}
   placeholder="Company Name"
-  className="w-full bg-slate-50 border border-[#D4AF37]/20 rounded-2xl px-6 py-5 text-slate-500 outline-none focus:border-cyan-400 transition"
+  className="w-full bg-white/5 backdrop-blur-xl border border-cyan-500/20 rounded-2xl px-6 py-5 text-white placeholder:text-slate-400 outline-none focus:border-cyan-400 transition"
 />
         
 
@@ -1648,7 +1642,7 @@ transport intelligence on a single platform.
   value={formData.message}
   onChange={handleInputChange}
   placeholder="Describe your enterprise requirement..."
-  className="w-full bg-slate-50 border border-[#D4AF37]/20 rounded-2xl px-6 py-5 text-slate-500 outline-none focus:border-cyan-400 transition resize-none"
+  className="w-full bg-white/5 backdrop-blur-xl border border-cyan-500/20 rounded-2xl px-6 py-5 text-white placeholder:text-slate-400 outline-none focus:border-cyan-400 transition resize-none"
           />
 
           <motion.button
@@ -1691,14 +1685,14 @@ transport intelligence on a single platform.
 
             <div
               key={i}
-              className="rounded-2xl bg-cyan-500/5 border border-cyan-500/10 p-5 text-center"
+              className="rounded-2xl bg-white/5 backdrop-blur-xl border border-cyan-500/20 p-5 text-center hover:border-cyan-400 transition"
             >
 
-              <div className="text-3xl font-black text-[#0F4C81] mb-2">
+              <div className="text-4xl font-black text-cyan-400 mb-2">
                 {item.value}
               </div>
 
-              <div className="text-gray-500 text-sm">
+              <div className="text-slate-400 text-sm uppercase tracking-wider">
                 {item.title}
               </div>
 
