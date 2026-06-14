@@ -415,20 +415,7 @@ return (
   </motion.div>
 
 ))}
-  key={item}
-  whileHover={{ x: 8 }}
-  onClick={() => setActiveTab(item)}
-  className={`rounded-2xl px-6 py-5 cursor-pointer transition-all ${
-    activeTab === item
-      ? "bg-cyan-500/10 border border-cyan-400/30"
-      : "bg-[#0b1220] border border-cyan-500/10"
-  }`}
->
-  <div className="text-white font-semibold text-lg">
-    {item}
-  </div>
-</motion.div>
-
+  
             {/* MAIN PANEL */}
             <div className="space-y-8">
 
