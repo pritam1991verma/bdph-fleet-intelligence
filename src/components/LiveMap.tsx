@@ -87,7 +87,7 @@ const alerts = [
   return (
     <section
       id="tracking"
-      className="relative py-24 bg-black overflow-hidden"
+      className="relative py-24 bg-slate-100 overflow-hidden"
     >
       {/* BACKGROUND GLOW */}
 
@@ -97,10 +97,10 @@ const alerts = [
         {/* HEADER */}
 
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 backdrop-blur-xl mb-8">
+          <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-[#D4AF37]/30 bg-cyan-500/10 backdrop-blur-xl mb-8">
             <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse"></div>
 
-            <span className="text-cyan-300 uppercase tracking-[0.3em] text-sm font-semibold">
+            <span className="text-[#0F4C81] uppercase tracking-[0.3em] text-sm font-semibold">
               AI Satellite Monitoring System
             </span>
           </div>
@@ -122,9 +122,9 @@ const alerts = [
 
         {/* LIVE ALERT TICKER */}
 
-        <div className="mb-8 overflow-hidden rounded-2xl border border-cyan-500/20 bg-black/40 backdrop-blur-xl">
+        <div className="mb-8 overflow-hidden rounded-2xl border border-[#D4AF37]/30 bg-slate-100/40 backdrop-blur-xl">
 
-          <div className="animate-[ticker_25s_linear_infinite] whitespace-nowrap py-4 text-sm uppercase tracking-[0.35em] text-cyan-300">
+          <div className="animate-[ticker_25s_linear_infinite] whitespace-nowrap py-4 text-sm uppercase tracking-[0.35em] text-[#0F4C81]">
 
             AI MONITORING ACTIVE •
             SATELLITE LINK STABLE •
@@ -140,7 +140,7 @@ const alerts = [
 
         {/* MAP WRAPPER */}
 
-        <div className="relative rounded-[32px] overflow-hidden border border-cyan-500/20 bg-black shadow-[0_0_100px_rgba(34,211,238,0.18)]">
+        <div className="relative rounded-[32px] overflow-hidden border border-[#D4AF37]/30 bg-slate-100 shadow-[0_0_100px_rgba(34,211,238,0.18)]">
 
           {/* AI CORE GLOW */}
 
@@ -162,9 +162,9 @@ const alerts = [
 
               <div className="absolute w-24 h-24 rounded-full border border-cyan-400/20 animate-ping"></div>
 
-              <div className="w-24 h-24 rounded-full border border-cyan-400/40 bg-black/40 backdrop-blur-xl"></div>
+              <div className="w-24 h-24 rounded-full border border-cyan-400/40 bg-slate-100/40 backdrop-blur-xl"></div>
 
-              <span className="absolute text-cyan-300 text-xs tracking-[0.3em]">
+              <span className="absolute text-[#0F4C81] text-xs tracking-[0.3em]">
                 SAT-LINK
               </span>
 
@@ -174,13 +174,13 @@ const alerts = [
 
           {/* LIVE STATUS PANEL */}
 
-          <div className="absolute top-6 left-6 z-[700] backdrop-blur-2xl bg-black/50 border border-cyan-500/20 rounded-3xl p-6 shadow-[0_0_40px_rgba(34,211,238,0.15)]">
+          <div className="absolute top-6 left-6 z-[700] backdrop-blur-2xl bg-white/95 border border-[#D4AF37]/30 rounded-3xl p-6 shadow-xl">
 
             <div className="flex items-center gap-3 mb-5">
 
               <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse"></div>
 
-              <span className="text-green-400 text-sm tracking-[0.3em] font-bold uppercase">
+              <span className="text-[#D4AF37] text-sm tracking-[0.3em] font-bold uppercase">
                 Live Network
               </span>
 
@@ -190,7 +190,7 @@ const alerts = [
 
               <div className="flex justify-between gap-12">
                 <span className="text-gray-400">Vehicles Online</span>
-                <span className="text-white font-bold">248</span>
+                <span className="text-slate-900 font-bold">248</span>
               </div>
 
               <div className="flex justify-between gap-12">
@@ -200,12 +200,12 @@ const alerts = [
 
               <div className="flex justify-between gap-12">
                 <span className="text-gray-400">Satellites Linked</span>
-                <span className="text-cyan-400 font-bold">16</span>
+                <span className="text-[#0F4C81] font-bold">16</span>
               </div>
 
               <div className="flex justify-between gap-12">
                 <span className="text-gray-400">Coverage</span>
-                <span className="text-green-400 font-bold">99.98%</span>
+                <span className="text-[#D4AF37] font-bold">99.98%</span>
               </div>
 
             </div>
@@ -213,32 +213,32 @@ const alerts = [
           </div>
           <div className="absolute top-[260px] left-6 z-[700]">
 
-  <div className="backdrop-blur-2xl bg-black/50 border border-cyan-500/20 rounded-3xl p-6">
+  <div className="backdrop-blur-2xl bg-white/95 border border-[#D4AF37]/30 rounded-3xl p-6">
 
-    <div className="text-cyan-300 uppercase tracking-[0.3em] text-sm mb-5">
+    <div className="text-[#0F4C81] uppercase tracking-[0.3em] text-sm mb-5">
       Fleet Status
     </div>
 
     <div className="space-y-3">
 
       <div className="flex justify-between gap-12">
-        <span className="text-green-400">Running</span>
-        <span className="text-white">{fleetStats.running}</span>
+        <span className="text-[#D4AF37]">Running</span>
+        <span className="text-slate-900">{fleetStats.running}</span>
       </div>
 
       <div className="flex justify-between gap-12">
         <span className="text-yellow-400">Idle</span>
-        <span className="text-white">{fleetStats.idle}</span>
+        <span className="text-slate-900">{fleetStats.idle}</span>
       </div>
 
       <div className="flex justify-between gap-12">
         <span className="text-red-400">Stopped</span>
-        <span className="text-white">{fleetStats.stopped}</span>
+        <span className="text-slate-900">{fleetStats.stopped}</span>
       </div>
 
       <div className="flex justify-between gap-12">
         <span className="text-gray-400">Offline</span>
-        <span className="text-white">{fleetStats.offline}</span>
+        <span className="text-slate-900">{fleetStats.offline}</span>
       </div>
 
     </div>
@@ -251,13 +251,13 @@ const alerts = [
 
           <div className="absolute bottom-8 left-6 z-[700]">
 
-            <div className="backdrop-blur-2xl bg-black/50 border border-cyan-500/20 rounded-3xl p-5 shadow-[0_0_40px_rgba(34,211,238,0.15)]">
+            <div className="backdrop-blur-2xl bg-white/95 border border-[#D4AF37]/30 rounded-3xl p-5 shadow-xl">
 
               <div className="flex items-center gap-3 mb-6">
 
                 <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse"></div>
 
-                <span className="text-cyan-300 uppercase tracking-[0.3em] text-sm font-semibold">
+                <span className="text-[#0F4C81] uppercase tracking-[0.3em] text-sm font-semibold">
                   Realtime Analytics
                 </span>
 
@@ -271,7 +271,7 @@ const alerts = [
 
                     <span className="text-gray-400">AI Processing</span>
 
-                    <span className="text-cyan-300">94%</span>
+                    <span className="text-[#0F4C81]">94%</span>
 
                   </div>
 
@@ -289,7 +289,7 @@ const alerts = [
 
                     <span className="text-gray-400">Satellite Signal</span>
 
-                    <span className="text-green-400">99%</span>
+                    <span className="text-[#D4AF37]">99%</span>
 
                   </div>
 
@@ -316,7 +316,7 @@ const alerts = [
                     <div className="h-full w-[88%] bg-gradient-to-r from-yellow-300 to-orange-300 rounded-full animate-pulse"></div>
                     <div className="absolute top-[430px] left-6 z-[700]">
 
-  <div className="backdrop-blur-2xl bg-black/50 border border-red-500/20 rounded-3xl p-6 w-[280px]">
+  <div className="backdrop-blur-2xl bg-white/95 border border-red-500/20 rounded-3xl p-6 w-[280px]">
 
     <div className="text-red-400 uppercase tracking-[0.3em] text-sm mb-5">
       AI Fuel Alerts
@@ -331,7 +331,7 @@ const alerts = [
           className="border border-red-500/10 rounded-2xl p-4"
         >
 
-          <div className="font-bold text-white">
+          <div className="font-bold text-slate-900">
             {alert.vehicle}
           </div>
 
@@ -381,9 +381,9 @@ const alerts = [
 
   <div className="absolute top-6 right-[150px] z-[700]">
 
-    <div className="bg-black/60 backdrop-blur-2xl border border-cyan-500/20 rounded-3xl p-5 w-[320px]">
+    <div className="bg-white/95 backdrop-blur-2xl border border-[#D4AF37]/30 rounded-3xl p-5 w-[320px]">
 
-      <div className="text-cyan-300 uppercase tracking-[0.3em] text-xs mb-3">
+      <div className="text-[#0F4C81] uppercase tracking-[0.3em] text-xs mb-3">
         Vehicle Search
       </div>
 
@@ -392,7 +392,7 @@ const alerts = [
         value={searchVehicle}
         onChange={(e) => setSearchVehicle(e.target.value)}
         placeholder="Search Vehicle No"
-        className="w-full bg-[#08111f] border border-cyan-500/20 rounded-xl px-4 py-3 text-white outline-none"
+        className="w-full bg-white border border-[#D4AF37]/30 rounded-xl px-4 py-3 text-slate-900 outline-none"
       />
 
     </div>
@@ -509,9 +509,9 @@ const alerts = [
 
   <div className="grid md:grid-cols-2 gap-4">
 
-    <div className="bg-black/60 backdrop-blur-xl border border-cyan-500/20 rounded-3xl p-5 w-[260px]">
+    <div className="bg-white/95 backdrop-blur-xl border border-[#D4AF37]/30 rounded-3xl p-5 w-[260px]">
 
-      <div className="text-cyan-300 font-bold mb-3">
+      <div className="text-[#0F4C81] font-bold mb-3">
         Kurwa Siding
       </div>
 
@@ -523,15 +523,15 @@ const alerts = [
         Waiting: 14
       </div>
 
-      <div className="text-green-400">
+      <div className="text-[#D4AF37]">
         Dispatched: 72
       </div>
 
     </div>
 
-    <div className="bg-black/60 backdrop-blur-xl border border-cyan-500/20 rounded-3xl p-5 w-[260px]">
+    <div className="bg-white/95 backdrop-blur-xl border border-[#D4AF37]/30 rounded-3xl p-5 w-[260px]">
 
-      <div className="text-cyan-300 font-bold mb-3">
+      <div className="text-[#0F4C81] font-bold mb-3">
         Dumka Siding
       </div>
 
@@ -543,7 +543,7 @@ const alerts = [
         Waiting: 8
       </div>
 
-      <div className="text-green-400">
+      <div className="text-[#D4AF37]">
         Dispatched: 53
       </div>
 
@@ -558,37 +558,37 @@ const alerts = [
 
             <div className="flex gap-4 flex-wrap justify-center">
 
-              <div className="backdrop-blur-xl bg-black/50 border border-cyan-500/20 rounded-2xl px-5 py-3">
+              <div className="backdrop-blur-xl bg-white/95 border border-[#D4AF37]/30 rounded-2xl px-5 py-3">
 
                 <div className="text-gray-400 text-xs uppercase tracking-widest">
                   Active Vehicles
                 </div>
 
-                <div className="text-2xl font-bold text-white">
+                <div className="text-2xl font-bold text-slate-900">
                   248
                 </div>
 
               </div>
 
-              <div className="backdrop-blur-xl bg-black/50 border border-cyan-500/20 rounded-2xl px-5 py-3">
+              <div className="backdrop-blur-xl bg-white/95 border border-[#D4AF37]/30 rounded-2xl px-5 py-3">
 
                 <div className="text-gray-400 text-xs uppercase tracking-widest">
                   Network Health
                 </div>
 
-                <div className="text-2xl font-bold text-green-400">
+                <div className="text-2xl font-bold text-[#D4AF37]">
                   Stable
                 </div>
 
               </div>
 
-              <div className="backdrop-blur-xl bg-black/50 border border-cyan-500/20 rounded-2xl px-5 py-3">
+              <div className="backdrop-blur-xl bg-white/95 border border-[#D4AF37]/30 rounded-2xl px-5 py-3">
 
                 <div className="text-gray-400 text-xs uppercase tracking-widest">
                   AI Monitoring
                 </div>
 
-                <div className="text-2xl font-bold text-cyan-400">
+                <div className="text-2xl font-bold text-[#0F4C81]">
                   Enabled
                 </div>
 
