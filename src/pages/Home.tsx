@@ -481,7 +481,7 @@ return (
                     whileHover={{
                       y: -8,
                     }}
-                    className="rounded-[30px] border border-[#D4AF37]/20 bg-gradient-to-br from-[#08111f] to-[#020617] p-8"
+                    className="rounded-[30px] border border-[#D4AF37]/20 enterprise-card to-[#020617] p-8"
                   >
 
                     <div className="text-slate-500 text-lg mb-4">
