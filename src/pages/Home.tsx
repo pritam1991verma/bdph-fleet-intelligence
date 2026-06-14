@@ -263,6 +263,7 @@ transport intelligence on a single platform.
   <div className="bg-white px-5 py-3 rounded-full shadow-lg border border-[#D4AF37]/20 text-[#0F4C81] font-semibold">
     ✓ Enterprise Security
   </div>
+   </div>         
 
 <div className="mt-16 max-w-6xl mx-auto rounded-[32px] overflow-hidden border border-[#D4AF37]/20 shadow-2xl">
 
