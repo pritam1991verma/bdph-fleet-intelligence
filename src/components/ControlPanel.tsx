@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 function ControlPanel() {
   return (
 
-    <section className="py-24 px-6 bg-[#020617]">
+    <section className="py-24 px-6 bg-slate-50">
 
       <div className="max-w-7xl mx-auto">
 
         <div className="text-center mb-20">
 
-          <h2 className="text-5xl font-bold text-cyan-400 mb-4">
+          <h2 className="text-5xl font-bold text-[#0F4C81] mb-4">
             Enterprise Control Center
           </h2>
 
@@ -45,14 +45,14 @@ function ControlPanel() {
             <motion.div
               key={index}
               whileHover={{ scale: 1.03 }}
-              className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8"
+              className="bg-white border border-[#D4AF37]/20 rounded-3xl p-8 shadow-xl"
             >
 
               <div className="text-gray-400 mb-4">
                 {card.title}
               </div>
 
-              <div className="text-5xl font-bold text-cyan-400">
+              <div className="text-5xl font-bold text-[#0F4C81]">
                 {card.value}
               </div>
 
@@ -64,11 +64,11 @@ function ControlPanel() {
 
         {/* LIVE TABLE */}
 
-        <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl overflow-hidden mb-10">
+        <div className="bg-white border border-[#D4AF37]/20 rounded-3xl overflow-hidden mb-10 shadow-xl">
 
-          <div className="px-8 py-6 border-b border-cyan-500/10">
+          <div className="px-8 py-6 border-b border-[#D4AF37]/10">
 
-            <h3 className="text-2xl font-bold text-cyan-400">
+            <h3 className="text-2xl font-bold text-[#0F4C81]">
               Live Fleet Monitoring
             </h3>
 
@@ -78,31 +78,31 @@ function ControlPanel() {
 
             <table className="w-full">
 
-              <thead className="bg-[#0f172a]">
+              <thead className="bg-slate-50">
 
                 <tr>
 
-                  <th className="text-left px-6 py-5 text-cyan-400">
+                  <th className="text-left px-6 py-5 text-[#0F4C81]">
                     Vehicle
                   </th>
 
-                  <th className="text-left px-6 py-5 text-cyan-400">
+                  <th className="text-left px-6 py-5 text-[#0F4C81]">
                     Driver
                   </th>
 
-                  <th className="text-left px-6 py-5 text-cyan-400">
+                  <th className="text-left px-6 py-5 text-[#0F4C81]">
                     Status
                   </th>
 
-                  <th className="text-left px-6 py-5 text-cyan-400">
+                  <th className="text-left px-6 py-5 text-[#0F4C81]">
                     Battery
                   </th>
 
-                  <th className="text-left px-6 py-5 text-cyan-400">
+                  <th className="text-left px-6 py-5 text-[#0F4C81]">
                     Fuel
                   </th>
 
-                  <th className="text-left px-6 py-5 text-cyan-400">
+                  <th className="text-left px-6 py-5 text-[#0F4C81]">
                     GPS
                   </th>
 
@@ -141,7 +141,7 @@ function ControlPanel() {
 
                   <tr
                     key={index}
-                    className="border-t border-cyan-500/10 hover:bg-[#0f172a] transition"
+                    className="border-t border-[#D4AF37]/10 hover:bg-slate-50 transition"
                   >
 
                     <td className="px-6 py-5">
@@ -164,7 +164,7 @@ function ControlPanel() {
                       {row.fuel}
                     </td>
 
-                    <td className="px-6 py-5 text-cyan-400">
+                    <td className="px-6 py-5 text-[#0F4C81]">
                       {row.gps}
                     </td>
 
@@ -184,7 +184,7 @@ function ControlPanel() {
 
         <div className="grid lg:grid-cols-2 gap-8">
 
-          <div className="bg-[#08111f] border border-red-500/20 rounded-3xl p-8">
+          <div className="bg-white border border-red-500/20 rounded-3xl p-8 shadow-xl">
 
             <h3 className="text-2xl font-bold text-red-400 mb-8">
               Critical Alerts
@@ -201,7 +201,7 @@ function ControlPanel() {
 
                 <div
                   key={index}
-                  className="bg-[#0f172a] border border-red-500/10 rounded-2xl px-6 py-5"
+                  className="bg-slate-50 border border-red-500/10 rounded-2xl px-6 py-5"
                 >
 
                   {alert}
@@ -214,9 +214,9 @@ function ControlPanel() {
 
           </div>
 
-          <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8">
+          <div className="bg-white border border-[#D4AF37]/20 rounded-3xl p-8 shadow-xl">
 
-            <h3 className="text-2xl font-bold text-cyan-400 mb-8">
+            <h3 className="text-2xl font-bold text-[#0F4C81] mb-8">
               AI Recommendations
             </h3>
 
@@ -231,7 +231,7 @@ function ControlPanel() {
 
                 <div
                   key={index}
-                  className="bg-[#0f172a] border border-cyan-500/10 rounded-2xl px-6 py-5"
+                  className="bg-slate-50 border border-[#D4AF37]/10 rounded-2xl px-6 py-5"
                 >
 
                   {item}
