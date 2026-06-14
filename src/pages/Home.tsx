@@ -216,20 +216,19 @@ return (
 
           <h1 className="text-5xl md:text-7xl font-black leading-tight mb-8 text-[#0F4C81]">
 
-            FUTURE OF
-            <span className="text-[#0F4C81]">
-              {" "}
-              AI ENTERPRISE{" "}
-            </span>
-            INTELLIGENCE
+           AI-Powered Enterprise
+<span className="text-[#D4AF37]">
+  Fleet Intelligence
+</span>
+Platform
 
           </h1>
 
           <p className="text-slate-500 text-xl max-w-3xl mx-auto mb-10">
 
-            Advanced GPS tracking, fleet monitoring,
-            realtime analytics, AI-powered enterprise
-            automation and intelligent cloud systems.
+            Unified fleet operations, fuel monitoring,
+GPS tracking, AI analytics, security and
+transport intelligence on a single platform.
 
           </p>
 
@@ -265,41 +264,20 @@ return (
     ✓ Enterprise Security
   </div>
 
-</div>
-{/* ORBIT UI */}
-<div className="mt-24 flex justify-center relative">
+<div className="mt-16 max-w-6xl mx-auto rounded-[32px] overflow-hidden border border-[#D4AF37]/20 shadow-2xl">
 
-  <div className="absolute w-[500px] h-[500px] rounded-full border border-cyan-500/10 animate-ping"></div>
-
-  <div className="absolute w-[400px] h-[400px] rounded-full border border-[#D4AF37]/20 animate-pulse"></div>
-
-  <motion.div
-    animate={{ rotate: 360 }}
-    transition={{
-      repeat: Infinity,
-      duration: 20,
-      ease: "linear",
-    }}
-    className="relative w-[300px] h-[300px] border border-cyan-500/30 rounded-full flex items-center justify-center"
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-auto"
   >
-
-    <div className="absolute w-[200px] h-[200px] border border-[#D4AF37]/20 rounded-full"></div>
-
-    <div className="absolute w-[120px] h-[120px] border border-[#D4AF37]/20 rounded-full"></div>
-
-    <div className="w-10 h-10 bg-cyan-400 rounded-full shadow-[0_0_40px_rgba(34,211,238,0.9)]"></div>
-
-    <div className="absolute left-0 top-10 text-[#0F4C81] text-xs flex gap-2 items-center">
-      <Satellite size={14} />
-      LIVE SATELLITE
-    </div>
-
-    <div className="absolute bottom-6 right-6 text-purple-400 text-xs flex gap-2 items-center">
-      <Radar size={14} />
-      SCANNING
-    </div>
-
-  </motion.div>
+    <source
+      src="/fleet-ai-demo.mp4"
+      type="video/mp4"
+    />
+  </video>
 
 </div>
 
