@@ -341,10 +341,10 @@ return (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
-                className="bg-[#0b1120] border border-[#D4AF37]/20 rounded-3xl p-8 hover:border-cyan-400 transition"
+                className="bg-white border border-[#D4AF37]/20 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition"
               >
 
-                <div className="w-16 h-16 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center mb-6 text-[#0F4C81] text-2xl">
+                <div activeTab === item   ? "bg-blue-50 border border-[#D4AF37]/30"   : "bg-white border border-slate-200">
                   ⚡
                 </div>
 
@@ -408,7 +408,7 @@ return (
 
   {/* SIDEBAR */}
 
-  <div className="rounded-[32px] border border-[#D4AF37]/20 bg-white shadow-xl p-8">
+  <div className="rounded-[32px] border border-[#D4AF37]/20 bg-white shadow-2xl p-8">
 
     <div className="text-5xl font-black text-[#0F4C81] mb-10">
       BDPH AI
@@ -437,7 +437,7 @@ return (
               : "bg-[#0b1220] border border-cyan-500/10"
           }`}
         >
-          <div className="text-[#0F4C81] font-semibold text-lg">
+          activeTab === item   ? "bg-blue-50 border border-[#D4AF37]/30"   : "bg-white border border-slate-200"
             {item}
           </div>
         </motion.div>
@@ -481,7 +481,7 @@ return (
                     whileHover={{
                       y: -8,
                     }}
-                    className="rounded-[30px] border border-[#D4AF37]/20 enterprise-card to-[#020617] p-8"
+                    className="rounded-[30px] bg-white border border-[#D4AF37]/20 shadow-xl p-8"
                   >
 
                     <div className="text-slate-500 text-lg mb-4">
