@@ -1649,7 +1649,6 @@ return (
 
 </section>
 
-    </div>
   );
 }
 
