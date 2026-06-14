@@ -490,6 +490,68 @@ return (
 
                 ))}
 
+                         </div>
+
+              {/* DASHBOARD CONTENT */}
+
+              <div className="grid lg:grid-cols-2 gap-8">
+
+                <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+
+                  <h3 className="text-2xl font-bold text-cyan-400 mb-8">
+                    Fuel Consumption Analysis
+                  </h3>
+
+                  <div className="space-y-5">
+
+                    {[78, 64, 88, 71, 93].map((v, i) => (
+
+                      <div key={i}>
+
+                        <div className="flex justify-between mb-2 text-gray-300">
+                          <span>Day {i + 1}</span>
+                          <span>{v}%</span>
+                        </div>
+
+                        <div className="h-4 bg-[#020617] rounded-full overflow-hidden">
+
+                          <div
+                            className="h-full bg-cyan-400"
+                            style={{ width: `${v}%` }}
+                          />
+
+                        </div>
+
+                      </div>
+
+                    ))}
+
+                  </div>
+
+                </div>
+
+                <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+
+                  <h3 className="text-2xl font-bold text-cyan-400 mb-8">
+                    Fleet Activity
+                  </h3>
+
+                  <div className="flex items-end justify-between h-[300px] gap-4">
+
+                    {[40, 80, 65, 95, 55, 100, 72].map((h, i) => (
+
+                      <div
+                        key={i}
+                        className="flex-1 bg-cyan-400 rounded-t-2xl"
+                        style={{ height: `${h}%` }}
+                      />
+
+                    ))}
+
+                  </div>
+
+                </div>
+
               </div>
 
             </div>
