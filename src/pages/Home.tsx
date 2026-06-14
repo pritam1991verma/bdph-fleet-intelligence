@@ -386,36 +386,49 @@ return (
 
           </div>
 
-          <div className="grid xl:grid-cols-[320px_1fr] gap-8">
+        <div className="grid xl:grid-cols-[320px_1fr] gap-8">
 
-           {[
-  "Overview",
-  "Fleet Tracking",
-  "Battery AI",
-  "Fuel Analytics",
-  "AI Monitoring",
-  "Security Layer",
-  "Cloud Sync",
-  "Settings",
-].map((item) => (
+  {/* SIDEBAR */}
 
-  <motion.div
-    key={item}
-    whileHover={{ x: 8 }}
-    onClick={() => setActiveTab(item)}
-    className={`rounded-2xl px-6 py-5 cursor-pointer transition-all ${
-      activeTab === item
-        ? "bg-cyan-500/10 border border-cyan-400/30"
-        : "bg-[#0b1220] border border-cyan-500/10"
-    }`}
-  >
-    <div className="text-white font-semibold text-lg">
-      {item}
+  <div className="rounded-[32px] border border-cyan-500/20 bg-gradient-to-b from-[#08111f] to-[#020617] p-8">
+
+    <div className="text-5xl font-black text-cyan-400 mb-10">
+      BDPH AI
     </div>
-  </motion.div>
 
-))}
-  
+    <div className="space-y-4">
+
+      {[
+        "Overview",
+        "Fleet Tracking",
+        "Battery AI",
+        "Fuel Analytics",
+        "AI Monitoring",
+        "Security Layer",
+        "Cloud Sync",
+        "Settings",
+      ].map((item) => (
+
+        <motion.div
+          key={item}
+          whileHover={{ x: 8 }}
+          onClick={() => setActiveTab(item)}
+          className={`rounded-2xl px-6 py-5 cursor-pointer transition-all ${
+            activeTab === item
+              ? "bg-cyan-500/10 border border-cyan-400/30"
+              : "bg-[#0b1220] border border-cyan-500/10"
+          }`}
+        >
+          <div className="text-white font-semibold text-lg">
+            {item}
+          </div>
+        </motion.div>
+
+      ))}
+
+    </div>
+
+  </div>
             {/* MAIN PANEL */}
             <div className="space-y-8">
 
