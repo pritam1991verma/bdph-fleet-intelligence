@@ -639,20 +639,14 @@ return (
   </div>
 
 )}
-                  </div>
+               )}
+            </div> {/* MAIN PANEL */}
 
-                </div>
+          </div> {/* grid xl:grid-cols-[320px_1fr] */}
 
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
+        </div> {/* max-w */}
 
       </section>
-
       {/* ANALYTICS */}
       <section
         id="analytics"
