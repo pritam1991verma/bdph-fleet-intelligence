@@ -620,7 +620,62 @@ return (
   </div>
 
 )}
+{activeTab === "Fuel Analytics" && (
 
+  <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+
+    <h3 className="text-3xl font-bold text-cyan-400 mb-8">
+      Fuel Analytics
+    </h3>
+
+    <div className="grid md:grid-cols-3 gap-6 mb-8">
+
+      <div className="bg-[#020617] p-6 rounded-2xl">
+        <div className="text-gray-400">Today's Fuel</div>
+        <div className="text-5xl font-bold text-cyan-400">8,450L</div>
+      </div>
+
+      <div className="bg-[#020617] p-6 rounded-2xl">
+        <div className="text-gray-400">Average Mileage</div>
+        <div className="text-5xl font-bold text-green-400">5.8</div>
+      </div>
+
+      <div className="bg-[#020617] p-6 rounded-2xl">
+        <div className="text-gray-400">Fuel Cost</div>
+        <div className="text-5xl font-bold text-yellow-400">₹7.2L</div>
+      </div>
+
+    </div>
+
+    <div className="space-y-5">
+
+      {[92, 81, 74, 88, 96].map((v, i) => (
+
+        <div key={i}>
+
+          <div className="flex justify-between mb-2 text-gray-300">
+            <span>Vehicle Group {i + 1}</span>
+            <span>{v}%</span>
+          </div>
+
+          <div className="h-4 bg-[#020617] rounded-full overflow-hidden">
+
+            <div
+              className="h-full bg-cyan-400"
+              style={{ width: `${v}%` }}
+            />
+
+          </div>
+
+        </div>
+
+      ))}
+
+    </div>
+
+  </div>
+
+)}
 {activeTab === "Settings" && (
 
   <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
