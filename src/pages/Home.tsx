@@ -1570,12 +1570,9 @@ transport intelligence on a single platform.
 
           </div>
 
-        </motion.div> {/* AI STATUS CARD */}
-
-</motion.div> {/* LEFT SIDE */}
-
-{/* RIGHT SIDE FORM */}
-<motion.div
+        </motion.div>
+      {/* RIGHT SIDE FORM */}
+      <motion.div
         initial={{ opacity: 0, x: 40 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
