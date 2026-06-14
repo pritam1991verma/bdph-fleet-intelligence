@@ -95,7 +95,9 @@ function Navbar() {
   </div>
 
 </div>
+<nav className="fixed top-8 left-0 w-full bg-white/90 backdrop-blur-xl border-b border-[#D4AF37]/20 shadow-lg z-50">
 
+<div className="w-full flex justify-between items-center px-16 py-3">
         {/* LOGO */}
 
         <div className="flex items-center gap-4">
