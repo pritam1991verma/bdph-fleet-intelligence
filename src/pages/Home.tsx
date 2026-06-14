@@ -639,7 +639,6 @@ return (
   </div>
 
 )}
-               )}
             </div> {/* MAIN PANEL */}
 
           </div> {/* grid xl:grid-cols-[320px_1fr] */}
