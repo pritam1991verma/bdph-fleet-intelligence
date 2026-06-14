@@ -779,6 +779,347 @@ return (
   </div>
 
 )}
+              {activeTab === "Security Layer" && (
+
+  <div className="space-y-8">
+
+    <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+
+      <h3 className="text-3xl font-bold text-cyan-400 mb-8">
+        Security Operations Center
+      </h3>
+
+      <div className="grid md:grid-cols-4 gap-6">
+
+        <div className="bg-[#020617] p-6 rounded-2xl">
+          <div className="text-gray-400 mb-2">
+            Active Users
+          </div>
+          <div className="text-5xl font-black text-cyan-400">
+            24
+          </div>
+        </div>
+
+        <div className="bg-[#020617] p-6 rounded-2xl">
+          <div className="text-gray-400 mb-2">
+            GPS Devices Online
+          </div>
+          <div className="text-5xl font-black text-green-400">
+            128
+          </div>
+        </div>
+
+        <div className="bg-[#020617] p-6 rounded-2xl">
+          <div className="text-gray-400 mb-2">
+            Failed Logins
+          </div>
+          <div className="text-5xl font-black text-red-400">
+            3
+          </div>
+        </div>
+
+        <div className="bg-[#020617] p-6 rounded-2xl">
+          <div className="text-gray-400 mb-2">
+            Threat Level
+          </div>
+          <div className="text-5xl font-black text-yellow-400">
+            LOW
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-8">
+
+      <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+
+        <h4 className="text-2xl font-bold text-cyan-400 mb-6">
+          Access Control
+        </h4>
+
+        <div className="space-y-4">
+
+          {[
+            "Admin Access - Active",
+            "Fleet Manager Access - Active",
+            "Dispatcher Access - Active",
+            "Driver Portal Access - Restricted",
+          ].map((item, i) => (
+
+            <div
+              key={i}
+              className="bg-[#020617] rounded-2xl p-4 border border-cyan-500/10"
+            >
+              <div className="text-white">
+                {item}
+              </div>
+            </div>
+
+          ))}
+
+        </div>
+
+      </div>
+
+      <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+
+        <h4 className="text-2xl font-bold text-cyan-400 mb-6">
+          Security Audit Logs
+        </h4>
+
+        <div className="space-y-4">
+
+          {[
+            "User Login - Admin - 09:22 AM",
+            "Vehicle Data Export - 10:05 AM",
+            "Fuel Report Access - 10:48 AM",
+            "GPS Configuration Updated - 11:15 AM",
+          ].map((log, i) => (
+
+            <div
+              key={i}
+              className="bg-[#020617] rounded-2xl p-4 border border-cyan-500/10"
+            >
+              <div className="text-gray-300">
+                {log}
+              </div>
+            </div>
+
+          ))}
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+
+      <h4 className="text-2xl font-bold text-cyan-400 mb-6">
+        System Protection Status
+      </h4>
+
+      <div className="grid md:grid-cols-4 gap-6">
+
+        <div className="bg-[#020617] rounded-2xl p-6 text-center">
+          <div className="text-green-400 text-lg">
+            Firewall
+          </div>
+          <div className="text-3xl font-bold text-white mt-2">
+            ACTIVE
+          </div>
+        </div>
+
+        <div className="bg-[#020617] rounded-2xl p-6 text-center">
+          <div className="text-green-400 text-lg">
+            GPS Encryption
+          </div>
+          <div className="text-3xl font-bold text-white mt-2">
+            ENABLED
+          </div>
+        </div>
+
+        <div className="bg-[#020617] rounded-2xl p-6 text-center">
+          <div className="text-green-400 text-lg">
+            Cloud Backup
+          </div>
+          <div className="text-3xl font-bold text-white mt-2">
+            RUNNING
+          </div>
+        </div>
+
+        <div className="bg-[#020617] rounded-2xl p-6 text-center">
+          <div className="text-green-400 text-lg">
+            Data Integrity
+          </div>
+          <div className="text-3xl font-bold text-white mt-2">
+            100%
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+)}
+              {activeTab === "Cloud Sync" && (
+
+  <div className="space-y-8">
+
+    <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+
+      <h3 className="text-3xl font-bold text-cyan-400 mb-8">
+        Cloud Synchronization Center
+      </h3>
+
+      <div className="grid md:grid-cols-4 gap-6">
+
+        <div className="bg-[#020617] p-6 rounded-2xl">
+          <div className="text-gray-400 mb-2">
+            Sync Status
+          </div>
+          <div className="text-5xl font-black text-green-400">
+            LIVE
+          </div>
+        </div>
+
+        <div className="bg-[#020617] p-6 rounded-2xl">
+          <div className="text-gray-400 mb-2">
+            Last Sync
+          </div>
+          <div className="text-3xl font-black text-cyan-400">
+            2 Min Ago
+          </div>
+        </div>
+
+        <div className="bg-[#020617] p-6 rounded-2xl">
+          <div className="text-gray-400 mb-2">
+            Server Health
+          </div>
+          <div className="text-5xl font-black text-green-400">
+            99.9%
+          </div>
+        </div>
+
+        <div className="bg-[#020617] p-6 rounded-2xl">
+          <div className="text-gray-400 mb-2">
+            Data Processed
+          </div>
+          <div className="text-5xl font-black text-cyan-400">
+            2.8TB
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-8">
+
+      <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+
+        <h4 className="text-2xl font-bold text-cyan-400 mb-6">
+          Connected Services
+        </h4>
+
+        <div className="space-y-4">
+
+          {[
+            "Fleet Database",
+            "GPS Tracking Server",
+            "Fuel Management System",
+            "AI Analytics Engine",
+            "Notification Gateway",
+          ].map((service, i) => (
+
+            <div
+              key={i}
+              className="bg-[#020617] rounded-2xl p-4 border border-green-500/20 flex justify-between"
+            >
+              <span className="text-white">
+                {service}
+              </span>
+
+              <span className="text-green-400">
+                Connected
+              </span>
+
+            </div>
+
+          ))}
+
+        </div>
+
+      </div>
+
+      <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+
+        <h4 className="text-2xl font-bold text-cyan-400 mb-6">
+          Synchronization Queue
+        </h4>
+
+        <div className="space-y-4">
+
+          {[
+            "Vehicle Telemetry Upload",
+            "Fuel Transaction Sync",
+            "Driver Activity Logs",
+            "Route Optimization Data",
+            "Battery Diagnostics",
+          ].map((item, i) => (
+
+            <div
+              key={i}
+              className="bg-[#020617] rounded-2xl p-4 border border-cyan-500/10"
+            >
+              <div className="text-gray-300">
+                {item}
+              </div>
+            </div>
+
+          ))}
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
+
+      <h4 className="text-2xl font-bold text-cyan-400 mb-8">
+        Cloud Infrastructure
+      </h4>
+
+      <div className="grid md:grid-cols-4 gap-6">
+
+        <div className="bg-[#020617] rounded-2xl p-6 text-center">
+          <div className="text-cyan-400 text-lg">
+            Primary Server
+          </div>
+          <div className="text-3xl font-bold text-white mt-2">
+            ONLINE
+          </div>
+        </div>
+
+        <div className="bg-[#020617] rounded-2xl p-6 text-center">
+          <div className="text-cyan-400 text-lg">
+            Backup Server
+          </div>
+          <div className="text-3xl font-bold text-white mt-2">
+            ONLINE
+          </div>
+        </div>
+
+        <div className="bg-[#020617] rounded-2xl p-6 text-center">
+          <div className="text-cyan-400 text-lg">
+            API Gateway
+          </div>
+          <div className="text-3xl font-bold text-white mt-2">
+            ACTIVE
+          </div>
+        </div>
+
+        <div className="bg-[#020617] rounded-2xl p-6 text-center">
+          <div className="text-cyan-400 text-lg">
+            Backup Status
+          </div>
+          <div className="text-3xl font-bold text-green-400 mt-2">
+            SUCCESS
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+)}
 {activeTab === "Settings" && (
 
   <div className="bg-[#08111f] border border-cyan-500/20 rounded-[30px] p-8">
