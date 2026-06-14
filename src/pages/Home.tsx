@@ -1367,9 +1367,10 @@ transport intelligence on a single platform.
   </div>
 </section>
      {/* ENHANCED AI CONTACT SECTION */}
-<section
-  CONTACT BDPH AI
+  <section
+  id="contact"
   className="relative py-32 px-6 bg-slate-50 overflow-hidden"
+
 >
 
   {/* BACKGROUND FX */}
@@ -1583,9 +1584,11 @@ transport intelligence on a single platform.
 
         <div className="mb-10">
 
-          <div className="text-5xl font-black text-[#0F4C81] mb-4">
-            Enterprise Command Center
-            <div className="flex gap-2 mt-4">
+         <div className="text-5xl font-black text-[#0F4C81] mb-4">
+  Enterprise Command Center
+</div>
+
+<div className="flex gap-2 mt-4">
 
   <span className="px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-xs">
     LIVE
@@ -1597,6 +1600,7 @@ transport intelligence on a single platform.
 
   <span className="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-400 text-xs">
     SECURED
+    </div>
   </span>
 
           </div>
@@ -1718,7 +1722,6 @@ transport intelligence on a single platform.
   </div>
 
 </section>
- </div>
   );
 }
 
