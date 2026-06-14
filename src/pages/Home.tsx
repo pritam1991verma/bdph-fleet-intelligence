@@ -138,7 +138,7 @@ return (
       >
 
         {/* BACKGROUND */}
-        <div <h1 className="text-5xl md:text-7xl font-black leading-tight mb-8 text-[#0F4C81]">
+<div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50 to-blue-100"></div>
 
         <div className="absolute inset-0 opacity-20">
 
@@ -214,7 +214,7 @@ return (
           className="relative z-10"
         >
 
-          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+          <h1 className="text-5xl md:text-7xl font-black leading-tight mb-8 text-[#0F4C81]">
 
             FUTURE OF
             <span className="text-[#0F4C81]">
