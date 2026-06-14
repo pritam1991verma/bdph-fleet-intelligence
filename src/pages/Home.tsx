@@ -2,7 +2,7 @@ import AnalyticsCharts from "../components/AnalyticsCharts";
 import Navbar from "../components/Navbar";
 import ControlPanel from "../components/ControlPanel";
 import LiveMap from "../components/LiveMap";
-
+import { motion } from "framer-motion";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useState } from "react";
 
