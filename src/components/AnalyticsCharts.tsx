@@ -7,7 +7,7 @@ function AnalyticsCharts() {
         <div className="text-center mb-20">
 
           <h2 className="text-5xl font-bold text-[#0F4C81] mb-6">
-            AI Analytics Intelligence
+            Enterprise Analytics & Intelligence
           </h2>
 
           <p className="text-gray-400 text-xl">
@@ -38,7 +38,7 @@ function AnalyticsCharts() {
 
                 <div key={index}>
 
-                  <div className="flex justify-between mb-2 text-gray-300">
+                  <div className="flex justify-between mb-2 text-slate-600">
 
                     <span>{item.day}</span>
 
@@ -46,7 +46,7 @@ function AnalyticsCharts() {
 
                   </div>
 
-                  <div className="w-full h-4 bg-[#020617] rounded-full overflow-hidden">
+                  <div className="w-full h-4 bg-slate-200 rounded-full overflow-hidden">
 
                     <div
                       className="h-full bg-[#D4AF37] rounded-full"
@@ -77,7 +77,7 @@ function AnalyticsCharts() {
 
                 <div
                   key={index}
-                  className="flex-1 bg-[#D4AF37] rounded-t-2xl hover:bg-cyan-300 transition"
+                  className="flex-1 bg-[#D4AF37] rounded-t-2xl hover:bg-[#0F4C81] transition"
                   style={{ height: `${height}%` }}
                 ></div>
 
@@ -118,7 +118,7 @@ function AnalyticsCharts() {
 
                 <div
                   key={index}
-                  className="bg-[#020617] rounded-3xl p-8 border border-cyan-500/10 text-center"
+                  className="bg-slate-50 rounded-3xl p-8 border border-[#D4AF37]/20 text-center"
                 >
 
                   <div className="text-gray-400 mb-4">
