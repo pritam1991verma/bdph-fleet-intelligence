@@ -84,11 +84,11 @@ const handleSubmit = () => {
       
       {/* CURSOR GLOW */}
       <motion.div
-        className="pointer-events-none fixed top-0 left-0 w-[400px] h-[400px] rounded-full bg-cyan-500/10 blur-[120px] z-0"
-        style={{
-          x: smoothX,
-          y: smoothY,
-        }}
+  className="pointer-events-none fixed top-0 left-0 w-[400px] h-[400px] rounded-full bg-cyan-500/10 blur-[120px] z-0"
+  style={{
+    x: smoothX,
+    y: smoothY,
+  }}
       />
 
       <Navbar />
