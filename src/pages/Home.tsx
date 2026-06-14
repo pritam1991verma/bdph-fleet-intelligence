@@ -1240,7 +1240,7 @@ transport intelligence on a single platform.
               {
                 title: "Battery",
                 status: "Realtime AI",
-                icon: <Battery size={36} className="text-yellow-500" />,
+                icon: <BatteryCharging size={36} className="text-yellow-500" />,
               },
               {
                 title: "GPS Maps",
