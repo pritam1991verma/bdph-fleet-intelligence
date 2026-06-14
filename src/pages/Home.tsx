@@ -80,7 +80,7 @@ const handleSubmit = () => {
 
 return (
   <div
-    className="min-h-screen bg-[#030712] text-slate-500 overflow-x-hidden relative"
+    className="min-h-screen bg-white text-slate-800 overflow-x-hidden relative"
     onMouseMove={handleMouseMove}
   >
       
@@ -138,7 +138,7 @@ return (
       >
 
         {/* BACKGROUND */}
-        <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/10 via-transparent to-black"></div>
+        <div <h1 className="text-5xl md:text-7xl font-black leading-tight mb-8 text-[#0F4C81]">
 
         <div className="absolute inset-0 opacity-20">
 
@@ -235,7 +235,7 @@ return (
 
           <div className="flex flex-wrap justify-center gap-6">
 
-            <button className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-4 rounded-2xl transition">
+            <button className="bg-[#0F4C81] hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-2xl transition">
               Explore Platform
             </button>
 
@@ -247,47 +247,25 @@ return (
             </a>
 
           </div>
+          <div className="flex flex-wrap justify-center gap-4 mt-10">
 
-          {/* ORBIT UI */}
-          <div className="mt-24 flex justify-center relative">
+  <div className="bg-white px-5 py-3 rounded-full shadow-lg border border-[#D4AF37]/20 text-[#0F4C81] font-semibold">
+    ✓ GPS Tracking
+  </div>
 
-            <div className="absolute w-[500px] h-[500px] rounded-full border border-cyan-500/10 animate-ping"></div>
+  <div className="bg-white px-5 py-3 rounded-full shadow-lg border border-[#D4AF37]/20 text-[#0F4C81] font-semibold">
+    ✓ Fuel Analytics
+  </div>
 
-            <div className="absolute w-[400px] h-[400px] rounded-full border border-[#D4AF37]/20 animate-pulse"></div>
+  <div className="bg-white px-5 py-3 rounded-full shadow-lg border border-[#D4AF37]/20 text-[#0F4C81] font-semibold">
+    ✓ AI Monitoring
+  </div>
 
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{
-                repeat: Infinity,
-                duration: 20,
-                ease: "linear",
-              }}
-              className="relative w-[300px] h-[300px] border border-cyan-500/30 rounded-full flex items-center justify-center"
-            >
+  <div className="bg-white px-5 py-3 rounded-full shadow-lg border border-[#D4AF37]/20 text-[#0F4C81] font-semibold">
+    ✓ Enterprise Security
+  </div>
 
-              <div className="absolute w-[200px] h-[200px] border border-[#D4AF37]/20 rounded-full"></div>
-
-              <div className="absolute w-[120px] h-[120px] border border-[#D4AF37]/20 rounded-full"></div>
-
-              <div className="w-10 h-10 bg-cyan-400 rounded-full shadow-[0_0_40px_rgba(34,211,238,0.9)]"></div>
-
-              <div className="absolute left-0 top-10 text-[#0F4C81] text-xs flex gap-2 items-center">
-                <Satellite size={14} />
-                LIVE SATELLITE
-              </div>
-
-              <div className="absolute bottom-6 right-6 text-purple-400 text-xs flex gap-2 items-center">
-                <Radar size={14} />
-                SCANNING
-              </div>
-
-            </motion.div>
-
-          </div>
-
-        </motion.div>
-
-      </section>
+</div>
 
       {/* SERVICES */}
       <section
@@ -351,7 +329,7 @@ return (
       {/* PREMIUM DASHBOARD */}
       <section
         id="dashboard"
-        className="relative py-32 px-6 bg-black overflow-hidden"
+        className="relative py-32 px-6 bg-slate-50 overflow-hidden"
       >
 
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[180px]" />
@@ -390,7 +368,7 @@ return (
 
   {/* SIDEBAR */}
 
-  <div className="rounded-[32px] border border-[#D4AF37]/20 bg-gradient-to-b from-[#08111f] to-[#020617] p-8">
+  <div className="rounded-[32px] border border-[#D4AF37]/20 bg-white shadow-xl p-8">
 
     <div className="text-5xl font-black text-[#0F4C81] mb-10">
       BDPH AI
@@ -419,7 +397,7 @@ return (
               : "bg-[#0b1220] border border-cyan-500/10"
           }`}
         >
-          <div className="text-slate-900 font-semibold text-lg">
+          <div className="text-[#0F4C81] font-semibold text-lg">
             {item}
           </div>
         </motion.div>
@@ -852,7 +830,7 @@ return (
               key={i}
               className="bg-slate-50 rounded-2xl p-4 border border-cyan-500/10"
             >
-              <div className="text-slate-900">
+              <div className="text-[#0F4C81]">
                 {item}
               </div>
             </div>
@@ -907,7 +885,7 @@ return (
           <div className="text-green-400 text-lg">
             Firewall
           </div>
-          <div className="text-3xl font-bold text-slate-900 mt-2">
+          <div className="text-3xl font-bold text-[#0F4C81] mt-2">
             ACTIVE
           </div>
         </div>
@@ -916,7 +894,7 @@ return (
           <div className="text-green-400 text-lg">
             GPS Encryption
           </div>
-          <div className="text-3xl font-bold text-slate-900 mt-2">
+          <div className="text-3xl font-bold text-[#0F4C81] mt-2">
             ENABLED
           </div>
         </div>
@@ -925,7 +903,7 @@ return (
           <div className="text-green-400 text-lg">
             Cloud Backup
           </div>
-          <div className="text-3xl font-bold text-slate-900 mt-2">
+          <div className="text-3xl font-bold text-[#0F4C81] mt-2">
             RUNNING
           </div>
         </div>
@@ -934,7 +912,7 @@ return (
           <div className="text-green-400 text-lg">
             Data Integrity
           </div>
-          <div className="text-3xl font-bold text-slate-900 mt-2">
+          <div className="text-3xl font-bold text-[#0F4C81] mt-2">
             100%
           </div>
         </div>
@@ -1315,7 +1293,7 @@ return (
      {/* ENHANCED AI CONTACT SECTION */}
 <section
   id="contact"
-  className="relative py-32 px-6 bg-black overflow-hidden"
+  className="relative py-32 px-6 bg-slate-50 overflow-hidden"
 >
 
   {/* BACKGROUND FX */}
