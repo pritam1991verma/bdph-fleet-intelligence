@@ -574,6 +574,86 @@ return (
       <LiveMap />
 
       {/* CONTACT SECTION HERE */}
+
+
+    {/* ABOUT */}
+<section
+  id="about"
+  className="py-32 px-6 bg-[#020617]"
+>
+  <div className="max-w-7xl mx-auto">
+
+    <div className="text-center mb-20">
+
+      <h2 className="text-5xl md:text-7xl font-black mb-6">
+        ABOUT{" "}
+        <span className="text-cyan-400">
+          BDPH GROUP
+        </span>
+      </h2>
+
+      <p className="text-xl text-gray-400 max-w-4xl mx-auto">
+        BDPH Group is developing intelligent enterprise solutions for
+        transporters, fleet operators, logistics companies and industrial
+        businesses. Our platform integrates GPS tracking, fuel monitoring,
+        fleet intelligence, AI analytics and enterprise automation into a
+        single ecosystem.
+      </p>
+
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-8">
+
+      <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8">
+        <div className="text-cyan-400 text-4xl mb-6">
+          🎯
+        </div>
+
+        <h3 className="text-2xl font-bold text-cyan-400 mb-4">
+          Mission
+        </h3>
+
+        <p className="text-gray-400">
+          To simplify transporter operations through intelligent
+          automation, AI-driven monitoring and centralized fleet
+          management.
+        </p>
+      </div>
+
+      <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8">
+        <div className="text-cyan-400 text-4xl mb-6">
+          🚀
+        </div>
+
+        <h3 className="text-2xl font-bold text-cyan-400 mb-4">
+          Vision
+        </h3>
+
+        <p className="text-gray-400">
+          To become India's leading AI-powered enterprise and fleet
+          intelligence platform for transport and logistics industries.
+        </p>
+      </div>
+
+      <div className="bg-[#08111f] border border-cyan-500/20 rounded-3xl p-8">
+        <div className="text-cyan-400 text-4xl mb-6">
+          ⚡
+        </div>
+
+        <h3 className="text-2xl font-bold text-cyan-400 mb-4">
+          Solutions
+        </h3>
+
+        <p className="text-gray-400">
+          GPS tracking, fuel management, compliance monitoring,
+          document alerts, AI analytics and enterprise automation.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
      {/* ENHANCED AI CONTACT SECTION */}
 <section
   id="contact"
