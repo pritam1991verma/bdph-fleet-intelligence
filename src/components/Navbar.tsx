@@ -53,8 +53,8 @@ function Navbar() {
       className={`transition duration-300 uppercase text-sm tracking-[0.18em] font-semibold
       ${
         active === id
-          ? "text-cyan-400 drop-shadow-[0_0_12px_rgba(34,211,238,0.9)]"
-          : "text-gray-200 hover:text-cyan-400"
+          ? "text-[#D4AF37] font-bold"
+          : "text-slate-700 hover:text-[#0F4C81]"
       }`}
     >
       {label}
@@ -64,7 +64,7 @@ function Navbar() {
 
   return (
 
-    <nav className="fixed top-0 left-0 w-full bg-black/50 backdrop-blur-md border-b border-white/10 z-50">
+    <nav className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-xl border-b border-[#D4AF37]/20 shadow-lg z-50">
 
       <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-3">
 
