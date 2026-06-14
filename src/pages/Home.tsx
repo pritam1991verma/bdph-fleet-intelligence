@@ -513,7 +513,7 @@ return (
 
               <div
                 className="h-full bg-cyan-400"
-                style={{ width: `${v}%` }}
+                style={{ width: ${v}% }}
               />
 
             </div>
@@ -539,7 +539,7 @@ return (
           <div
             key={i}
             className="flex-1 bg-cyan-400 rounded-t-2xl"
-            style={{ height: `${h}%` }}
+            style={{ height: ${h}% }}
           />
 
         ))}
