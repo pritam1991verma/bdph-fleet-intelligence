@@ -1571,7 +1571,6 @@ transport intelligence on a single platform.
           </div>
 
         </motion.div>
-
       {/* RIGHT SIDE FORM */}
       <motion.div
         initial={{ opacity: 0, x: 40 }}
