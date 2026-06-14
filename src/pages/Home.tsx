@@ -428,19 +428,19 @@ return (
       ].map((item) => (
 
         <motion.div
-          key={item}
-          whileHover={{ x: 8 }}
-          onClick={() => setActiveTab(item)}
-          className={`rounded-2xl px-6 py-5 cursor-pointer transition-all ${
-            activeTab === item
-              ? "bg-cyan-500/10 border border-cyan-400/30"
-              : "bg-[#0b1220] border border-cyan-500/10"
-          }`}
-        >
-          activeTab === item   ? "bg-blue-50 border border-[#D4AF37]/30"   : "bg-white border border-slate-200"
-            {item}
-          </div>
-        </motion.div>
+  key={item}
+  whileHover={{ x: 8 }}
+  onClick={() => setActiveTab(item)}
+  className={`rounded-2xl px-6 py-5 cursor-pointer transition-all ${
+    activeTab === item
+      ? "bg-blue-50 border border-[#D4AF37]/30"
+      : "bg-white border border-slate-200"
+  }`}
+>
+  <div className="text-[#0F4C81] font-bold text-lg">
+    {item}
+  </div>
+</motion.div>
 
       ))}
 
