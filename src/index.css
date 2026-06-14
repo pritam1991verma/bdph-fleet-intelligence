@@ -276,16 +276,4 @@ body {
   background: rgba(212,175,55,0.25);
   color: #0f172a;
 }
-@keyframes marquee {
-  from {
-    transform: translateX(100%);
-  }
 
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.animate-marquee {
-  animation: marquee 25s linear infinite;
-}
