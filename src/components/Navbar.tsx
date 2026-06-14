@@ -63,10 +63,37 @@ function Navbar() {
   );
 
   return (
+<div className="fixed top-0 left-0 w-full bg-[#0F4C81] text-white text-xs z-50 overflow-hidden">
 
-    <>   <div className="fixed top-0 left-0 w-full bg-[#0F4C81] text-white text-xs z-50">     <div className="max-w-7xl mx-auto flex justify-between px-8 py-2">        <div className="flex gap-8">         <span className="text-green-400">● AI ENGINE ONLINE</span>         <span className="text-cyan-300">● GPS NETWORK ACTIVE</span>         <span className="text-yellow-300">● CLOUD SYNC STABLE</span>       </div>        <div className="text-slate-200">         Enterprise Fleet Intelligence Platform       </div>      </div>   </div>    <nav className="fixed top-8 left-0 w-full bg-white/90 backdrop-blur-xl border-b border-[#D4AF37]/20 shadow-lg z-50">
+  <div className="w-full py-2">
 
-      <div className="w-full flex justify-between items-center px-16 py-3">
+    <div className="animate-marquee inline-flex gap-16 whitespace-nowrap">
+
+      <span className="text-green-400">● AI ENGINE ONLINE</span>
+
+      <span className="text-cyan-300">● GPS NETWORK ACTIVE</span>
+
+      <span className="text-yellow-300">● CLOUD SYNC STABLE</span>
+
+      <span className="text-green-400">● 128 VEHICLES ONLINE</span>
+
+      <span className="text-cyan-300">● FUEL ANALYTICS ACTIVE</span>
+
+      <span className="text-yellow-300">● AI MONITORING ENABLED</span>
+
+      <span className="text-green-400">● AI ENGINE ONLINE</span>
+
+      <span className="text-cyan-300">● GPS NETWORK ACTIVE</span>
+
+      <span className="text-yellow-300">● CLOUD SYNC STABLE</span>
+
+      <span className="text-green-400">● 128 VEHICLES ONLINE</span>
+
+    </div>
+
+  </div>
+
+</div>
 
         {/* LOGO */}
 
