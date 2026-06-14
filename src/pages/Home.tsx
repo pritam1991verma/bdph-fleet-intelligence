@@ -1572,8 +1572,6 @@ transport intelligence on a single platform.
 
         </motion.div>
 
-      </motion.div>
-
       {/* RIGHT SIDE FORM */}
       <motion.div
         initial={{ opacity: 0, x: 40 }}
@@ -1602,11 +1600,13 @@ transport intelligence on a single platform.
 </span>
   </div>
 
-          <div className="text-cyan-300 text-lg">
+         <div className="text-cyan-300 text-lg">
   Connect directly with our AI enterprise operations team.
-          </div>
+</div>
 
-        <div className="space-y-6">
+</div>   {/* CLOSE mb-10 */}
+
+<div className="space-y-6">
 <input
   type="text"
   name="name"
@@ -1705,7 +1705,7 @@ transport intelligence on a single platform.
 
     </div>
 
-    {/* FOOTER */}
+        {/* FOOTER */}
     <div className="mt-24 pt-10 border-t border-cyan-500/10 text-center">
 
       <div className="text-gray-500 text-lg">
@@ -1713,6 +1713,8 @@ transport intelligence on a single platform.
       </div>
 
     </div>
+
+  </div> {/* max-w-7xl */}
 
 </section>
   );
