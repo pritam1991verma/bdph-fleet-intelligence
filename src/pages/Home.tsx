@@ -351,12 +351,11 @@ transport intelligence on a single platform.
 
           <div className="text-center mb-20">
 
-            <h2 className="text-5xl font-bold text-[#0F4C81] mb-4">
+            <h2 className="text-6xl font-extrabold text-[#0F4C81] mb-3">
               Enterprise Services
             </h2>
-
-            <p className="text-slate-500 text-lg">
-              Intelligent enterprise monitoring systems.
+<p className="text-slate-600 text-lg">
+  Intelligent monitoring and compliance management for enterprise fleets.
             </p>
 
           </div>
@@ -1220,34 +1219,34 @@ transport intelligence on a single platform.
 
           <div className="text-center mb-20">
 
-            <h2 className="text-5xl font-bold text-[#0F4C81] mb-4">
+            <h2 className="text-6xl font-extrabold text-[#0F4C81] mb-3">
               Smart Monitoring System
             </h2>
 
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
             {[
               {
                 title: "Pollution",
                 status: "12 Expiring",
-                icon: <FileWarning size={36} />,
+                icon: <FileWarning size={36} className="text-red-500" />,
               },
               {
                 title: "Insurance",
                 status: "48 Active",
-                icon: <ShieldCheck size={36} />,
+                icon: <Shield size={36} className="text-green-600" />,
               },
               {
                 title: "Battery",
                 status: "Realtime AI",
-                icon: <BatteryCharging size={36} />,
+                icon: <Battery size={36} className="text-yellow-500" />,
               },
               {
                 title: "GPS Maps",
                 status: "Live Tracking",
-                icon: <Map size={36} />,
+               icon: <Map size={36} className="text-blue-600" />,
               },
             ].map((item, index) => (
 
