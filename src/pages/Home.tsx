@@ -344,7 +344,7 @@ return (
                 className="bg-white border border-[#D4AF37]/20 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition"
               >
 
-                <div activeTab === item   ? "bg-blue-50 border border-[#D4AF37]/30"   : "bg-white border border-slate-200">
+                <div className="w-16 h-16 rounded-2xl bg-blue-50 border border-[#D4AF37]/20 flex items-center justify-center mb-6 text-[#0F4C81] text-2xl">
                   ⚡
                 </div>
 
