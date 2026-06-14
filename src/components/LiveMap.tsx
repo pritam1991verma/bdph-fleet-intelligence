@@ -373,43 +373,45 @@ const alerts = [
 
           <div className="absolute bottom-0 right-0 w-24 h-24 border-r-4 border-b-4 border-cyan-400 z-[500]" />
 
-          {/* MAP */}
+         {/* MAP */}
 
-          <div className="relative w-full h-[780px] z-0">
+<div className="relative w-full h-[780px] z-0">
 
-            <MapContainer
-              center={[22.8046, 86.2029]}
-              zoom={11}
-              scrollWheelZoom={true}
-              className="w-full h-full"
-              <div className="absolute top-6 right-[150px] z-[700]">
+  {/* VEHICLE SEARCH PANEL */}
 
-  <div className="bg-black/60 backdrop-blur-2xl border border-cyan-500/20 rounded-3xl p-5 w-[320px]">
+  <div className="absolute top-6 right-[150px] z-[700]">
 
-    <div className="text-cyan-300 uppercase tracking-[0.3em] text-xs mb-3">
-      Vehicle Search
+    <div className="bg-black/60 backdrop-blur-2xl border border-cyan-500/20 rounded-3xl p-5 w-[320px]">
+
+      <div className="text-cyan-300 uppercase tracking-[0.3em] text-xs mb-3">
+        Vehicle Search
+      </div>
+
+      <input
+        type="text"
+        value={searchVehicle}
+        onChange={(e) => setSearchVehicle(e.target.value)}
+        placeholder="Search Vehicle No"
+        className="w-full bg-[#08111f] border border-cyan-500/20 rounded-xl px-4 py-3 text-white outline-none"
+      />
+
     </div>
-
-    <input
-      type="text"
-      value={searchVehicle}
-      onChange={(e) => setSearchVehicle(e.target.value)}
-      placeholder="Search Vehicle No"
-      className="w-full bg-[#08111f] border border-cyan-500/20 rounded-xl px-4 py-3 text-white outline-none"
-    />
 
   </div>
 
-</div>
-            >
+  <MapContainer
+    center={[22.8046, 86.2029]}
+    zoom={11}
+    scrollWheelZoom={true}
+    className="w-full h-full"
+  >
 
-              <TileLayer
-                attribution="&copy; Esri"
-                url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
-              />
+    <TileLayer
+      attribution="&copy; Esri"
+      url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+    />
 
-              {/* ROUTES */}
-
+    {/* ROUTES */}
               <Polyline
                 positions={[
                   [22.8046, 86.2029],
