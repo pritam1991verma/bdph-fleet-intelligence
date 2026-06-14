@@ -1597,19 +1597,14 @@ transport intelligence on a single platform.
   <span className="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 text-xs">
     AI ACTIVE
   </span>
-
-  <span className="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-400 text-xs">
-    SECURED
-    </div>
-  </span>
-
-          </div>
+<span className="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-400 text-xs">
+  SECURED
+</span>
+  </div>
 
           <div className="text-cyan-300 text-lg">
   Connect directly with our AI enterprise operations team.
           </div>
-
-        </div>
 
         <div className="space-y-6">
 <input
@@ -1718,8 +1713,6 @@ transport intelligence on a single platform.
       </div>
 
     </div>
-
-  </div>
 
 </section>
   );
