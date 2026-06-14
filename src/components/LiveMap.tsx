@@ -61,7 +61,29 @@ function LiveMap() {
   useEffect(() => {
     L.Icon.Default.mergeOptions({});
   }, []);
+const [searchVehicle, setSearchVehicle] = useState("");
 
+const fleetStats = {
+  running: 182,
+  idle: 41,
+  stopped: 19,
+  offline: 6,
+};
+
+const alerts = [
+  {
+    vehicle: "BDPH-2044",
+    location: "Dumka",
+    issue: "Fuel Drop Detected",
+    severity: "HIGH",
+  },
+  {
+    vehicle: "BDPH-6619",
+    location: "Kurwa",
+    issue: "Engine Alert",
+    severity: "MEDIUM",
+  },
+];
   return (
     <section
       id="tracking"
@@ -189,6 +211,41 @@ function LiveMap() {
             </div>
 
           </div>
+          <div className="absolute top-[220px] left-6 z-[700]">
+
+  <div className="backdrop-blur-2xl bg-black/50 border border-cyan-500/20 rounded-3xl p-6">
+
+    <div className="text-cyan-300 uppercase tracking-[0.3em] text-sm mb-5">
+      Fleet Status
+    </div>
+
+    <div className="space-y-3">
+
+      <div className="flex justify-between gap-12">
+        <span className="text-green-400">Running</span>
+        <span className="text-white">{fleetStats.running}</span>
+      </div>
+
+      <div className="flex justify-between gap-12">
+        <span className="text-yellow-400">Idle</span>
+        <span className="text-white">{fleetStats.idle}</span>
+      </div>
+
+      <div className="flex justify-between gap-12">
+        <span className="text-red-400">Stopped</span>
+        <span className="text-white">{fleetStats.stopped}</span>
+      </div>
+
+      <div className="flex justify-between gap-12">
+        <span className="text-gray-400">Offline</span>
+        <span className="text-white">{fleetStats.offline}</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
           {/* REALTIME ANALYTICS */}
 
@@ -257,6 +314,44 @@ function LiveMap() {
                   <div className="h-2 bg-white/10 rounded-full overflow-hidden">
 
                     <div className="h-full w-[88%] bg-gradient-to-r from-yellow-300 to-orange-300 rounded-full animate-pulse"></div>
+                    <div className="absolute bottom-[140px] right-8 z-[700]">
+
+  <div className="backdrop-blur-2xl bg-black/50 border border-red-500/20 rounded-3xl p-6 w-[320px]">
+
+    <div className="text-red-400 uppercase tracking-[0.3em] text-sm mb-5">
+      AI Fuel Alerts
+    </div>
+
+    <div className="space-y-4">
+
+      {alerts.map((alert, i) => (
+
+        <div
+          key={i}
+          className="border border-red-500/10 rounded-2xl p-4"
+        >
+
+          <div className="font-bold text-white">
+            {alert.vehicle}
+          </div>
+
+          <div className="text-gray-400 text-sm">
+            {alert.location}
+          </div>
+
+          <div className="text-red-400 mt-2">
+            {alert.issue}
+          </div>
+
+        </div>
+
+      ))}
+
+    </div>
+
+  </div>
+
+</div>
 
                   </div>
 
@@ -287,6 +382,25 @@ function LiveMap() {
               zoom={11}
               scrollWheelZoom={true}
               className="w-full h-full"
+              <div className="absolute top-6 right-[150px] z-[700]">
+
+  <div className="bg-black/60 backdrop-blur-2xl border border-cyan-500/20 rounded-3xl p-5 w-[320px]">
+
+    <div className="text-cyan-300 uppercase tracking-[0.3em] text-xs mb-3">
+      Vehicle Search
+    </div>
+
+    <input
+      type="text"
+      value={searchVehicle}
+      onChange={(e) => setSearchVehicle(e.target.value)}
+      placeholder="Search Vehicle No"
+      className="w-full bg-[#08111f] border border-cyan-500/20 rounded-xl px-4 py-3 text-white outline-none"
+    />
+
+  </div>
+
+</div>
             >
 
               <TileLayer
@@ -389,7 +503,53 @@ function LiveMap() {
             </MapContainer>
 
           </div>
+<div className="absolute bottom-32 left-1/2 -translate-x-1/2 z-[700]">
 
+  <div className="grid md:grid-cols-2 gap-4">
+
+    <div className="bg-black/60 backdrop-blur-xl border border-cyan-500/20 rounded-3xl p-5 w-[260px]">
+
+      <div className="text-cyan-300 font-bold mb-3">
+        Kurwa Siding
+      </div>
+
+      <div className="text-gray-300">
+        Loaded Today: 86
+      </div>
+
+      <div className="text-gray-300">
+        Waiting: 14
+      </div>
+
+      <div className="text-green-400">
+        Dispatched: 72
+      </div>
+
+    </div>
+
+    <div className="bg-black/60 backdrop-blur-xl border border-cyan-500/20 rounded-3xl p-5 w-[260px]">
+
+      <div className="text-cyan-300 font-bold mb-3">
+        Dumka Siding
+      </div>
+
+      <div className="text-gray-300">
+        Loaded Today: 61
+      </div>
+
+      <div className="text-gray-300">
+        Waiting: 8
+      </div>
+
+      <div className="text-green-400">
+        Dispatched: 53
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
           {/* BOTTOM TELEMETRY */}
 
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[700]">
