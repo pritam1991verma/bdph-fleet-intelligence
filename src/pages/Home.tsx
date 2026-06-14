@@ -1666,7 +1666,7 @@ transport intelligence on a single platform.
   </div>
 
 </section>
-
+ </div>
   );
 }
 
