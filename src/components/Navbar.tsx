@@ -50,7 +50,7 @@ function Navbar() {
 
     <a
       href={`#${id}`}
-      className={`transition duration-300 uppercase text-sm tracking-[0.12em] font-semibold
+      className={`transition duration-300 uppercase text-lg tracking-[0.08em] font-bold
       ${
         active === id
           ? "text-[#D4AF37] font-bold"
@@ -97,19 +97,19 @@ function Navbar() {
 </div>
 <nav className="fixed top-8 left-0 w-full bg-white/90 backdrop-blur-xl border-b border-[#D4AF37]/20 shadow-lg z-50">
 
-<div className="w-full flex justify-between items-center px-16 py-3">
+<div className="w-full flex justify-between items-center px-16 py-5">
         {/* LOGO */}
 
        <div className="flex items-center">
   <img
     src="/logo.png"
     alt="BDPH Group"
-    className="h-16 md:h-20 w-auto"
+    className="h-20 md:h-24 w-auto"
   />
 </div>
         {/* MENU */}
 
-        <div className="hidden md:flex items-center gap-7 whitespace-nowrap">
+        <div className="hidden md:flex items-center gap-12 whitespace-nowrap">
 
           {navItem("home", "Home")}
 
@@ -128,12 +128,12 @@ function Navbar() {
 
   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
 
-  <span className="text-[#0F4C81] font-semibold text-sm">
+  <span className="text-[#0F4C81] font-bold text-base">
     128 Vehicles Online
   </span>
 
 </div>
-          <button className="ml-4 px-5 py-2 bg-[#0F4C81] text-white rounded-xl font-semibold hover:scale-105 transition">
+          <button className="ml-4 px-8 py-3 bg-[#0F4C81] text-white rounded-xl font-bold text-lg hover:scale-105 transition">
   Request Demo
 </button>
 
