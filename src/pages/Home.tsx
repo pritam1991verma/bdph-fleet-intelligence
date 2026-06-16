@@ -1570,7 +1570,10 @@ transport intelligence on a single platform.
 
           </div>
 
-        </motion.div>
+               </motion.div>
+
+      </motion.div> {/* CLOSE LEFT SIDE */}
+
       {/* RIGHT SIDE FORM */}
       <motion.div
         initial={{ opacity: 0, x: 40 }}
