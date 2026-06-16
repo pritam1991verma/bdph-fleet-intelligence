@@ -601,45 +601,44 @@ transport intelligence on a single platform.
 )}
 
 {activeTab === "Fleet Tracking" && (
-
   <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
     <h3 className="text-3xl font-bold text-[#0F4C81] mb-8">
       Fleet Tracking
     </h3>
-<div className="grid md:grid-cols-4 gap-6">
 
-  <div className="bg-white rounded-3xl p-6 shadow-xl border-l-8 border-green-500">
-    <p className="text-gray-500">Running</p>
-    <h3 className="text-5xl font-bold text-green-500">182</h3>
-    <p className="text-green-500 font-semibold mt-2">▲ +12%</p>
-  </div>
+    <div className="grid md:grid-cols-4 gap-6">
 
-  <div className="bg-white rounded-3xl p-6 shadow-xl border-l-8 border-yellow-500">
-    <p className="text-gray-500">Idle</p>
-    <h3 className="text-5xl font-bold text-yellow-500">41</h3>
-    <p className="text-yellow-500 font-semibold mt-2">● Waiting</p>
-  </div>
+      <div className="bg-white rounded-3xl p-6 shadow-xl border-l-8 border-green-500">
+        <p className="text-gray-500">Running</p>
+        <h3 className="text-5xl font-bold text-green-500">182</h3>
+        <p className="text-green-500 font-semibold mt-2">▲ +12%</p>
+      </div>
 
-  <div className="bg-white rounded-3xl p-6 shadow-xl border-l-8 border-red-500">
-    <p className="text-gray-500">Stopped</p>
-    <h3 className="text-5xl font-bold text-red-500">19</h3>
-    <p className="text-red-500 font-semibold mt-2">▼ Attention</p>
-  </div>
+      <div className="bg-white rounded-3xl p-6 shadow-xl border-l-8 border-yellow-500">
+        <p className="text-gray-500">Idle</p>
+        <h3 className="text-5xl font-bold text-yellow-500">41</h3>
+        <p className="text-yellow-500 font-semibold mt-2">● Waiting</p>
+      </div>
 
-  <div className="bg-white rounded-3xl p-6 shadow-xl border-l-8 border-slate-500">
-    <p className="text-gray-500">Offline</p>
-    <h3 className="text-5xl font-bold text-slate-500">6</h3>
-    <p className="text-slate-500 font-semibold mt-2">Disconnected</p>
- 
-</div>
+      <div className="bg-white rounded-3xl p-6 shadow-xl border-l-8 border-red-500">
+        <p className="text-gray-500">Stopped</p>
+        <h3 className="text-5xl font-bold text-red-500">19</h3>
+        <p className="text-red-500 font-semibold mt-2">▼ Attention</p>
+      </div>
+
+      <div className="bg-white rounded-3xl p-6 shadow-xl border-l-8 border-slate-500">
+        <p className="text-gray-500">Offline</p>
+        <h3 className="text-5xl font-bold text-slate-500">6</h3>
+        <p className="text-slate-500 font-semibold mt-2">
+          Disconnected
+        </p>
+      </div>
 
     </div>
 
   </div>
-
 )}
-
 {activeTab === "Battery AI" && (
 
   <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
