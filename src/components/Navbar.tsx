@@ -100,16 +100,13 @@ function Navbar() {
 <div className="w-full flex justify-between items-center px-16 py-3">
         {/* LOGO */}
 
-        <div className="flex items-center gap-4">
-
-          <img
-            src="/logo.png"
-            alt="BDPH Group"
-            className="h-16 w-auto object-contain"
-          />
-
-        </div>
-
+       <div className="flex items-center">
+  <img
+    src="/logo.png"
+    alt="BDPH Group"
+    className="h-16 md:h-20 w-auto"
+  />
+</div>
         {/* MENU */}
 
         <div className="hidden md:flex items-center gap-7 whitespace-nowrap">
