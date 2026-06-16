@@ -1718,7 +1718,7 @@ transport intelligence on a single platform.
     </div> {/* max-w-7xl */}
 
 </section>
-
+</div>   {/* closes the root div opened after return ( */}
   );
 }
 
