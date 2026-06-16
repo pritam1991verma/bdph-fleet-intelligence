@@ -1718,9 +1718,6 @@ transport intelligence on a single platform.
     </div> {/* max-w-7xl */}
 
 </section>
-    </div>
-
-</div>
 
   );
 }
