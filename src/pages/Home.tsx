@@ -1720,7 +1720,7 @@ transport intelligence on a single platform.
 </section>
     </div>
 
-</div> {/* ROOT PAGE WRAPPER */}
+</div>
 
   );
 }
