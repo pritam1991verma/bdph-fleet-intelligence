@@ -50,7 +50,7 @@ function Navbar() {
 
     <a
       href={`#${id}`}
-      className={`transition duration-300 uppercase text-lg tracking-[0.08em] font-bold
+      className={`transition duration-300 uppercase text-base font-bold tracking-wide tracking-[0.08em] font-bold
       ${
         active === id
           ? "text-[#D4AF37] font-bold"
@@ -95,22 +95,21 @@ function Navbar() {
   </div>
 
 </div>
-<nav className="fixed top-8 left-0 w-full bg-white/90 backdrop-blur-xl border-b border-[#D4AF37]/20 shadow-lg z-50">
+  <nav className="fixed top-8 left-0 w-full bg-white/95 backdrop-blur-xl border-b border-[#D4AF37]/20 shadow-lg z-50">
 
-<div className="w-full flex justify-between items-center px-16 py-5">
+<div className="w-full flex justify-between items-center px-12 py-2">
         {/* LOGO */}
 
        <div className="flex items-center">
   <img
-    src="/logo.png"
-    alt="BDPH Group"
-    className="h-20 md:h-24 w-auto"
-  />
+  src="/logo.png"
+  alt="BDPH Group"
+  className="max-h-14 w-auto object-contain"
+/>
 </div>
         {/* MENU */}
-
-        <div className="hidden md:flex items-center gap-12 whitespace-nowrap">
-
+  
+<div className="hidden md:flex items-center gap-8 whitespace-nowrap">
           {navItem("home", "Home")}
 
           {navItem("services", "Services")}
