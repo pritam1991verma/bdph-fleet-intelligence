@@ -1715,9 +1715,13 @@ transport intelligence on a single platform.
 
     </div>
 
-  </div> {/* max-w-7xl */}
+    </div> {/* max-w-7xl */}
 
 </section>
+    </div>
+
+</div> {/* ROOT PAGE WRAPPER */}
+
   );
 }
 
