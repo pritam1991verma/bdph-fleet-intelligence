@@ -139,10 +139,9 @@ return (
   flex-col
   items-center
   justify-center
-  pt-32
+  min-h-[85vh]
+  pt-28
   pb-12
-  md:pt-40
-  md:pb-16
   text-center
   px-4
   sm:px-6
