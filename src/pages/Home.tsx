@@ -79,7 +79,7 @@ const handleSubmit = () => {
 
 return (
   <div
-    className="min-h-screen bg-gradient-to-br from-white via-slate-50 to-blue-50 text-slate-800 overflow-x-hidden relative"
+    className="h-auto bg-gradient-to-br from-white via-slate-50 to-blue-50 text-slate-800 overflow-x-hidden relative"
     onMouseMove={handleMouseMove}
   >
       
@@ -132,19 +132,22 @@ return (
 
       {/* HERO */}
           <section
-id="home"
-className="
-relative
-flex
-flex-col
-items-center
-justify-center
-min-h-screen
-text-center
-px-4
-sm:px-6
-lg:px-8
-overflow-hidden
+  id="home"
+  className="
+  relative
+  flex
+  flex-col
+  items-center
+  justify-center
+  pt-32
+  pb-12
+  md:pt-40
+  md:pb-16
+  text-center
+  px-4
+  sm:px-6
+  lg:px-8
+  overflow-hidden
 "
 >
 
@@ -172,7 +175,7 @@ overflow-hidden
               repeat: Infinity,
               duration: 4,
             }}
-            className="bg-gradient-to-br from-white via-slate-50 to-blue-50/80 backdrop-blur-xl border border-[#D4AF37]/20 rounded-3xl p-6 w-64 shadow-2xl"
+            className="bg-gradient-to-br from-white via-slate-50 to-blue-50/80 backdrop-blur-xl border border-[#D4AF37]/20 rounded-2xl p-4 w-64 shadow-2xl"
           >
 
             <div className="text-slate-500 text-sm mb-2">
@@ -200,14 +203,14 @@ overflow-hidden
               repeat: Infinity,
               duration: 5,
             }}
-            className="bg-gradient-to-br from-white via-slate-50 to-blue-50/80 backdrop-blur-xl border border-[#D4AF37]/20 rounded-3xl p-6 w-64 shadow-2xl"
+            className="bg-gradient-to-br from-white via-slate-50 to-blue-50/80 backdrop-blur-xl border border-[#D4AF37]/20 rounded-2xl p-4 w-64 shadow-2xl"
           >
 
             <div className="text-slate-500 text-sm mb-2">
               AI Monitoring Status
             </div>
 
-            <div className="text-4xl font-bold text-[#0F4C81]">
+            <div className="text-3xl font-bold text-[#0F4C81]">
               99.9%
             </div>
 
@@ -229,24 +232,31 @@ overflow-hidden
       
 
  <h1
-  className="
-    text-4xl
-    sm:text-5xl
-    md:text-6xl
-    lg:text-4xl md:text-6xl
-    xl:text-8xl
-    font-black
-    leading-tight
-    mb-8
-    text-[#0F4C81]
-    px-4
-  "
->
-  AI-Powered Enterprise
-  <span className="text-[#D4AF37]">
-    Fleet Intelligence
-  </span>
-  Platform
+className="
+text-3xl
+sm:text-4xl
+md:text-5xl
+lg:text-6xl
+xl:text-7xl
+font-black
+leading-none
+mb-6
+text-[#0F4C81]
+text-center
+"
+   >
+ AI-Powered
+
+<br />
+
+Enterprise
+<span className="text-[#D4AF37]">
+  Fleet
+</span>
+
+<br />
+
+Intelligence Platform
 </h1>
 
 <p
@@ -310,12 +320,12 @@ gap-4
   initial={{ opacity: 0, y: 40 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 1 }}
-  className="mt-10 max-w-6xl mx-auto px-4"
+  className="mt-6 max-w-6xl mx-auto px-4"
 >
 
-  <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 rounded-[32px] border border-[#D4AF37]/20 shadow-2xl p-10">
+  <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 rounded-[24px] border border-[#D4AF37]/20 shadow-xl p-5">
 
-    <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-6">
 
       {[
         { title: "Vehicles", value: "128" },
@@ -331,13 +341,13 @@ gap-4
             repeat: Infinity,
             delay: index * 0.2
           }}
-          className="bg-slate-50 rounded-3xl p-6 border border-[#D4AF37]/20"
+          className="bg-slate-50 rounded-2xl p-4 border border-[#D4AF37]/20"
         >
           <div className="text-slate-500 text-sm">
             {item.title}
           </div>
 
-          <div className="text-4xl font-bold text-[#0F4C81] mt-2">
+          <div className="text-3xl font-bold text-[#0F4C81] mt-2">
             {item.value}
           </div>
         </motion.div>
@@ -385,14 +395,14 @@ gap-4
 {/* SERVICES */}
 <section
   id="services"
-        className="py-24 px-6"
-      >
+  className="py-12 md:py-16 px-4 md:px-6"
+>
 
         <div className="max-w-7xl mx-auto">
 
-          <div className="text-center mb-20">
+          <div className="text-center mb-8">
 
-            <h2 className="text-4xl md:text-5xl lg:text-4xl md:text-5xl lg:text-base sm:text-lg md:text-xl font-extrabold text-[#0F4C81] mb-3">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0F4C81] mb-3">
               Enterprise Services
             </h2>
 <p className="text-slate-600 text-lg">
@@ -401,7 +411,7 @@ gap-4
 
           </div>
 
-          <div className="grid md:grid-cols-1 lg:grid-cols-2 lg:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
 
             {[
               "GPS Vehicle Tracking",
@@ -415,18 +425,18 @@ gap-4
               <motion.div
                 key={index}
                 whileHover={{   scale: 1.03,   y: -8 }}
-                className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition"
+                className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-2xl p-4 shadow-lg hover:shadow-xl transition"
               >
 
-                <div className="w-16 h-16 rounded-2xl bg-blue-50 border border-[#D4AF37]/20 flex items-center justify-center mb-6 text-[#0F4C81] text-2xl">
+                <div className="w-14 h-14 rounded-2xl bg-blue-50 border border-[#D4AF37]/20 flex items-center justify-center mb-6 text-[#0F4C81] text-2xl">
                   ⚡
                 </div>
 
-                <h3 className="text-2xl font-bold text-[#0F4C81] mb-4">
+                <h3 className="text-xl font-bold text-[#0F4C81] mb-3">
                   {service}
                 </h3>
 
-                <p className="text-slate-500">
+                <p className="text-slate-500 text-sm leading-relaxed">
                   Enterprise-grade realtime analytics and monitoring systems.
                 </p>
 
@@ -443,22 +453,22 @@ gap-4
       {/* PREMIUM DASHBOARD */}
       <section
         id="dashboard"
-        className="relative py-20 md:py-28 px-6 bg-slate-50 overflow-hidden"
+        className="relative py-12 md:py-16 px-4 md:px-6 bg-slate-50 overflow-hidden"
       >
 
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[180px]" />
 
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[180px]" />
 
-        <div className="max-w-[1600px] mx-auto relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10 px-4">
 
-          <div className="text-center mb-20">
+          <div className="text-center mb-8">
 
             <motion.h2
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-4xl md:text-6xl font-black mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-3 text-[#0F4C81]"
             >
 
               LIVE{" "}
@@ -469,7 +479,7 @@ gap-4
 
             </motion.h2>
 
-            <p className="text-slate-500 text-xl max-w-4xl mx-auto">
+            className="relative py-12 md:py-16 px-4 md:px-6 bg-slate-50 overflow-hidden"
 
               AI-powered enterprise monitoring system with realtime
               fleet intelligence and predictive analytics.
@@ -478,7 +488,7 @@ gap-4
 
           </div>
 
-        <div className="grid xl:grid-cols-[320px_1fr] gap-8">
+        <div className="grid lg:grid-cols-[260px_1fr] gap-4">
 
   {/* SIDEBAR */}
 
@@ -522,7 +532,7 @@ gap-4
 
   </div>
             {/* MAIN PANEL */}
-            <div className="space-y-8">
+            <div className="space-y-6">
 
               {/* STATS */}
               <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -649,27 +659,27 @@ gap-4
       Fleet Tracking
     </h3>
 
-    <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-6">
 
-      <div className="bg-white rounded-3xl p-6 shadow-xl border-l-8 border-green-500">
+      <div className="bg-white rounded-2xl p-4 shadow-xl border-l-8 border-green-500">
         <p className="text-gray-500">Running</p>
         <h3 className="text-5xl font-bold text-green-500">182</h3>
         <p className="text-green-500 font-semibold mt-2">▲ +12%</p>
       </div>
 
-      <div className="bg-white rounded-3xl p-6 shadow-xl border-l-8 border-yellow-500">
+      <div className="bg-white rounded-2xl p-4 shadow-xl border-l-8 border-yellow-500">
         <p className="text-gray-500">Idle</p>
         <h3 className="text-5xl font-bold text-yellow-500">41</h3>
         <p className="text-yellow-500 font-semibold mt-2">● Waiting</p>
       </div>
 
-      <div className="bg-white rounded-3xl p-6 shadow-xl border-l-8 border-red-500">
+      <div className="bg-white rounded-2xl p-4 shadow-xl border-l-8 border-red-500">
         <p className="text-gray-500">Stopped</p>
         <h3 className="text-5xl font-bold text-red-500">19</h3>
         <p className="text-red-500 font-semibold mt-2">▼ Attention</p>
       </div>
 
-      <div className="bg-white rounded-3xl p-6 shadow-xl border-l-8 border-slate-500">
+      <div className="bg-white rounded-2xl p-4 shadow-xl border-l-8 border-slate-500">
         <p className="text-gray-500">Offline</p>
         <h3 className="text-5xl font-bold text-slate-500">6</h3>
         <p className="text-slate-500 font-semibold mt-2">
@@ -689,7 +699,7 @@ gap-4
       Battery Intelligence
     </h3>
 
-    <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-6">
 
       {["94%", "81%", "72%", "88%"].map((v, i) => (
 
@@ -773,7 +783,7 @@ gap-4
 )}
               {activeTab === "AI Monitoring" && (
 
-  <div className="space-y-8">
+  <div className="space-y-6">
 
     <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
@@ -781,7 +791,7 @@ gap-4
         AI Monitoring Center
       </h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-6">
 
         <div className="bg-slate-50 p-6 rounded-2xl">
           <div className="text-slate-500 mb-2">Fuel Theft Risk</div>
@@ -876,7 +886,7 @@ gap-4
 )}
               {activeTab === "Security Layer" && (
 
-  <div className="space-y-8">
+  <div className="space-y-6">
 
     <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
@@ -884,7 +894,7 @@ gap-4
         Security Operations Center
       </h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-6">
 
         <div className="bg-slate-50 p-6 rounded-2xl">
           <div className="text-slate-500 mb-2">
@@ -996,7 +1006,7 @@ gap-4
         System Protection Status
       </h4>
 
-      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-6">
 
         <div className="bg-slate-50 rounded-2xl p-6 text-center">
           <div className="text-green-400 text-lg">
@@ -1043,7 +1053,7 @@ gap-4
 )}
               {activeTab === "Cloud Sync" && (
 
-  <div className="space-y-8">
+  <div className="space-y-6">
 
     <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
@@ -1051,7 +1061,7 @@ gap-4
         Cloud Synchronization Center
       </h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-6">
 
         <div className="bg-slate-50 p-6 rounded-2xl">
           <div className="text-slate-500 mb-2">
@@ -1170,7 +1180,7 @@ gap-4
         Cloud Infrastructure
       </h4>
 
-      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-6">
 
         <div className="bg-slate-50 rounded-2xl p-6 text-center">
           <div className="text-[#0F4C81] text-lg">
@@ -1248,7 +1258,7 @@ gap-4
 )}
             </div> {/* MAIN PANEL */}
 
-          </div> {/* grid xl:grid-cols-[320px_1fr] */}
+          </div> {/* grid xl:grid-cols-[280px_1fr] */}
 
         </div> {/* max-w */}
 
@@ -1261,9 +1271,9 @@ gap-4
 
         <div className="max-w-7xl mx-auto">
 
-          <div className="text-center mb-20">
+          <div className="text-center mb-8">
 
-            <h2 className="text-4xl md:text-5xl lg:text-4xl md:text-5xl lg:text-base sm:text-lg md:text-xl font-extrabold text-[#0F4C81] mb-3">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0F4C81] mb-3">
               Smart Monitoring System
             </h2>
 
@@ -1304,7 +1314,7 @@ gap-4
                   {item.icon}
                 </div>
 
-                <h3 className="text-2xl font-bold text-[#0F4C81] mb-4">
+                <h3 className="text-xl font-bold text-[#0F4C81] mb-3">
                   {item.title}
                 </h3>
 
@@ -1336,9 +1346,9 @@ gap-4
 >
   <div className="max-w-7xl mx-auto">
 
-    <div className="text-center mb-20">
+    <div className="text-center mb-8">
 
-      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-4xl md:text-6xl font-black mb-6">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-3 text-[#0F4C81]">
         ABOUT{" "}
         <span className="text-[#0F4C81]">
           BDPH GROUP
@@ -1362,11 +1372,11 @@ gap-4
           🎯
         </div>
 
-        <h3 className="text-2xl font-bold text-[#0F4C81] mb-4">
+        <h3 className="text-xl font-bold text-[#0F4C81] mb-3">
           Mission
         </h3>
 
-        <p className="text-slate-500">
+        <p className="text-slate-500 text-sm leading-relaxed">
           To simplify transporter operations through intelligent
           automation, AI-driven monitoring and centralized fleet
           management.
@@ -1378,11 +1388,11 @@ gap-4
           🚀
         </div>
 
-        <h3 className="text-2xl font-bold text-[#0F4C81] mb-4">
+        <h3 className="text-xl font-bold text-[#0F4C81] mb-3">
           Vision
         </h3>
 
-        <p className="text-slate-500">
+        <p className="text-slate-500 text-sm leading-relaxed">
           To become India's leading AI-powered enterprise and fleet
           intelligence platform for transport and logistics industries.
         </p>
@@ -1393,11 +1403,11 @@ gap-4
           ⚡
         </div>
 
-        <h3 className="text-2xl font-bold text-[#0F4C81] mb-4">
+        <h3 className="text-xl font-bold text-[#0F4C81] mb-3">
           Solutions
         </h3>
 
-        <p className="text-slate-500">
+        <p className="text-slate-500 text-sm leading-relaxed">
           GPS tracking, fuel management, compliance monitoring,
           document alerts, AI analytics and enterprise automation.
         </p>
@@ -1410,7 +1420,7 @@ gap-4
      {/* ENHANCED AI CONTACT SECTION */}
   <section
   id="contact"
-  className="relative py-20 md:py-28 px-6 bg-slate-50 overflow-hidden"
+  className="relative py-12 md:py-16 px-4 md:px-6 bg-slate-50 overflow-hidden"
 
 >
 
@@ -1434,7 +1444,7 @@ gap-4
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-4xl md:text-6xl font-black mb-6"
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-3 text-[#0F4C81]"
       >
 
         CONTACT{" "}
@@ -1444,7 +1454,7 @@ gap-4
 
       </motion.h2>
 
-      <p className="text-slate-500 text-xl max-w-4xl mx-auto">
+      className="relative py-12 md:py-16 px-4 md:px-6 bg-slate-50 overflow-hidden"
 
         Connect with our AI enterprise intelligence team for
         realtime fleet systems, GPS monitoring, cloud analytics,
@@ -1461,12 +1471,12 @@ gap-4
         initial={{ opacity: 0, x: -40 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="space-y-8"
+        className="space-y-6"
       >
 
        {/* COMPANY CARD */}
 
-<div className="rounded-[32px] border border-cyan-500/20 bg-gradient-to-br from-slate-900 via-[#0F172A] to-[#0F4C81] p-10 shadow-[0_0_80px_rgba(34,211,238,0.15)] text-white">
+<div className="rounded-[32px] border border-cyan-500/20 bg-gradient-to-br from-slate-900 via-[#0F172A] to-[#0F4C81] p-6 shadow-[0_0_80px_rgba(34,211,238,0.15)] text-white">
 
   <div className="flex items-center justify-between mb-10">
 
@@ -1620,7 +1630,7 @@ gap-4
         initial={{ opacity: 0, x: 40 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="rounded-[36px] border border-[#D4AF37]/20 bg-gradient-to-br from-white via-slate-50 to-blue-50/80 backdrop-blur-2xl p-10 shadow-[0_0_60px_rgba(0,255,255,0.08)]"
+        className="rounded-[36px] border border-[#D4AF37]/20 bg-gradient-to-br from-white via-slate-50 to-blue-50/80 backdrop-blur-2xl p-6 shadow-[0_0_60px_rgba(0,255,255,0.08)]"
       >
 
         <div className="mb-10">
