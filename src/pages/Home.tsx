@@ -131,10 +131,23 @@ return (
       </div>
 
       {/* HERO */}
-        <section
-  id="home"
-  className="relative flex flex-col items-center justify-center min-h-screen text-center px-4 sm:px-6 lg:px-8 overflow-hidden"
+          <section
+id="home"
+className="
+relative
+flex
+flex-col
+items-center
+justify-center
+min-h-screen
+text-center
+px-4
+sm:px-6
+lg:px-8
+overflow-hidden
+"
 >
+
     
 
         {/* BACKGROUND */}
@@ -211,7 +224,7 @@ return (
   initial={{ opacity: 0, y: 60 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 1 }}
-  className="relative z-10 max-w-7xl mx-auto px-4"
+            className="relative z-10 max-w-6xl mx-auto"
 >
       
 
@@ -233,18 +246,21 @@ text-[#0F4C81]
 </span>
 Platform
 
-          </h1>
-
-       <p className="
-text-base
-sm:text-lg
-md:text-xl
-text-slate-500
-max-w-3xl
-mx-auto
-mb-10
-px-4
-">
+        <h1
+  className="
+  text-4xl
+  sm:text-5xl
+  md:text-6xl
+  lg:text-7xl
+  xl:text-8xl
+  font-black
+  leading-tight
+  mb-8
+  text-[#0F4C81]
+  px-4
+"
+>
+         
 
             Unified fleet operations, fuel monitoring,
 GPS tracking, AI analytics, security and
