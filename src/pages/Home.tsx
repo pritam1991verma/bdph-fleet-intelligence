@@ -228,7 +228,7 @@ overflow-hidden
 >
       
 
-         <h1 className="
+         <h1 >className="
 text-4xl
 sm:text-5xl
 md:text-4xl md:text-5xl lg:text-base sm:text-lg md:text-xl
