@@ -131,7 +131,7 @@ return (
       </div>
 
       {/* HERO */}
-          <section
+         <section
   id="home"
   className="
   relative
@@ -139,9 +139,8 @@ return (
   flex-col
   items-center
   justify-center
-  min-h-[85vh]
-  pt-28
-  pb-12
+  pt-8
+  pb-8
   text-center
   px-4
   sm:px-6
@@ -226,7 +225,7 @@ return (
   initial={{ opacity: 0, y: 60 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 1 }}
-            className="relative z-10 max-w-6xl mx-auto"
+            className="relative z-10 max-w-6xl mx-auto pt-2"
 >
       
 
@@ -296,7 +295,7 @@ gap-4
             </a>
 
           </div>
-          <div className="flex flex-wrap justify-center gap-4 mt-10">
+          <div className="flex flex-wrap justify-center gap-3 mt-6">
 
   <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 px-5 py-3 rounded-full shadow-lg border border-[#D4AF37]/20 text-[#0F4C81] font-semibold">
     ✓ GPS Tracking
