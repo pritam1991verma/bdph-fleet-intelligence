@@ -132,20 +132,20 @@ return (
 
       {/* HERO */}
          <section
-  id="home"
   className="
-  relative
-  flex
-  flex-col
-  items-center
-  justify-center
-  pt-8
-  pb-8
-  text-center
-  px-4
-  sm:px-6
-  lg:px-8
-  overflow-hidden
+relative
+flex
+flex-col
+items-center
+justify-center
+min-h-[85vh]
+text-center
+px-4
+sm:px-6
+lg:px-8
+pt-6
+pb-6
+overflow-hidden
 "
 >
 
@@ -221,24 +221,29 @@ return (
         </div>
 
         {/* MAIN HERO */}
-          <motion.div
+         <motion.div
   initial={{ opacity: 0, y: 60 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 1 }}
-            className="relative z-10 max-w-6xl mx-auto pt-2"
+  className="relative z-10 max-w-5xl mx-auto pt-4"
 >
-      
-
+  <div className="max-w-5xl mx-auto">    
+<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#D4AF37]/20 shadow mb-5">
+  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+  <span className="text-[#0F4C81] text-sm font-semibold tracking-wider">
+    ENTERPRISE FLEET COMMAND CENTER
+  </span>
+</div>
  <h1
 className="
-text-3xl
-sm:text-4xl
-md:text-5xl
-lg:text-6xl
-xl:text-7xl
+text-2xl
+sm:text-3xl
+md:text-4xl
+lg:text-5xl
+xl:text-6xl
 font-black
 leading-none
-mb-6
+mb-4
 text-[#0F4C81]
 text-center
 "
@@ -265,7 +270,7 @@ Intelligence Platform
     text-slate-500
     max-w-3xl
     mx-auto
-    mb-10
+    mb-5
     px-4
   "
 >
@@ -280,7 +285,7 @@ flex-col
 sm:flex-row
 justify-center
 items-center
-gap-4
+gap-3
 ">
 
             <button className="bg-[#0F4C81] hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-2xl transition">
@@ -318,12 +323,12 @@ gap-4
   initial={{ opacity: 0, y: 40 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 1 }}
-  className="mt-6 max-w-6xl mx-auto px-4"
+  className="mt-4 max-w-4xl mx-auto px-2"
 >
 
   <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 rounded-[24px] border border-[#D4AF37]/20 shadow-xl p-5">
 
-    <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-6">
+    <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-6">
 
       {[
         { title: "Vehicles", value: "128" },
@@ -339,13 +344,13 @@ gap-4
             repeat: Infinity,
             delay: index * 0.2
           }}
-          className="bg-slate-50 rounded-2xl p-4 border border-[#D4AF37]/20"
+          className="bg-white rounded-xl p-3 border border-[#D4AF37]/20"
         >
           <div className="text-slate-500 text-sm">
             {item.title}
           </div>
 
-          <div className="text-3xl font-bold text-[#0F4C81] mt-2">
+          <div className="text-2xl font-bold text-[#0F4C81] mt-1">
             {item.value}
           </div>
         </motion.div>
@@ -485,13 +490,13 @@ gap-4
 </p>
           </div>
 
-        <div className="grid lg:grid-cols-[260px_1fr] gap-4">
+        <div className="grid lg:grid-cols-[260px_1fr] gap-3">
 
   {/* SIDEBAR */}
 
   <div className="rounded-[32px] border border-[#D4AF37]/20 bg-gradient-to-br from-white via-slate-50 to-blue-50 shadow-2xl p-8">
 
-    <div className="text-5xl font-black text-[#0F4C81] mb-10">
+    <div className="text-5xl font-black text-[#0F4C81] mb-5">
       BDPH AI
     </div>
 
@@ -532,7 +537,7 @@ gap-4
             <div className="space-y-6">
 
               {/* STATS */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
 
                 {[
                   {
@@ -629,7 +634,7 @@ gap-4
         Fleet Activity
       </h3>
 
-      <div className="flex items-end justify-between h-[300px] gap-4">
+      <div className="flex items-end justify-between h-[300px] gap-3">
 
         {[40, 80, 65, 95, 55, 100, 72].map((h, i) => (
 
@@ -656,7 +661,7 @@ gap-4
       Fleet Tracking
     </h3>
 
-    <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-6">
+    <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-6">
 
       <div className="bg-white rounded-2xl p-4 shadow-xl border-l-8 border-green-500">
         <p className="text-gray-500">Running</p>
@@ -696,7 +701,7 @@ gap-4
       Battery Intelligence
     </h3>
 
-    <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-6">
+    <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-6">
 
       {["94%", "81%", "72%", "88%"].map((v, i) => (
 
@@ -788,7 +793,7 @@ gap-4
         AI Monitoring Center
       </h3>
 
-      <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-6">
+      <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-6">
 
         <div className="bg-slate-50 p-6 rounded-2xl">
           <div className="text-slate-500 mb-2">Fuel Theft Risk</div>
@@ -891,7 +896,7 @@ gap-4
         Security Operations Center
       </h3>
 
-      <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-6">
+      <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-6">
 
         <div className="bg-slate-50 p-6 rounded-2xl">
           <div className="text-slate-500 mb-2">
@@ -1003,13 +1008,13 @@ gap-4
         System Protection Status
       </h4>
 
-      <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-6">
+      <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-6">
 
         <div className="bg-slate-50 rounded-2xl p-6 text-center">
           <div className="text-green-400 text-lg">
             Firewall
           </div>
-          <div className="text-3xl font-bold text-[#0F4C81] mt-2">
+          <div className="text-2xl font-bold text-[#0F4C81] mt-1">
             ACTIVE
           </div>
         </div>
@@ -1018,7 +1023,7 @@ gap-4
           <div className="text-green-400 text-lg">
             GPS Encryption
           </div>
-          <div className="text-3xl font-bold text-[#0F4C81] mt-2">
+          <div className="text-2xl font-bold text-[#0F4C81] mt-1">
             ENABLED
           </div>
         </div>
@@ -1027,7 +1032,7 @@ gap-4
           <div className="text-green-400 text-lg">
             Cloud Backup
           </div>
-          <div className="text-3xl font-bold text-[#0F4C81] mt-2">
+          <div className="text-2xl font-bold text-[#0F4C81] mt-1">
             RUNNING
           </div>
         </div>
@@ -1036,7 +1041,7 @@ gap-4
           <div className="text-green-400 text-lg">
             Data Integrity
           </div>
-          <div className="text-3xl font-bold text-[#0F4C81] mt-2">
+          <div className="text-2xl font-bold text-[#0F4C81] mt-1">
             100%
           </div>
         </div>
@@ -1058,7 +1063,7 @@ gap-4
         Cloud Synchronization Center
       </h3>
 
-      <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-6">
+      <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-6">
 
         <div className="bg-slate-50 p-6 rounded-2xl">
           <div className="text-slate-500 mb-2">
@@ -1177,7 +1182,7 @@ gap-4
         Cloud Infrastructure
       </h4>
 
-      <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-6">
+      <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-6">
 
         <div className="bg-slate-50 rounded-2xl p-6 text-center">
           <div className="text-[#0F4C81] text-lg">
@@ -1475,7 +1480,7 @@ gap-4
 
 <div className="rounded-[32px] border border-cyan-500/20 bg-gradient-to-br from-slate-900 via-[#0F172A] to-[#0F4C81] p-6 shadow-[0_0_80px_rgba(34,211,238,0.15)] text-white">
 
-  <div className="flex items-center justify-between mb-10">
+  <div className="flex items-center justify-between mb-5">
 
 
 <div>
@@ -1630,7 +1635,7 @@ gap-4
         className="rounded-[36px] border border-[#D4AF37]/20 bg-gradient-to-br from-white via-slate-50 to-blue-50/80 backdrop-blur-2xl p-6 shadow-[0_0_60px_rgba(0,255,255,0.08)]"
       >
 
-        <div className="mb-10">
+        <div className="mb-5">
 
          <div className="text-5xl font-black text-[#0F4C81] mb-4">
   Enterprise Command Center
@@ -1654,7 +1659,7 @@ gap-4
   Connect directly with our AI enterprise operations team.
 </div>
 
-</div>   {/* CLOSE mb-10 */}
+</div>   {/* CLOSE mb-5 */}
 
 <div className="space-y-6">
 <input
