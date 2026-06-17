@@ -1453,7 +1453,7 @@ gap-4
 
       </motion.h2>
 
-     <p className="relative py-12 md:py-16 px-4 md:px-6 bg-slate-50 overflow-hidden"
+     <p className="relative py-12 md:py-16 px-4 md:px-6 bg-slate-50 overflow-hidden">
 
         Connect with our AI enterprise intelligence team for
         realtime fleet systems, GPS monitoring, cloud analytics,
