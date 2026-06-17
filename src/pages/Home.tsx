@@ -131,10 +131,11 @@ return (
       </div>
 
       {/* HERO */}
-      <section
-        id="home"
-        className="relative flex flex-col items-center justify-center min-h-screen text-center px-6 overflow-hidden"
-      >
+        <section
+  id="home"
+  className="relative flex flex-col items-center justify-center min-h-screen text-center px-4 sm:px-6 lg:px-8 overflow-hidden"
+>
+    
 
         {/* BACKGROUND */}
 <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50 to-blue-100"></div>
@@ -150,7 +151,7 @@ return (
         </div>
 
         {/* FLOATING CARD LEFT */}
-        <div className="absolute top-[25%] left-10 hidden xl:block z-20">
+        <div className="absolute top-[25%] left-5 hidden 2xl:block z-20">
 
           <motion.div
             animate={{ y: [0, -12, 0] }}
@@ -178,7 +179,7 @@ return (
         </div>
 
         {/* FLOATING CARD RIGHT */}
-        <div className="absolute top-[45%] right-10 hidden xl:block z-20">
+        <div className="absolute top-[45%] right-5 hidden 2xl:block z-20">
 
           <motion.div
             animate={{ y: [0, 12, 0] }}
@@ -206,14 +207,25 @@ return (
         </div>
 
         {/* MAIN HERO */}
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="relative z-10"
-        >
+          <motion.div
+  initial={{ opacity: 0, y: 60 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+  className="relative z-10 max-w-7xl mx-auto px-4"
+>
+      
 
-          <h1 className="text-5xl md:text-7xl font-black leading-tight mb-8 text-[#0F4C81]">
+         <h1 className="
+text-4xl
+sm:text-5xl
+md:text-4xl md:text-5xl lg:text-base sm:text-lg md:text-xl
+lg:text-7xl
+xl:text-8xl
+font-black
+leading-tight
+mb-8
+text-[#0F4C81]
+">
 
            AI-Powered Enterprise
 <span className="text-[#D4AF37]">
@@ -223,7 +235,16 @@ Platform
 
           </h1>
 
-          <p className="text-slate-500 text-xl max-w-3xl mx-auto mb-10">
+       <p className="
+text-base
+sm:text-lg
+md:text-xl
+text-slate-500
+max-w-3xl
+mx-auto
+mb-10
+px-4
+">
 
             Unified fleet operations, fuel monitoring,
 GPS tracking, AI analytics, security and
@@ -231,7 +252,14 @@ transport intelligence on a single platform.
 
           </p>
 
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="
+flex
+flex-col
+sm:flex-row
+justify-center
+items-center
+gap-4
+">
 
             <button className="bg-[#0F4C81] hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-2xl transition">
               Explore Platform
@@ -273,7 +301,7 @@ transport intelligence on a single platform.
 
   <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 rounded-[32px] border border-[#D4AF37]/20 shadow-2xl p-10">
 
-    <div className="grid md:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
       {[
         { title: "Vehicles", value: "128" },
@@ -350,7 +378,7 @@ transport intelligence on a single platform.
 
           <div className="text-center mb-20">
 
-            <h2 className="text-6xl font-extrabold text-[#0F4C81] mb-3">
+            <h2 className="text-4xl md:text-5xl lg:text-4xl md:text-5xl lg:text-base sm:text-lg md:text-xl font-extrabold text-[#0F4C81] mb-3">
               Enterprise Services
             </h2>
 <p className="text-slate-600 text-lg">
@@ -416,7 +444,7 @@ transport intelligence on a single platform.
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-5xl md:text-7xl font-black mb-6"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-6"
             >
 
               LIVE{" "}
@@ -520,7 +548,7 @@ transport intelligence on a single platform.
                       {card.title}
                     </div>
 
-                    <div className="text-6xl font-black text-[#0F4C81]">
+                    <div className="text-4xl md:text-5xl lg:text-base sm:text-lg md:text-xl font-black text-[#0F4C81]">
                       {card.value}
                     </div>
 
@@ -607,7 +635,7 @@ transport intelligence on a single platform.
       Fleet Tracking
     </h3>
 
-    <div className="grid md:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
       <div className="bg-white rounded-3xl p-6 shadow-xl border-l-8 border-green-500">
         <p className="text-gray-500">Running</p>
@@ -647,7 +675,7 @@ transport intelligence on a single platform.
       Battery Intelligence
     </h3>
 
-    <div className="grid md:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
       {["94%", "81%", "72%", "88%"].map((v, i) => (
 
@@ -739,7 +767,7 @@ transport intelligence on a single platform.
         AI Monitoring Center
       </h3>
 
-      <div className="grid md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <div className="bg-slate-50 p-6 rounded-2xl">
           <div className="text-slate-500 mb-2">Fuel Theft Risk</div>
@@ -842,7 +870,7 @@ transport intelligence on a single platform.
         Security Operations Center
       </h3>
 
-      <div className="grid md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <div className="bg-slate-50 p-6 rounded-2xl">
           <div className="text-slate-500 mb-2">
@@ -954,7 +982,7 @@ transport intelligence on a single platform.
         System Protection Status
       </h4>
 
-      <div className="grid md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <div className="bg-slate-50 rounded-2xl p-6 text-center">
           <div className="text-green-400 text-lg">
@@ -1009,7 +1037,7 @@ transport intelligence on a single platform.
         Cloud Synchronization Center
       </h3>
 
-      <div className="grid md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <div className="bg-slate-50 p-6 rounded-2xl">
           <div className="text-slate-500 mb-2">
@@ -1128,7 +1156,7 @@ transport intelligence on a single platform.
         Cloud Infrastructure
       </h4>
 
-      <div className="grid md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <div className="bg-slate-50 rounded-2xl p-6 text-center">
           <div className="text-[#0F4C81] text-lg">
@@ -1221,7 +1249,7 @@ transport intelligence on a single platform.
 
           <div className="text-center mb-20">
 
-            <h2 className="text-6xl font-extrabold text-[#0F4C81] mb-3">
+            <h2 className="text-4xl md:text-5xl lg:text-4xl md:text-5xl lg:text-base sm:text-lg md:text-xl font-extrabold text-[#0F4C81] mb-3">
               Smart Monitoring System
             </h2>
 
@@ -1296,7 +1324,7 @@ transport intelligence on a single platform.
 
     <div className="text-center mb-20">
 
-      <h2 className="text-5xl md:text-7xl font-black mb-6">
+      <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-6">
         ABOUT{" "}
         <span className="text-[#0F4C81]">
           BDPH GROUP
@@ -1392,7 +1420,7 @@ transport intelligence on a single platform.
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-5xl md:text-7xl font-black mb-6"
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-6"
       >
 
         CONTACT{" "}
