@@ -86,9 +86,9 @@ const alerts = [
 ];
   return (
     <section
-      id="tracking"
-      className="relative py-24 bg-slate-100 overflow-hidden"
-    >
+  id="tracking"
+  className="relative py-12 md:py-16 overflow-hidden"
+>
       {/* BACKGROUND GLOW */}
 
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-[#D4AF37]/10 blur-[180px] rounded-full pointer-events-none"></div>
@@ -117,7 +117,7 @@ const alerts = [
             intelligence.
           </p>
 
-          <div className="w-64 h-[2px] mx-auto bg-gradient-to-r from-transparent via-cyan-400 to-transparent mt-10"></div>
+          <div className="w-64 h-[2px] mx-auto bg-gradient-to-r from-transparent via-cyan-400 to-transparent mt-4"></div>
         </div>
 
         {/* LIVE ALERT TICKER */}
