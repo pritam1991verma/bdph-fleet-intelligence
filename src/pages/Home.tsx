@@ -479,13 +479,12 @@ gap-4
 
             </motion.h2>
 
-            className="relative py-12 md:py-16 px-4 md:px-6 bg-slate-50 overflow-hidden"
+<p className="text-slate-500 text-base md:text-lg max-w-3xl mx-auto">
 
-              AI-powered enterprise monitoring system with realtime
-              fleet intelligence and predictive analytics.
+  AI-powered enterprise monitoring system with realtime
+  fleet intelligence and predictive analytics.
 
-            </p>
-
+</p>
           </div>
 
         <div className="grid lg:grid-cols-[260px_1fr] gap-4">
@@ -535,7 +534,7 @@ gap-4
             <div className="space-y-6">
 
               {/* STATS */}
-              <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
 
                 {[
                   {
@@ -572,7 +571,7 @@ gap-4
                       {card.title}
                     </div>
 
-                    <div className="text-4xl md:text-5xl lg:text-base sm:text-lg md:text-xl font-black text-[#0F4C81]">
+                    <div className="text-3xl md:text-4xl font-black text-[#0F4C81]">
                       {card.value}
                     </div>
 
