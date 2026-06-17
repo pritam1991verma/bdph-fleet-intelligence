@@ -390,7 +390,7 @@ gap-3
   </div>
 
 </motion.div>
-
+</div>
 </motion.div>
 
 </section>
