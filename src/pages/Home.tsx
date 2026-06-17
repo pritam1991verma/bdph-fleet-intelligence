@@ -233,7 +233,7 @@ overflow-hidden
     text-4xl
     sm:text-5xl
     md:text-6xl
-    lg:text-7xl
+    lg:text-4xl md:text-6xl
     xl:text-8xl
     font-black
     leading-tight
@@ -310,12 +310,12 @@ gap-4
   initial={{ opacity: 0, y: 40 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 1 }}
-  className="mt-16 max-w-6xl mx-auto"
+  className="mt-10 max-w-6xl mx-auto px-4"
 >
 
   <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 rounded-[32px] border border-[#D4AF37]/20 shadow-2xl p-10">
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-6">
 
       {[
         { title: "Vehicles", value: "128" },
@@ -401,7 +401,7 @@ gap-4
 
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 lg:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
 
             {[
               "GPS Vehicle Tracking",
@@ -443,7 +443,7 @@ gap-4
       {/* PREMIUM DASHBOARD */}
       <section
         id="dashboard"
-        className="relative py-32 px-6 bg-slate-50 overflow-hidden"
+        className="relative py-20 md:py-28 px-6 bg-slate-50 overflow-hidden"
       >
 
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[180px]" />
@@ -458,7 +458,7 @@ gap-4
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-4xl md:text-6xl font-black mb-6"
             >
 
               LIVE{" "}
@@ -525,7 +525,7 @@ gap-4
             <div className="space-y-8">
 
               {/* STATS */}
-              <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+              <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-6">
 
                 {[
                   {
@@ -580,7 +580,7 @@ gap-4
 
 {activeTab === "Overview" && (
 
-  <div className="grid lg:grid-cols-2 gap-8">
+  <div className="grid lg:grid-cols-1 lg:grid-cols-2 gap-8">
 
     <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
@@ -649,7 +649,7 @@ gap-4
       Fleet Tracking
     </h3>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-6">
 
       <div className="bg-white rounded-3xl p-6 shadow-xl border-l-8 border-green-500">
         <p className="text-gray-500">Running</p>
@@ -689,7 +689,7 @@ gap-4
       Battery Intelligence
     </h3>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-6">
 
       {["94%", "81%", "72%", "88%"].map((v, i) => (
 
@@ -723,7 +723,7 @@ gap-4
       Fuel Analytics
     </h3>
 
-    <div className="grid md:grid-cols-3 gap-6 mb-8">
+    <div className="grid md:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
 
       <div className="bg-slate-50 p-6 rounded-2xl">
         <div className="text-slate-500">Today's Fuel</div>
@@ -781,7 +781,7 @@ gap-4
         AI Monitoring Center
       </h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <div className="bg-slate-50 p-6 rounded-2xl">
           <div className="text-slate-500 mb-2">Fuel Theft Risk</div>
@@ -807,7 +807,7 @@ gap-4
 
     </div>
 
-    <div className="grid lg:grid-cols-2 gap-8">
+    <div className="grid lg:grid-cols-1 lg:grid-cols-2 gap-8">
 
       <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
@@ -884,7 +884,7 @@ gap-4
         Security Operations Center
       </h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <div className="bg-slate-50 p-6 rounded-2xl">
           <div className="text-slate-500 mb-2">
@@ -926,7 +926,7 @@ gap-4
 
     </div>
 
-    <div className="grid lg:grid-cols-2 gap-8">
+    <div className="grid lg:grid-cols-1 lg:grid-cols-2 gap-8">
 
       <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
@@ -996,7 +996,7 @@ gap-4
         System Protection Status
       </h4>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <div className="bg-slate-50 rounded-2xl p-6 text-center">
           <div className="text-green-400 text-lg">
@@ -1051,7 +1051,7 @@ gap-4
         Cloud Synchronization Center
       </h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <div className="bg-slate-50 p-6 rounded-2xl">
           <div className="text-slate-500 mb-2">
@@ -1093,7 +1093,7 @@ gap-4
 
     </div>
 
-    <div className="grid lg:grid-cols-2 gap-8">
+    <div className="grid lg:grid-cols-1 lg:grid-cols-2 gap-8">
 
       <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
@@ -1170,7 +1170,7 @@ gap-4
         Cloud Infrastructure
       </h4>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <div className="bg-slate-50 rounded-2xl p-6 text-center">
           <div className="text-[#0F4C81] text-lg">
@@ -1269,7 +1269,7 @@ gap-4
 
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-6">
 
             {[
               {
@@ -1332,13 +1332,13 @@ gap-4
     {/* ABOUT */}
 <section
   id="about"
-  className="py-32 px-6 bg-slate-50"
+  className="py-20 md:py-28 px-6 bg-slate-50"
 >
   <div className="max-w-7xl mx-auto">
 
     <div className="text-center mb-20">
 
-      <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-6">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-4xl md:text-6xl font-black mb-6">
         ABOUT{" "}
         <span className="text-[#0F4C81]">
           BDPH GROUP
@@ -1355,7 +1355,7 @@ gap-4
 
     </div>
 
-    <div className="grid md:grid-cols-3 gap-8">
+    <div className="grid md:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
 
       <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-3xl p-8">
         <div className="text-[#0F4C81] text-4xl mb-6">
@@ -1410,7 +1410,7 @@ gap-4
      {/* ENHANCED AI CONTACT SECTION */}
   <section
   id="contact"
-  className="relative py-32 px-6 bg-slate-50 overflow-hidden"
+  className="relative py-20 md:py-28 px-6 bg-slate-50 overflow-hidden"
 
 >
 
@@ -1434,7 +1434,7 @@ gap-4
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-6"
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-4xl md:text-6xl font-black mb-6"
       >
 
         CONTACT{" "}
@@ -1500,7 +1500,7 @@ gap-4
 
   </div>
 
-  <div className="grid grid-cols-2 gap-5">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
 
 
 <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-5 border border-white/10">
@@ -1708,7 +1708,7 @@ gap-4
         </div>
 
         {/* BOTTOM STATS */}
-        <div className="grid grid-cols-3 gap-5 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 mt-10">
 
           {[
             {
