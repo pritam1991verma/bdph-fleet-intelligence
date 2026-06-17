@@ -85,7 +85,7 @@ const alerts = [
   },
 ];
   return (
-    <section
+  <section
   id="tracking"
   className="relative py-12 md:py-16 overflow-hidden"
 >
@@ -105,11 +105,17 @@ const alerts = [
             </span>
           </div>
 
-          <h2 className="text-5xl md:text-7xl font-black tracking-tight mb-6">
-            <span className="bg-gradient-to-r from-cyan-300 via-white to-cyan-500 bg-clip-text text-transparent">
-              Live Fleet Operations
-            </span>
-          </h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-4">
+
+  <span className="text-[#0F4C81]">
+    Live Fleet
+  </span>
+
+  <span className="text-[#D4AF37]">
+    {" "}Operations
+  </span>
+
+</h2>
 
           <p className="text-gray-400 text-lg max-w-3xl mx-auto">
             Enterprise-grade AI powered satellite tracking with realtime
