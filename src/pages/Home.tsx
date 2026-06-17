@@ -328,7 +328,7 @@ gap-3
 
   <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 rounded-[24px] border border-[#D4AF37]/20 shadow-xl p-5">
 
-    <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-6">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
 
       {[
         { title: "Vehicles", value: "128" },
@@ -592,59 +592,164 @@ gap-3
 
 {activeTab === "Overview" && (
 
-  <div className="grid lg:grid-cols-1 lg:grid-cols-2 gap-8">
+<div className="space-y-6">
 
-    <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
+  {/* KPI ROW */}
 
-      <h3 className="text-2xl font-bold text-[#0F4C81] mb-8">
-        Fuel Consumption Analysis
+  <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-5">
+
+    {[
+      {
+        title: "Active Vehicles",
+        value: "128",
+        status: "+12%",
+      },
+      {
+        title: "Fuel Efficiency",
+        value: "94%",
+        status: "+8%",
+      },
+      {
+        title: "Tracking Accuracy",
+        value: "99.9%",
+        status: "LIVE",
+      },
+      {
+        title: "AI Alerts",
+        value: "12",
+        status: "ACTIVE",
+      },
+    ].map((item, index) => (
+
+      <div
+        key={index}
+        className="bg-white rounded-3xl shadow-lg border border-slate-200 p-6"
+      >
+
+        <div className="text-slate-500 text-sm mb-2">
+          {item.title}
+        </div>
+
+        <div className="text-4xl font-black text-[#0F4C81]">
+          {item.value}
+        </div>
+
+        <div className="mt-3 text-green-500 font-semibold">
+          {item.status}
+        </div>
+
+      </div>
+
+    ))}
+
+  </div>
+
+  {/* MAIN DASHBOARD */}
+
+  <div className="grid xl:grid-cols-[320px_1fr_320px] gap-6">
+
+    {/* LEFT PANEL */}
+
+    <div className="bg-white rounded-3xl shadow-lg border border-slate-200 p-6">
+
+      <h3 className="text-2xl font-bold text-[#0F4C81] mb-6">
+        Fleet Performance
       </h3>
 
-      <div className="space-y-5">
+      <div className="flex justify-center">
 
-        {[78, 64, 88, 71, 93].map((v, i) => (
+        <div className="w-40 h-40 rounded-full border-[14px] border-[#0F4C81] flex items-center justify-center">
 
-          <div key={i}>
+          <div className="text-center">
 
-            <div className="flex justify-between mb-2 text-slate-600 font-medium">
-              <span>Day {i + 1}</span>
-              <span>{v}%</span>
+            <div className="text-5xl font-black text-[#0F4C81]">
+              94%
             </div>
 
-            <div className="h-4 bg-slate-50 rounded-full overflow-hidden">
-
-              <div
-                className="h-full bg-cyan-400"
-                style={{ width: `${v}%` }}
-              />
-
+            <div className="text-slate-500">
+              Overall Score
             </div>
 
           </div>
 
+        </div>
+
+      </div>
+
+      <div className="space-y-4 mt-8">
+
+        <div className="flex justify-between">
+          <span>Fuel Efficiency</span>
+          <span className="font-bold text-green-500">
+            94%
+          </span>
+        </div>
+
+        <div className="flex justify-between">
+          <span>Battery Health</span>
+          <span className="font-bold text-green-500">
+            99%
+          </span>
+        </div>
+
+        <div className="flex justify-between">
+          <span>Vehicle Uptime</span>
+          <span className="font-bold text-green-500">
+            99.9%
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+    {/* CENTER PANEL */}
+
+    <div className="bg-white rounded-3xl shadow-lg border border-slate-200 p-6">
+
+      <h3 className="text-2xl font-bold text-[#0F4C81] mb-8">
+        Fuel Consumption Trend
+      </h3>
+
+      <div className="h-[320px] flex items-end justify-between gap-3">
+
+        {[55,45,62,90,75,42,76].map((h,index)=>(
+          <div
+            key={index}
+            className="flex-1 bg-[#0F4C81] rounded-t-xl"
+            style={{height:`${h}%`}}
+          />
         ))}
 
       </div>
 
     </div>
 
-    <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
+    {/* RIGHT PANEL */}
 
-      <h3 className="text-2xl font-bold text-[#0F4C81] mb-8">
-        Fleet Activity
+    <div className="bg-white rounded-3xl shadow-lg border border-slate-200 p-6">
+
+      <h3 className="text-2xl font-bold text-[#0F4C81] mb-6">
+        AI Insights
       </h3>
 
-      <div className="flex items-end justify-between h-[300px] gap-3">
+      <div className="space-y-4">
 
-        {[40, 80, 65, 95, 55, 100, 72].map((h, i) => (
+        <div className="bg-green-50 rounded-2xl p-4">
+          Route optimization detected
+        </div>
 
-          <div
-            key={i}
-            className="flex-1 bg-cyan-400 rounded-t-2xl"
-            style={{ height: `${h}%` }}
-          />
+        <div className="bg-yellow-50 rounded-2xl p-4">
+          Fuel anomaly identified
+        </div>
 
-        ))}
+        <div className="bg-red-50 rounded-2xl p-4">
+          Maintenance due on 3 vehicles
+        </div>
+
+        <div className="bg-blue-50 rounded-2xl p-4">
+          Cloud sync operating normally
+        </div>
 
       </div>
 
@@ -652,8 +757,9 @@ gap-3
 
   </div>
 
-)}
+</div>
 
+)}
 {activeTab === "Fleet Tracking" && (
   <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
@@ -661,7 +767,7 @@ gap-3
       Fleet Tracking
     </h3>
 
-    <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-6">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
 
       <div className="bg-white rounded-2xl p-4 shadow-xl border-l-8 border-green-500">
         <p className="text-gray-500">Running</p>
@@ -701,7 +807,7 @@ gap-3
       Battery Intelligence
     </h3>
 
-    <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-6">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
 
       {["94%", "81%", "72%", "88%"].map((v, i) => (
 
@@ -735,7 +841,7 @@ gap-3
       Fuel Analytics
     </h3>
 
-    <div className="grid md:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
+    <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
 
       <div className="bg-slate-50 p-6 rounded-2xl">
         <div className="text-slate-500">Today's Fuel</div>
@@ -793,7 +899,7 @@ gap-3
         AI Monitoring Center
       </h3>
 
-      <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
 
         <div className="bg-slate-50 p-6 rounded-2xl">
           <div className="text-slate-500 mb-2">Fuel Theft Risk</div>
@@ -819,7 +925,7 @@ gap-3
 
     </div>
 
-    <div className="grid lg:grid-cols-1 lg:grid-cols-2 gap-8">
+    <div className="grid lg:grid-cols-2 gap-6">
 
       <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
@@ -896,7 +1002,7 @@ gap-3
         Security Operations Center
       </h3>
 
-      <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
 
         <div className="bg-slate-50 p-6 rounded-2xl">
           <div className="text-slate-500 mb-2">
@@ -938,7 +1044,7 @@ gap-3
 
     </div>
 
-    <div className="grid lg:grid-cols-1 lg:grid-cols-2 gap-8">
+    <div className="grid lg:grid-cols-2 gap-6">
 
       <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
@@ -1008,7 +1114,7 @@ gap-3
         System Protection Status
       </h4>
 
-      <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
 
         <div className="bg-slate-50 rounded-2xl p-6 text-center">
           <div className="text-green-400 text-lg">
@@ -1063,7 +1169,7 @@ gap-3
         Cloud Synchronization Center
       </h3>
 
-      <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
 
         <div className="bg-slate-50 p-6 rounded-2xl">
           <div className="text-slate-500 mb-2">
@@ -1105,7 +1211,7 @@ gap-3
 
     </div>
 
-    <div className="grid lg:grid-cols-1 lg:grid-cols-2 gap-8">
+    <div className="grid lg:grid-cols-2 gap-6">
 
       <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-[30px] p-8">
 
@@ -1182,7 +1288,7 @@ gap-3
         Cloud Infrastructure
       </h4>
 
-      <div className="grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
 
         <div className="bg-slate-50 rounded-2xl p-6 text-center">
           <div className="text-[#0F4C81] text-lg">
@@ -1367,7 +1473,7 @@ gap-3
 
     </div>
 
-    <div className="grid md:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+    <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
 
       <div className="bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 rounded-3xl p-8">
         <div className="text-[#0F4C81] text-4xl mb-6">
