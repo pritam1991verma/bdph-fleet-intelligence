@@ -228,45 +228,43 @@ overflow-hidden
 >
       
 
-         <h1 >className="
-text-4xl
-sm:text-5xl
-md:text-4xl md:text-5xl lg:text-base sm:text-lg md:text-xl
-lg:text-7xl
-xl:text-8xl
-font-black
-leading-tight
-mb-8
-text-[#0F4C81]
-">
-
-           AI-Powered Enterprise
-<span className="text-[#D4AF37]">
-  Fleet Intelligence
-</span>
-Platform
-
-        <h1
+ <h1
   className="
-  text-4xl
-  sm:text-5xl
-  md:text-6xl
-  lg:text-7xl
-  xl:text-8xl
-  font-black
-  leading-tight
-  mb-8
-  text-[#0F4C81]
-  px-4
-"
+    text-4xl
+    sm:text-5xl
+    md:text-6xl
+    lg:text-7xl
+    xl:text-8xl
+    font-black
+    leading-tight
+    mb-8
+    text-[#0F4C81]
+    px-4
+  "
 >
-         
+  AI-Powered Enterprise
+  <span className="text-[#D4AF37]">
+    Fleet Intelligence
+  </span>
+  Platform
+</h1>
 
-            Unified fleet operations, fuel monitoring,
-GPS tracking, AI analytics, security and
-transport intelligence on a single platform.
-
-          </p>
+<p
+  className="
+    text-base
+    sm:text-lg
+    md:text-xl
+    text-slate-500
+    max-w-3xl
+    mx-auto
+    mb-10
+    px-4
+  "
+>
+  Unified fleet operations, fuel monitoring,
+  GPS tracking, AI analytics, security and
+  transport intelligence on a single platform.
+</p>
 
           <div className="
 flex
