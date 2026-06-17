@@ -536,57 +536,6 @@ gap-3
             {/* MAIN PANEL */}
             <div className="space-y-6">
 
-              {/* STATS */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-
-                {[
-                  {
-                    title: "Vehicles Online",
-                    value: "128",
-                    growth: "+12%",
-                  },
-                  {
-                    title: "Fuel Efficiency",
-                    value: "94%",
-                    growth: "+8%",
-                  },
-                  {
-                    title: "Battery Health",
-                    value: "99%",
-                    growth: "+3%",
-                  },
-                  {
-                    title: "AI Alerts",
-                    value: "12",
-                    growth: "-2%",
-                  },
-                ].map((card, i) => (
-
-                  <motion.div
-                    key={i}
-                    whileHover={{
-                      y: -8,
-                    }}
-                    className="rounded-[30px] bg-gradient-to-br from-white via-slate-50 to-blue-50 border border-[#D4AF37]/20 shadow-xl p-8"
-                  >
-
-                    <div className="text-slate-500 text-lg mb-4">
-                      {card.title}
-                    </div>
-
-                    <div className="text-3xl md:text-4xl font-black text-[#0F4C81]">
-                      {card.value}
-                    </div>
-
-                    <div className="mt-4 text-green-400 font-semibold">
-                      ▲ {card.growth}
-                    </div>
-
-                  </motion.div>
-
-                ))}
-
-                         </div>
 
              {/* DASHBOARD CONTENT */}
 
