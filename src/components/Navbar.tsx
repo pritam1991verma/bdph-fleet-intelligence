@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 
 function Navbar() {
-
-  const [active, setActive] = useState("home");
-
+const [active, setActive] = useState("home");
+const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
 
     const sections = [
@@ -97,16 +96,22 @@ function Navbar() {
 </div>
   <nav className="fixed top-8 left-0 w-full bg-white/95 backdrop-blur-xl border-b border-[#D4AF37]/20 shadow-lg z-50">
 
-<div className="w-full flex justify-between items-center px-12 py-2">
+<div className="w-full flex justify-between items-center px-4 md:px-12 py-2">
         {/* LOGO */}
 
        <div className="flex items-center">
   <img
   src="/logo.png"
   alt="BDPH Group"
-  className="max-h-14 w-auto object-contain"
+  className="h-10 md:h-14 w-auto object-contain"
 />
 </div>
+  <button
+  onClick={() => setMenuOpen(!menuOpen)}
+  className="md:hidden text-[#0F4C81] text-3xl font-bold"
+>
+  ☰
+</button>
         {/* MENU */}
   
 <div className="hidden md:flex items-center gap-8 whitespace-nowrap">
@@ -139,7 +144,27 @@ function Navbar() {
         </div>
 
       </div>
+{menuOpen && (
+  <div className="md:hidden bg-white border-t border-[#D4AF37]/20">
 
+    <div className="flex flex-col p-4 gap-4">
+
+      {navItem("home", "Home")}
+      {navItem("services", "Services")}
+      {navItem("dashboard", "Dashboard")}
+      {navItem("analytics", "Analytics")}
+      {navItem("tracking", "Live Tracking")}
+      {navItem("about", "About")}
+      {navItem("contact", "Contact")}
+
+      <button className="w-full mt-2 px-6 py-3 bg-[#0F4C81] text-white rounded-xl font-bold">
+        Request Demo
+      </button>
+
+    </div>
+
+  </div>
+)}
    </nav>
 </>
 
