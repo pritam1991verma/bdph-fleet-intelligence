@@ -108,7 +108,7 @@ return (
           </span>
 
           <span className="mx-10">
-            ● 128 VEHICLES TRACKED
+            ● 1000+ VEHICLES TRACKED
           </span>
 
           <span className="mx-10">
@@ -181,7 +181,7 @@ overflow-hidden
             </div>
 
             <div className="text-5xl font-bold text-[#0F4C81]">
-              128
+              1200+
             </div>
 
             <div className="mt-4 text-green-400 text-sm">
@@ -331,10 +331,10 @@ gap-3
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
 
       {[
-        { title: "Vehicles", value: "128" },
+        { title: "Vehicles", value: "1200+" },
         { title: "Fuel Efficiency", value: "94%" },
         { title: "Tracking Accuracy", value: "99.9%" },
-        { title: "AI Alerts", value: "12" }
+        { title: "AI Alerts", value: "120" }
       ].map((item, index) => (
         <motion.div
           key={index}
@@ -550,7 +550,7 @@ gap-3
     {[
       {
         title: "Active Vehicles",
-        value: "128",
+        value: "1200+",
         status: "+12%",
       },
       {
@@ -565,7 +565,7 @@ gap-3
       },
       {
         title: "AI Alerts",
-        value: "12",
+        value: "120",
         status: "ACTIVE",
       },
     ].map((item, index) => (
@@ -967,7 +967,7 @@ gap-3
             GPS Devices Online
           </div>
           <div className="text-5xl font-black text-green-400">
-            128
+            1200+
           </div>
         </div>
 
@@ -1572,7 +1572,7 @@ gap-3
 
 <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-5 border border-white/10">
   <p className="text-slate-400 text-sm">Vehicles Connected</p>
-  <h4 className="text-4xl font-black text-cyan-400">128</h4>
+  <h4 className="text-4xl font-black text-cyan-400">1200+</h4>
 </div>
 
 <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-5 border border-white/10">
