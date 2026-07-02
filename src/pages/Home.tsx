@@ -334,7 +334,7 @@ gap-3
         { title: "Vehicles", value: "1200+" },
         { title: "Fuel Efficiency", value: "94%" },
         { title: "Tracking Accuracy", value: "99.9%" },
-        { title: "AI Alerts", value: "120" }
+        { title: "AI Alerts", value: "120+" }
       ].map((item, index) => (
         <motion.div
           key={index}
@@ -565,7 +565,7 @@ gap-3
       },
       {
         title: "AI Alerts",
-        value: "120",
+        value: "120+",
         status: "ACTIVE",
       },
     ].map((item, index) => (
